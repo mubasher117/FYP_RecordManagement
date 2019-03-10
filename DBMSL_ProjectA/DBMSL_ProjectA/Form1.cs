@@ -13,37 +13,42 @@ using System.Collections;
 
 namespace DBMSL_ProjectA
 {
-    public partial class Form1 : Form
+    public partial class frmRegisterStudent : Form
     {
 
         List<string> Values = new List<string>();
-        public Form1()
+        private frmRegisterStudent()
         {
             InitializeComponent();
+        }
+        private static frmRegisterStudent Instance = null;
+        public static frmRegisterStudent GetInstance()
+        {
+            if (Instance == null)
+            {
+                frmRegisterStudent new_Instance = new frmRegisterStudent();
+                return new_Instance;
+
+            }
+            return Instance;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bool IsConnnected = DatabaseConnection.start();
-            if (IsConnnected)
-            {
-                MessageBox.Show("Connected");
-            }
-            else
-            {
-                MessageBox.Show("Error");
+            AddAdvisor addAdvisor =  AddAdvisor.GetInstance();
+            addAdvisor.Show();
+            this.Hide();
 
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            DatabaseConnection.createStatement("INSERT INTO Person (FirstName, LastName, Contact, Email, DateOfBirth, Gender)" + 
+            /*
+            DatabaseConnection.createStatement("INSERT INTO Person ( FirstName, LastName, Contact, Email, DateOfBirth, Gender)" + 
             "VALUES('Mushi', 'Ahmad', '031342431147', 'mushi.ahmad1101@gmail.com', 1998 - 9 - 30, 1); ");
             DatabaseConnection.performAction();
             
-            /* SqlDataReader reader = DatabaseConnection.getData();
+             SqlDataReader reader = DatabaseConnection.getData();
             textBox1.Text = "Result";
             while (reader.Read())
             {
@@ -55,7 +60,7 @@ namespace DBMSL_ProjectA
                 richTextBox1.Text += s;
                 richTextBox1.Text += "\n";
 
-            }*/
+            }
             
             DatabaseConnection.createStatement("Select @@identity as id from Person");
             SqlDataReader reader = DatabaseConnection.getData();
@@ -69,8 +74,89 @@ namespace DBMSL_ProjectA
             DatabaseConnection.createStatement("INSERT INTO Student (Id, RegistrationNo) VALUES( "+ id +",'2016-CS-312') ");
             DatabaseConnection.performAction();
             
+            */
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtDOB_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDOB_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            bool IsConnnected = DatabaseConnection.start();
+            if (IsConnnected)
+            {
+                MessageBox.Show("Connected");
+            }
+            else
+            {
+                MessageBox.Show("Error");
+
+            }
+            string StudentGender = "0";
+            if ( cmbGender.Text == "Male")
+            {
+                StudentGender = "1";
+            }
+
+            string day = cmbDay.Text;
+            string month = cmbMonth.SelectedIndex.ToString();
+            string year = cmbYear.Text;
+            string studentDOB = year + " - " + month + " - " + day;
+            
+            DatabaseConnection.createStatement("INSERT INTO Person ( FirstName, LastName, Contact, Email, DateOfBirth, Gender)" +
+            " VALUES('" + txtFirstName.Text + "' , '" + txtLastName.Text + "', '" + txtContactNo.Text + "', '"+ txtEmail.Text+ "', "+studentDOB+ "," + StudentGender+"); ");
+            DatabaseConnection.performAction();
+            
+            DatabaseConnection.createStatement("Select @@identity as id from Person");
+            SqlDataReader reader = DatabaseConnection.getData();
+            string id = "0";
+            while (reader.Read())
+            {
+                id = (reader["id"].ToString());
+            }
+
+            DatabaseConnection.createStatement("INSERT INTO Student (Id, RegistrationNo) VALUES ("+id+", '"+txtRegNo.Text+"') ");
+            DatabaseConnection.performAction();
             
         }
 
+        private void frmRegisterStudent_Load(object sender, EventArgs e)
+        {
+
+            bool IsConnnected = DatabaseConnection.start();
+            cmbDay.SelectedIndex = 0;
+            cmbMonth.SelectedIndex = 0;
+            cmbYear.SelectedIndex = 0;
+        }
+
+        private void txtContactNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ManageStudent m = new ManageStudent();
+            m.Show();
+            this.Hide();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            AddProject p = new AddProject();
+            p.Show();
+            this.Hide();
+        }
     }
 }

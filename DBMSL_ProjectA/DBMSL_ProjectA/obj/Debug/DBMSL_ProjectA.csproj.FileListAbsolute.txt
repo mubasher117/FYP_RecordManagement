@@ -2,9 +2,12 @@ c:\users\mubas\source\repos\DBMSL_ProjectA\DBMSL_ProjectA\bin\Debug\DBMSL_Projec
 c:\users\mubas\source\repos\DBMSL_ProjectA\DBMSL_ProjectA\bin\Debug\DBMSL_ProjectA.exe
 c:\users\mubas\source\repos\DBMSL_ProjectA\DBMSL_ProjectA\bin\Debug\DBMSL_ProjectA.pdb
 c:\users\mubas\source\repos\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.csprojResolveAssemblyReference.cache
-c:\users\mubas\source\repos\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.Form1.resources
 c:\users\mubas\source\repos\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.Properties.Resources.resources
 c:\users\mubas\source\repos\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.csproj.GenerateResource.cache
 c:\users\mubas\source\repos\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.csproj.CoreCompileInputs.cache
 c:\users\mubas\source\repos\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.exe
 c:\users\mubas\source\repos\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.pdb
+C:\Users\mubas\source\repos\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.frmRegisterStudent.resources
+C:\Users\mubas\source\repos\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.AddAdvisor.resources
+C:\Users\mubas\source\repos\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.AddProject.resources
+C:\Users\mubas\source\repos\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.ManageStudent.resources
