@@ -9,10 +9,8 @@ namespace DBMSL_ProjectA
 {
     class TempData
     {
-        private static ArrayList students = new ArrayList();
-
-        public static ArrayList GetStudents (){ return students; }
-        public static void SetStudents(ArrayList newStudents)
+        private static List<Student> students = new List<Student>();
+        public static void SetStudents(List<Student> newStudents)
         {
             students.Clear();
             students = newStudents;

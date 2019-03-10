@@ -49,7 +49,6 @@ namespace DBMSL_ProjectA
             {
                 StudentGender = "1";
             }
-
             string day = cmbDay.Text;
             string month = cmbMonth.SelectedIndex.ToString();
             string year = cmbYear.Text;

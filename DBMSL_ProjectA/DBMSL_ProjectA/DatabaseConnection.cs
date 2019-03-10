@@ -11,7 +11,7 @@ namespace DBMSL_ProjectA
 {
     class DatabaseConnection
     {
-        static String connectionURL = "Data Source=MUSHI\\MUSHISQL;Initial Catalog=ProjectA;Integrated Security=True; MultipleActiveResultSets=true";
+        static String connectionURL = "Data Source=MUSHI\\MUSHISQL;Initial Catalog=LabProjectA;Integrated Security=True; MultipleActiveResultSets=true";
                             
         static SqlConnection connectionObject;
         static SqlCommand command;

@@ -115,7 +115,7 @@ namespace DBMSL_ProjectA
             string studentDOB = year + " - " + month + " - " + day;
             
             DatabaseConnection.createStatement("INSERT INTO Person ( FirstName, LastName, Contact, Email, DateOfBirth, Gender)" +
-            " VALUES('" + txtFirstName.Text + "' , '" + txtLastName.Text + "', '" + txtContactNo.Text + "', '"+ txtEmail.Text+ "', "+studentDOB+ "," + StudentGender+"); ");
+            " VALUES('" + txtFirstName.Text + "' , '" + txtLastName.Text + "', '" + txtContactNo.Text + "', '"+ txtEmail.Text+ "', "+studentDOB+"," + StudentGender+"); ");
             DatabaseConnection.performAction();
             
             DatabaseConnection.createStatement("Select @@identity as id from Person");
@@ -156,6 +156,21 @@ namespace DBMSL_ProjectA
         {
             AddProject p = new AddProject();
             p.Show();
+            this.Hide();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Evaluation p = Evaluation.GetInstance();
+            p.Show();
+            this.Hide();
+
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CreateGroup c = new CreateGroup();
+            c.Show();
             this.Hide();
         }
     }

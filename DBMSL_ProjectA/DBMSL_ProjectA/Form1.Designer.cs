@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.dtDOB = new System.Windows.Forms.DateTimePicker();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtContactNo = new System.Windows.Forms.TextBox();
             this.txtRegNo = new System.Windows.Forms.TextBox();
@@ -52,6 +48,8 @@
             this.cmbYear = new System.Windows.Forms.ComboBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button2 = new System.Windows.Forms.Button();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // button1
@@ -63,36 +61,6 @@
             this.button1.Text = "Add Advisor";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(905, 545);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 22);
-            this.textBox1.TabIndex = 2;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(905, 461);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(145, 43);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(988, 376);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(100, 22);
-            this.textBox8.TabIndex = 17;
-            // 
-            // dtDOB
-            // 
-            this.dtDOB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtDOB.Location = new System.Drawing.Point(551, 84);
-            this.dtDOB.Name = "dtDOB";
-            this.dtDOB.Size = new System.Drawing.Size(200, 22);
-            this.dtDOB.TabIndex = 33;
             // 
             // txtEmail
             // 
@@ -333,7 +301,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(808, 281);
+            this.linkLabel1.Location = new System.Drawing.Point(851, 297);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(74, 17);
             this.linkLabel1.TabIndex = 38;
@@ -343,7 +311,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(552, 297);
+            this.button2.Location = new System.Drawing.Point(854, 252);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(199, 23);
             this.button2.TabIndex = 39;
@@ -351,18 +319,41 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(851, 336);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(74, 17);
+            this.linkLabel2.TabIndex = 40;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Evaluation";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Location = new System.Drawing.Point(851, 377);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(94, 17);
+            this.linkLabel3.TabIndex = 41;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "Create Group";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
             // frmRegisterStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 617);
+            this.Controls.Add(this.linkLabel3);
+            this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.cmbYear);
             this.Controls.Add(this.cmbMonth);
             this.Controls.Add(this.cmbDay);
             this.Controls.Add(this.cmbGender);
-            this.Controls.Add(this.dtDOB);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtContactNo);
             this.Controls.Add(this.txtRegNo);
@@ -376,9 +367,6 @@
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Name = "frmRegisterStudent";
             this.Text = "Student Registration";
@@ -391,10 +379,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.DateTimePicker dtDOB;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtContactNo;
         private System.Windows.Forms.TextBox txtRegNo;
@@ -414,6 +398,8 @@
         private System.Windows.Forms.ComboBox cmbYear;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel3;
     }
 }
 
