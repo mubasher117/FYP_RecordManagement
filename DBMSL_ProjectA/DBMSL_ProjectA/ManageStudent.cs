@@ -21,7 +21,7 @@ namespace DBMSL_ProjectA
 
         private void ManageStudent_Load(object sender, EventArgs e)
         {
-            gvStudents.DataSource = null;
+            gvStudents.Rows.Clear();
             gvStudents.Refresh();
             bool IsConnnected = DatabaseConnection.start();
             DatabaseConnection.createStatement("select FirstName[Name], RegistrationNo[Registration No] from Person join Student on Person.Id = Student.Id");

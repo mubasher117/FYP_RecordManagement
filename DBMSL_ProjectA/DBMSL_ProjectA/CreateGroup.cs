@@ -23,7 +23,6 @@ namespace DBMSL_ProjectA
         {
 
         }
-        List<Student> GroupStudents = new List<Student>();
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
@@ -41,6 +40,7 @@ namespace DBMSL_ProjectA
             reader = DatabaseConnection.getData();
             Student student = new Student();
             student.RegistrationNo = RegNo;
+            student.StudentId = int.Parse(StudentId);
             if (reader.Read())
             {
                 student.FirstName =  reader.GetString(1).ToString();
@@ -49,10 +49,10 @@ namespace DBMSL_ProjectA
                 student.Email = reader.GetString(4).ToString();
                 student.DateOfBirth = Convert.ToDateTime(reader.GetDateTime(5));
             }
-            GroupStudents.Add(student);
-            gvStudents.DataSource = null;
+            TempData.add_GroupStudent(student);
+            gvStudents.Rows.Clear();
             gvStudents.Refresh();
-            foreach(Student s in GroupStudents)
+            foreach(Student s in TempData.GetGroupStudents())
             {
                 gvStudents.Rows.Add(s.RegistrationNo, s.FirstName);
             }
@@ -62,20 +62,15 @@ namespace DBMSL_ProjectA
 
         private void txtCreateGroup_Click(object sender, EventArgs e)
         {
-
             bool IsConnnected = DatabaseConnection.start();
-            string sqlFormattedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            DatabaseConnection.createStatement("INSERT INTO [dbo].[Group] ([Created_On]) VALUES('" + sqlFormattedDate + "')");
-            DatabaseConnection.performAction();
-            DatabaseConnection.createStatement("Select @@identity as id from Group");
-            SqlDataReader reader = DatabaseConnection.getData();
-            string id = "0";
-            if (reader.Read())
+            foreach (Student s in TempData.GetGroupStudents())
             {
-                id = (reader["id"].ToString());
-                MessageBox.Show(id);
+                MessageBox.Show(s.StudentId.ToString());
+                DatabaseConnection.createStatement("Insert into GroupStudent (GroupId, StudentId ,Status , AssignmentDate) " +
+                    "Values (7," + s.StudentId.ToString() + ", 3 ,'" + DateTime.Now.ToString("yyyy-MM-dd") + "')");
+                DatabaseConnection.performAction();
             }
-
+            TempData.Clear_GroupStudents();
         }
     }
 }

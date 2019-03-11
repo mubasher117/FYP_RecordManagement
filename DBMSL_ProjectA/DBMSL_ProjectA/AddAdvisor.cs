@@ -55,7 +55,7 @@ namespace DBMSL_ProjectA
             string advisorDOB = year + " - " + month + " - " + day;
 
             DatabaseConnection.createStatement("INSERT INTO Person ( FirstName, LastName, Contact, Email, DateOfBirth, Gender)" +
-            " VALUES('" + txtFirstName.Text + "' , '" + txtLastName.Text + "', '" + txtContactNo.Text + "', '" + txtEmail.Text + "', " + advisorDOB + "," + StudentGender + "); ");
+            " VALUES('" + txtFirstName.Text + "' , '" + txtLastName.Text + "', '" + txtContactNo.Text + "', '" + txtEmail.Text + "', '" + advisorDOB + "'," + StudentGender + "); ");
             DatabaseConnection.performAction();
 
             DatabaseConnection.createStatement("Select @@identity as id from Person");
