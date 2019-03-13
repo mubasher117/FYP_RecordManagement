@@ -26,3 +26,5 @@ E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\D
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.exe
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.pdb
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.CreateGroup.resources
+E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.Dashboard.resources
+E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.ManageProjects.resources

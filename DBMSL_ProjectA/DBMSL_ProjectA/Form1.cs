@@ -147,7 +147,7 @@ namespace DBMSL_ProjectA
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            ManageStudent m = new ManageStudent();
+            ManageStudent m = ManageStudent.GetInstance();
             m.Show();
             this.Hide();
         }

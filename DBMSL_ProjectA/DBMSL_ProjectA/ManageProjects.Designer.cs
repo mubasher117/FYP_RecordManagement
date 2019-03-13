@@ -1,6 +1,6 @@
 ﻿namespace DBMSL_ProjectA
 {
-    partial class ManageStudent
+    partial class ManageProjects
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvStudents = new System.Windows.Forms.DataGridView();
             this.RegistrationNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnAddStudent = new System.Windows.Forms.Button();
+            this.Action3 = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,67 +53,58 @@
             this.gvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RegistrationNo,
-            this.SName,
             this.Action,
-            this.Action2});
-            this.gvStudents.Location = new System.Drawing.Point(43, 205);
+            this.Action2,
+            this.Action3});
+            this.gvStudents.Location = new System.Drawing.Point(8, 175);
             this.gvStudents.Name = "gvStudents";
             this.gvStudents.RowTemplate.Height = 24;
-            this.gvStudents.Size = new System.Drawing.Size(689, 254);
+            this.gvStudents.Size = new System.Drawing.Size(461, 254);
             this.gvStudents.TabIndex = 2;
+            this.gvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvStudents_CellContentClick);
             // 
             // RegistrationNo
             // 
-            this.RegistrationNo.HeaderText = "Reg No";
+            this.RegistrationNo.HeaderText = "Title";
             this.RegistrationNo.MinimumWidth = 7;
             this.RegistrationNo.Name = "RegistrationNo";
             this.RegistrationNo.ReadOnly = true;
             this.RegistrationNo.Width = 120;
-            // 
-            // SName
-            // 
-            this.SName.HeaderText = "Name";
-            this.SName.MinimumWidth = 10;
-            this.SName.Name = "SName";
-            this.SName.Width = 130;
             // 
             // Action
             // 
             this.Action.HeaderText = "";
             this.Action.Name = "Action";
             this.Action.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Action.Text = "Edit";
+            this.Action.Text = "View";
             this.Action.UseColumnTextForButtonValue = true;
             this.Action.Width = 60;
             // 
             // Action2
             // 
-            this.Action2.HeaderText = "";
+            this.Action2.HeaderText = "Action";
             this.Action2.Name = "Action2";
-            this.Action2.Text = "Delete";
+            this.Action2.Text = "Edit";
             this.Action2.UseColumnTextForButtonValue = true;
             this.Action2.Width = 60;
             // 
-            // btnAddStudent
+            // Action3
             // 
-            this.btnAddStudent.Location = new System.Drawing.Point(597, 112);
-            this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(135, 32);
-            this.btnAddStudent.TabIndex = 3;
-            this.btnAddStudent.Text = "Add Students";
-            this.btnAddStudent.UseVisualStyleBackColor = true;
-            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
+            this.Action3.HeaderText = "";
+            this.Action3.Name = "Action3";
+            this.Action3.Text = "Delete";
+            this.Action3.UseColumnTextForButtonValue = true;
+            this.Action3.Width = 60;
             // 
-            // ManageStudent
+            // ManageProjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 558);
-            this.Controls.Add(this.btnAddStudent);
+            this.ClientSize = new System.Drawing.Size(838, 605);
             this.Controls.Add(this.gvStudents);
-            this.Name = "ManageStudent";
-            this.Text = "ManageStudent";
-            this.Load += new System.EventHandler(this.ManageStudent_Load);
+            this.Name = "ManageProjects";
+            this.Text = "ManageProjects";
+            this.Load += new System.EventHandler(this.ManageProjects_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).EndInit();
             this.ResumeLayout(false);
 
@@ -124,9 +114,8 @@
 
         private System.Windows.Forms.DataGridView gvStudents;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SName;
         private System.Windows.Forms.DataGridViewButtonColumn Action;
         private System.Windows.Forms.DataGridViewButtonColumn Action2;
-        private System.Windows.Forms.Button btnAddStudent;
+        private System.Windows.Forms.DataGridViewButtonColumn Action3;
     }
 }

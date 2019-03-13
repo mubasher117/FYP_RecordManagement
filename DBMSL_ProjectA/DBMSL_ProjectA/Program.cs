@@ -16,7 +16,7 @@ namespace DBMSL_ProjectA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(frmRegisterStudent.GetInstance());
+            Application.Run(Dashboard.GetInstance());
         }
     }
 }

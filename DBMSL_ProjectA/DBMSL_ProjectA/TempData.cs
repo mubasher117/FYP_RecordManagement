@@ -11,6 +11,7 @@ namespace DBMSL_ProjectA
     {
         private static List<Student> students = new List<Student>();
         private static List<Student> CurrentGroupStudents = new List<Student>();
+        private static int currentGroupId;
 
         public static void SetStudents(List<Student> newStudents)
         {

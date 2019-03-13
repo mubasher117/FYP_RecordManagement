@@ -14,9 +14,20 @@ namespace DBMSL_ProjectA
 {
     public partial class ManageStudent : Form
     {
-        public ManageStudent()
+        private ManageStudent()
         {
             InitializeComponent();
+        }
+        private static ManageStudent Instance = null;
+        public static ManageStudent GetInstance()
+        {
+            if (Instance == null)
+            {
+                ManageStudent new_Instance = new ManageStudent();
+                return new_Instance;
+
+            }
+            return Instance;
         }
 
         private void ManageStudent_Load(object sender, EventArgs e)
@@ -31,6 +42,13 @@ namespace DBMSL_ProjectA
                 gvStudents.Rows.Add(reader["Registration No"].ToString(), reader["Name"].ToString());
             }
 
+        }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            frmRegisterStudent frmRegisterStudent = frmRegisterStudent.GetInstance();
+            frmRegisterStudent.Show();
+            this.Hide();
         }
     }
 }
