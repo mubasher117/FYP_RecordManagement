@@ -13,9 +13,20 @@ namespace DBMSL_ProjectA
 {
     public partial class AddProject : Form
     {
-        public AddProject()
+        private AddProject()
         {
             InitializeComponent();
+        }
+        private static AddProject Instance = null;
+        public static AddProject GetInstance()
+        {
+            if (Instance == null)
+            {
+                AddProject new_Instance = new AddProject();
+                return new_Instance;
+
+            }
+            return Instance;
         }
 
         private void btnAddProject_Click(object sender, EventArgs e)
@@ -24,6 +35,25 @@ namespace DBMSL_ProjectA
             DatabaseConnection.createStatement("INSERT INTO Project ( Title, Description)" +
             " VALUES('" + txtTitle.Text + "' , '" + txtDescription.Text + "'); ");
             DatabaseConnection.performAction();
+            Project project = new Project();
+            project.Title = txtTitle.Text;
+
+            DatabaseConnection.createStatement("Select @@identity as id from Project");
+            SqlDataReader reader = DatabaseConnection.getData();
+            while (reader.Read())
+            {
+                project.Id = int.Parse(reader["id"].ToString());
+            }
+            TempData.CurrentProject = project;
+            ProjectDashboard dashboard = ProjectDashboard.GetInstance();
+            dashboard.Show();
+            this.Hide();
+
+        }
+
+        private void AddProject_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

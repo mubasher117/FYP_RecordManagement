@@ -85,6 +85,7 @@
             this.Controls.Add(this.btnProjects);
             this.Name = "Dashboard";
             this.Text = "FYP Management System";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.ResumeLayout(false);
 
         }

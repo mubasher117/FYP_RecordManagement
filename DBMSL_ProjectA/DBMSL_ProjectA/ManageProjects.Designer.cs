@@ -30,6 +30,8 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvStudents = new System.Windows.Forms.DataGridView();
+            this.btnAddProject = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegistrationNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action2 = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -52,6 +54,7 @@
             this.gvStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.RegistrationNo,
             this.Action,
             this.Action2,
@@ -62,6 +65,22 @@
             this.gvStudents.Size = new System.Drawing.Size(461, 254);
             this.gvStudents.TabIndex = 2;
             this.gvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvStudents_CellContentClick);
+            // 
+            // btnAddProject
+            // 
+            this.btnAddProject.Location = new System.Drawing.Point(527, 78);
+            this.btnAddProject.Name = "btnAddProject";
+            this.btnAddProject.Size = new System.Drawing.Size(108, 24);
+            this.btnAddProject.TabIndex = 3;
+            this.btnAddProject.Text = "Add Project";
+            this.btnAddProject.UseVisualStyleBackColor = true;
+            this.btnAddProject.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
             // 
             // RegistrationNo
             // 
@@ -101,6 +120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 605);
+            this.Controls.Add(this.btnAddProject);
             this.Controls.Add(this.gvStudents);
             this.Name = "ManageProjects";
             this.Text = "ManageProjects";
@@ -113,6 +133,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView gvStudents;
+        private System.Windows.Forms.Button btnAddProject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationNo;
         private System.Windows.Forms.DataGridViewButtonColumn Action;
         private System.Windows.Forms.DataGridViewButtonColumn Action2;

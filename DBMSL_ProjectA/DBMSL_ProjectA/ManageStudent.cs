@@ -35,11 +35,11 @@ namespace DBMSL_ProjectA
             gvStudents.Rows.Clear();
             gvStudents.Refresh();
             bool IsConnnected = DatabaseConnection.start();
-            DatabaseConnection.createStatement("select FirstName[Name], RegistrationNo[Registration No] from Person join Student on Person.Id = Student.Id");
+            DatabaseConnection.createStatement("select Person.Id[id], FirstName[Name], RegistrationNo[Registration No] from Person join Student on Person.Id = Student.Id");
             SqlDataReader reader = DatabaseConnection.getData();
             while (reader.Read())
             {
-                gvStudents.Rows.Add(reader["Registration No"].ToString(), reader["Name"].ToString());
+                gvStudents.Rows.Add(reader["id"].ToString(), reader["Registration No"].ToString(), reader["Name"].ToString());
             }
 
         }
@@ -49,6 +49,27 @@ namespace DBMSL_ProjectA
             frmRegisterStudent frmRegisterStudent = frmRegisterStudent.GetInstance();
             frmRegisterStudent.Show();
             this.Hide();
+        }
+
+        private void gvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (gvStudents.Columns[e.ColumnIndex].Name.ToString() == "Action3")
+            {
+                if (MessageBox.Show("Are you sure you want to delete?", "Delete Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    string id = gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    DatabaseConnection.start();
+                    DatabaseConnection.createStatement("Delete from GroupStudent where StudentId =" + id);
+                    DatabaseConnection.performAction();
+                    DatabaseConnection.createStatement("Delete from Student where Id =" + id);
+                    DatabaseConnection.performAction();
+                    DatabaseConnection.createStatement("Delete from Person where Id =" + id);
+                    DatabaseConnection.performAction();
+
+                }
+                
+            
+            }
         }
     }
 }

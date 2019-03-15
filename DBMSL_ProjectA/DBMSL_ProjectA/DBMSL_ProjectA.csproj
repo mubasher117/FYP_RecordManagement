@@ -51,11 +51,24 @@
     <Compile Include="AddAdvisor.Designer.cs">
       <DependentUpon>AddAdvisor.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddAdvisorToProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAdvisorToProject.Designer.cs">
+      <DependentUpon>AddAdvisorToProject.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddProject.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddProject.Designer.cs">
       <DependentUpon>AddProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advisor.cs" />
+    <Compile Include="AssignGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignGroup.Designer.cs">
+      <DependentUpon>AssignGroup.cs</DependentUpon>
     </Compile>
     <Compile Include="CreateGroup.cs">
       <SubType>Form</SubType>
@@ -83,6 +96,12 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Group.cs" />
+    <Compile Include="ManageAdvisors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageAdvisors.Designer.cs">
+      <DependentUpon>ManageAdvisors.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageProjects.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,14 +115,39 @@
       <DependentUpon>ManageStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="ProjectDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectDashboard.Designer.cs">
+      <DependentUpon>ProjectDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectEvaluation.Designer.cs">
+      <DependentUpon>ProjectEvaluation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
+    <Compile Include="StudentGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentGroup.Designer.cs">
+      <DependentUpon>StudentGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="TempData.cs" />
     <EmbeddedResource Include="AddAdvisor.resx">
       <DependentUpon>AddAdvisor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddAdvisorToProject.resx">
+      <DependentUpon>AddAdvisorToProject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddProject.resx">
       <DependentUpon>AddProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignGroup.resx">
+      <DependentUpon>AssignGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateGroup.resx">
       <DependentUpon>CreateGroup.cs</DependentUpon>
@@ -117,11 +161,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageAdvisors.resx">
+      <DependentUpon>ManageAdvisors.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageProjects.resx">
       <DependentUpon>ManageProjects.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageStudent.resx">
       <DependentUpon>ManageStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectDashboard.resx">
+      <DependentUpon>ProjectDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectEvaluation.resx">
+      <DependentUpon>ProjectEvaluation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -132,6 +185,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="StudentGroup.resx">
+      <DependentUpon>StudentGroup.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

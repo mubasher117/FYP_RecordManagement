@@ -28,3 +28,9 @@ E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\D
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.CreateGroup.resources
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.Dashboard.resources
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.ManageProjects.resources
+E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.ProjectDashboard.resources
+E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.AddAdvisorToProject.resources
+E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.ManageAdvisors.resources
+E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.AssignGroup.resources
+E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.StudentGroup.resources
+E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.ProjectEvaluation.resources

@@ -62,15 +62,49 @@ namespace DBMSL_ProjectA
 
         private void txtCreateGroup_Click(object sender, EventArgs e)
         {
-            bool IsConnnected = DatabaseConnection.start();
+            string conStr = "Data Source=MUSHI\\MUSHISQL;Initial Catalog=LabProjectA;Integrated Security=True; MultipleActiveResultSets=true";
+            SqlConnection con = new SqlConnection(conStr);
+            con.Open();
+            string sqlFormattedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            if (con.State == ConnectionState.Open)
+            {
+                string Insert = "INSERT INTO [dbo].[Group](Created_On) VALUES ('" + sqlFormattedDate + "')";
+                SqlCommand cmd = new SqlCommand(Insert, con);
+                cmd.ExecuteNonQuery();
+            }
+            
+            string I = "Select @@identity as id from [Group]";
+            SqlCommand cm = new SqlCommand(I, con);
+
+            SqlDataReader reader = cm.ExecuteReader();
+
+            string id = "0";
+
+            if (reader.Read())
+            {
+                id = (reader["id"].ToString());
+                MessageBox.Show(id);
+            }
+
+
             foreach (Student s in TempData.GetGroupStudents())
             {
                 MessageBox.Show(s.StudentId.ToString());
                 DatabaseConnection.createStatement("Insert into GroupStudent (GroupId, StudentId ,Status , AssignmentDate) " +
-                    "Values (7," + s.StudentId.ToString() + ", 3 ,'" + DateTime.Now.ToString("yyyy-MM-dd") + "')");
+                    "Values (" + id + "," + s.StudentId.ToString() + ", 3 ,'" + DateTime.Now.ToString("yyyy-MM-dd") + "')");
                 DatabaseConnection.performAction();
             }
             TempData.Clear_GroupStudents();
+
+        }
+
+        private void gvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void CreateGroup_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

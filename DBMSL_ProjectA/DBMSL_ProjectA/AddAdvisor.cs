@@ -86,7 +86,9 @@ namespace DBMSL_ProjectA
             DatabaseConnection.createStatement("INSERT INTO Advisor (Id, Designation, Salary) VALUES (" + id + ","+advisorDesignation+","+ txtSalary.Text+") ");
             DatabaseConnection.performAction();
 
-
+            ManageAdvisors manageAdvisors = ManageAdvisors.GetInstance();
+            manageAdvisors.Show();
+            this.Hide();
         }
 
         private void txtContactNo_KeyPress(object sender, KeyPressEventArgs e)

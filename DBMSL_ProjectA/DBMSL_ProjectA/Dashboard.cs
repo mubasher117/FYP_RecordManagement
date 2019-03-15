@@ -49,7 +49,14 @@ namespace DBMSL_ProjectA
 
         private void btnAdvisors_Click(object sender, EventArgs e)
         {
+            ManageAdvisors manageAdvisors = ManageAdvisors.GetInstance();
+            manageAdvisors.Show();
+            this.Hide();
+        }
 
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

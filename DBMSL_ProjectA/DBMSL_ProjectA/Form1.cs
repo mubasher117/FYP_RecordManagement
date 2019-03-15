@@ -154,9 +154,6 @@ namespace DBMSL_ProjectA
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            AddProject p = new AddProject();
-            p.Show();
-            this.Hide();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

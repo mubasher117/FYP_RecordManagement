@@ -1,6 +1,6 @@
 ﻿namespace DBMSL_ProjectA
 {
-    partial class ManageStudent
+    partial class ManageAdvisors
     {
         /// <summary>
         /// Required designer variable.
@@ -29,22 +29,32 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.gvStudents = new System.Windows.Forms.DataGridView();
-            this.btnAddStudent = new System.Windows.Forms.Button();
-            this.StudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.gvAdvisors = new System.Windows.Forms.DataGridView();
+            this.hiddenId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegistrationNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action3 = new System.Windows.Forms.DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gvAdvisors)).BeginInit();
             this.SuspendLayout();
             // 
-            // gvStudents
+            // btnAdd
             // 
-            this.gvStudents.AllowUserToAddRows = false;
-            this.gvStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.gvStudents.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.btnAdd.Location = new System.Drawing.Point(608, 80);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(135, 32);
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.Text = "Add New Advisor";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // gvAdvisors
+            // 
+            this.gvAdvisors.AllowUserToAddRows = false;
+            this.gvAdvisors.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gvAdvisors.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -52,41 +62,31 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.gvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.StudentId,
+            this.gvAdvisors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gvAdvisors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvAdvisors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.hiddenId,
             this.RegistrationNo,
             this.SName,
             this.Action,
             this.Action2,
             this.Action3});
-            this.gvStudents.Location = new System.Drawing.Point(43, 205);
-            this.gvStudents.Name = "gvStudents";
-            this.gvStudents.RowTemplate.Height = 24;
-            this.gvStudents.Size = new System.Drawing.Size(689, 254);
-            this.gvStudents.TabIndex = 2;
-            this.gvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvStudents_CellContentClick);
+            this.gvAdvisors.Location = new System.Drawing.Point(54, 173);
+            this.gvAdvisors.Name = "gvAdvisors";
+            this.gvAdvisors.RowTemplate.Height = 24;
+            this.gvAdvisors.Size = new System.Drawing.Size(689, 254);
+            this.gvAdvisors.TabIndex = 4;
+            this.gvAdvisors.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvAdvisors_CellContentClick);
             // 
-            // btnAddStudent
+            // hiddenId
             // 
-            this.btnAddStudent.Location = new System.Drawing.Point(597, 112);
-            this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(135, 32);
-            this.btnAddStudent.TabIndex = 3;
-            this.btnAddStudent.Text = "Add Students";
-            this.btnAddStudent.UseVisualStyleBackColor = true;
-            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
-            // 
-            // StudentId
-            // 
-            this.StudentId.HeaderText = "Id";
-            this.StudentId.Name = "StudentId";
-            this.StudentId.Visible = false;
+            this.hiddenId.HeaderText = "Id";
+            this.hiddenId.Name = "hiddenId";
+            this.hiddenId.Visible = false;
             // 
             // RegistrationNo
             // 
-            this.RegistrationNo.HeaderText = "Reg No";
+            this.RegistrationNo.HeaderText = "Name";
             this.RegistrationNo.MinimumWidth = 7;
             this.RegistrationNo.Name = "RegistrationNo";
             this.RegistrationNo.ReadOnly = true;
@@ -94,7 +94,7 @@
             // 
             // SName
             // 
-            this.SName.HeaderText = "Name";
+            this.SName.HeaderText = "Designation";
             this.SName.MinimumWidth = 10;
             this.SName.Name = "SName";
             this.SName.Width = 130;
@@ -123,26 +123,26 @@
             this.Action3.UseColumnTextForButtonValue = true;
             this.Action3.Width = 60;
             // 
-            // ManageStudent
+            // ManageAdvisors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 558);
-            this.Controls.Add(this.btnAddStudent);
-            this.Controls.Add(this.gvStudents);
-            this.Name = "ManageStudent";
-            this.Text = "ManageStudent";
-            this.Load += new System.EventHandler(this.ManageStudent_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).EndInit();
+            this.ClientSize = new System.Drawing.Size(791, 489);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.gvAdvisors);
+            this.Name = "ManageAdvisors";
+            this.Text = "ManageAdvisors";
+            this.Load += new System.EventHandler(this.ManageAdvisors_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gvAdvisors)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView gvStudents;
-        private System.Windows.Forms.Button btnAddStudent;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentId;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridView gvAdvisors;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hiddenId;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn SName;
         private System.Windows.Forms.DataGridViewButtonColumn Action;

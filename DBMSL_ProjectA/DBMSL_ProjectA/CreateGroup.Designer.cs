@@ -92,6 +92,7 @@
             this.gvStudents.RowTemplate.Height = 24;
             this.gvStudents.Size = new System.Drawing.Size(683, 177);
             this.gvStudents.TabIndex = 3;
+            this.gvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvStudents_CellContentClick);
             // 
             // RegistrationNo
             // 
@@ -147,6 +148,7 @@
             this.Controls.Add(this.lblRegistrationNo);
             this.Name = "CreateGroup";
             this.Text = "CreateGroup";
+            this.Load += new System.EventHandler(this.CreateGroup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

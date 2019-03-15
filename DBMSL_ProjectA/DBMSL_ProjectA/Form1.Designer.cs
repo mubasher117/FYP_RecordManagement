@@ -65,7 +65,7 @@
             // txtEmail
             // 
             this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEmail.Location = new System.Drawing.Point(231, 336);
+            this.txtEmail.Location = new System.Drawing.Point(231, 338);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 22);
             this.txtEmail.TabIndex = 31;
@@ -73,7 +73,7 @@
             // txtContactNo
             // 
             this.txtContactNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtContactNo.Location = new System.Drawing.Point(231, 297);
+            this.txtContactNo.Location = new System.Drawing.Point(231, 299);
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(200, 22);
             this.txtContactNo.TabIndex = 30;
@@ -82,7 +82,7 @@
             // txtRegNo
             // 
             this.txtRegNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtRegNo.Location = new System.Drawing.Point(231, 255);
+            this.txtRegNo.Location = new System.Drawing.Point(231, 257);
             this.txtRegNo.Name = "txtRegNo";
             this.txtRegNo.Size = new System.Drawing.Size(200, 22);
             this.txtRegNo.TabIndex = 29;
@@ -90,7 +90,7 @@
             // txtLastName
             // 
             this.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLastName.Location = new System.Drawing.Point(231, 210);
+            this.txtLastName.Location = new System.Drawing.Point(231, 212);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(200, 22);
             this.txtLastName.TabIndex = 28;
@@ -98,7 +98,7 @@
             // txtFirstName
             // 
             this.txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtFirstName.Location = new System.Drawing.Point(231, 164);
+            this.txtFirstName.Location = new System.Drawing.Point(231, 166);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(200, 22);
             this.txtFirstName.TabIndex = 27;
@@ -107,7 +107,7 @@
             // 
             this.lblDOB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDOB.AutoSize = true;
-            this.lblDOB.Location = new System.Drawing.Point(83, 419);
+            this.lblDOB.Location = new System.Drawing.Point(83, 421);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(90, 17);
             this.lblDOB.TabIndex = 26;
@@ -117,7 +117,7 @@
             // 
             this.lblGender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(85, 379);
+            this.lblGender.Location = new System.Drawing.Point(85, 381);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(56, 17);
             this.lblGender.TabIndex = 25;
@@ -127,7 +127,7 @@
             // 
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(85, 339);
+            this.lblEmail.Location = new System.Drawing.Point(85, 341);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(42, 17);
             this.lblEmail.TabIndex = 24;
@@ -137,7 +137,7 @@
             // 
             this.lblContactNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblContactNo.AutoSize = true;
-            this.lblContactNo.Location = new System.Drawing.Point(85, 300);
+            this.lblContactNo.Location = new System.Drawing.Point(85, 302);
             this.lblContactNo.Name = "lblContactNo";
             this.lblContactNo.Size = new System.Drawing.Size(78, 17);
             this.lblContactNo.TabIndex = 23;
@@ -147,7 +147,7 @@
             // 
             this.lblRegNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRegNo.AutoSize = true;
-            this.lblRegNo.Location = new System.Drawing.Point(83, 258);
+            this.lblRegNo.Location = new System.Drawing.Point(83, 260);
             this.lblRegNo.Name = "lblRegNo";
             this.lblRegNo.Size = new System.Drawing.Size(106, 17);
             this.lblRegNo.TabIndex = 22;
@@ -157,7 +157,7 @@
             // 
             this.lblLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(85, 213);
+            this.lblLastName.Location = new System.Drawing.Point(85, 215);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(76, 17);
             this.lblLastName.TabIndex = 21;
@@ -167,7 +167,7 @@
             // 
             this.lblFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(85, 167);
+            this.lblFirstName.Location = new System.Drawing.Point(85, 169);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(76, 17);
             this.lblFirstName.TabIndex = 20;
@@ -176,7 +176,7 @@
             // btnRegister
             // 
             this.btnRegister.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegister.Location = new System.Drawing.Point(340, 461);
+            this.btnRegister.Location = new System.Drawing.Point(340, 463);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(93, 29);
             this.btnRegister.TabIndex = 19;
@@ -345,7 +345,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 617);
+            this.ClientSize = new System.Drawing.Size(1185, 620);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.button2);
