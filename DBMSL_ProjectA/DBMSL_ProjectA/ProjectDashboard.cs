@@ -30,6 +30,14 @@ namespace DBMSL_ProjectA
         }
         private void ProjectDashboard_Load(object sender, EventArgs e)
         {
+            if (gvGroupStudents.Rows.Count == 0)
+            {
+                btnChangeGroup.Text = "Add Group";
+            }
+            else 
+            {
+                btnChangeGroup.Text = "Change Group";
+            }
             lblTitle.Text = TempData.CurrentProject.Title;
             List<Advisor> advisors = new List<Advisor>();
             DatabaseConnection.createStatement("select AdvisorId, FirstName, LastName, AdvisorRole from ProjectAdvisor join Advisor on ProjectAdvisor.AdvisorId = Advisor.Id join Person on Advisor.Id = Person.Id where ProjectAdvisor.ProjectId = " + TempData.CurrentProject.Id.ToString());

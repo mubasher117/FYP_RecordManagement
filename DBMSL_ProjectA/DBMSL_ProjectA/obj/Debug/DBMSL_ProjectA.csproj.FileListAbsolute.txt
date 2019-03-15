@@ -17,7 +17,6 @@ E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\bin\Debug\D
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.csprojResolveAssemblyReference.cache
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.AddAdvisor.resources
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.AddProject.resources
-E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.Evaluation.resources
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.frmRegisterStudent.resources
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.ManageStudent.resources
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.Properties.Resources.resources
@@ -32,5 +31,4 @@ E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\D
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.AddAdvisorToProject.resources
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.ManageAdvisors.resources
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.AssignGroup.resources
-E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.StudentGroup.resources
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.ProjectEvaluation.resources

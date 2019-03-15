@@ -158,10 +158,6 @@ namespace DBMSL_ProjectA
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Evaluation p = Evaluation.GetInstance();
-            p.Show();
-            this.Hide();
-
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

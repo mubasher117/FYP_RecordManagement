@@ -44,7 +44,7 @@ namespace DBMSL_ProjectA
         {
             bool IsConnnected = DatabaseConnection.start();
 
-            string StudentGender = "0";
+            string StudentGender = "2";
             if (cmbGender.Text == "Male")
             {
                 StudentGender = "1";

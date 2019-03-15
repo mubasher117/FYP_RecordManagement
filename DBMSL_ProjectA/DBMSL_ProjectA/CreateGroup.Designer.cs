@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblRegistrationNo = new System.Windows.Forms.Label();
-            this.txtRegistrationNo = new System.Windows.Forms.TextBox();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.gvStudents = new System.Windows.Forms.DataGridView();
             this.RegistrationNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,6 +37,7 @@
             this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txtCreateGroup = new System.Windows.Forms.Button();
+            this.cmbSelectStudent = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,16 +51,9 @@
             this.lblRegistrationNo.Text = "Enter Registration No";
             this.lblRegistrationNo.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtRegistrationNo
-            // 
-            this.txtRegistrationNo.Location = new System.Drawing.Point(255, 92);
-            this.txtRegistrationNo.Name = "txtRegistrationNo";
-            this.txtRegistrationNo.Size = new System.Drawing.Size(203, 22);
-            this.txtRegistrationNo.TabIndex = 1;
-            // 
             // btnAddStudent
             // 
-            this.btnAddStudent.Location = new System.Drawing.Point(361, 120);
+            this.btnAddStudent.Location = new System.Drawing.Point(523, 134);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(97, 34);
             this.btnAddStudent.TabIndex = 2;
@@ -73,14 +66,14 @@
             this.gvStudents.AllowUserToAddRows = false;
             this.gvStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gvStudents.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RegistrationNo,
@@ -136,15 +129,23 @@
             this.txtCreateGroup.UseVisualStyleBackColor = true;
             this.txtCreateGroup.Click += new System.EventHandler(this.txtCreateGroup_Click);
             // 
+            // cmbSelectStudent
+            // 
+            this.cmbSelectStudent.FormattingEnabled = true;
+            this.cmbSelectStudent.Location = new System.Drawing.Point(254, 92);
+            this.cmbSelectStudent.Name = "cmbSelectStudent";
+            this.cmbSelectStudent.Size = new System.Drawing.Size(366, 24);
+            this.cmbSelectStudent.TabIndex = 5;
+            // 
             // CreateGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbSelectStudent);
             this.Controls.Add(this.txtCreateGroup);
             this.Controls.Add(this.gvStudents);
             this.Controls.Add(this.btnAddStudent);
-            this.Controls.Add(this.txtRegistrationNo);
             this.Controls.Add(this.lblRegistrationNo);
             this.Name = "CreateGroup";
             this.Text = "CreateGroup";
@@ -158,7 +159,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblRegistrationNo;
-        private System.Windows.Forms.TextBox txtRegistrationNo;
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.DataGridView gvStudents;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationNo;
@@ -166,5 +166,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Action;
         private System.Windows.Forms.DataGridViewButtonColumn Action2;
         private System.Windows.Forms.Button txtCreateGroup;
+        private System.Windows.Forms.ComboBox cmbSelectStudent;
     }
 }

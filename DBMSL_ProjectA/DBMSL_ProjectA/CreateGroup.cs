@@ -18,6 +18,17 @@ namespace DBMSL_ProjectA
         {
             InitializeComponent();
         }
+        private static CreateGroup Instance = null;
+        public static CreateGroup GetInstance()
+        {
+            if (Instance == null)
+            {
+                CreateGroup new_Instance = new CreateGroup();
+                return new_Instance;
+
+            }
+            return Instance;
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -26,7 +37,7 @@ namespace DBMSL_ProjectA
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            string RegNo = txtRegistrationNo.Text;
+            string RegNo = cmbSelectStudent.Text;
             bool IsConnnected = DatabaseConnection.start();
             DatabaseConnection.createStatement("Select Id from Student where RegistrationNo = '" + RegNo + "'");
             SqlDataReader reader = DatabaseConnection.getData();
@@ -34,7 +45,6 @@ namespace DBMSL_ProjectA
             if (reader.Read())
             {
                 StudentId = reader.GetValue(reader.GetOrdinal("Id")).ToString();
-                MessageBox.Show(StudentId);
             }
             DatabaseConnection.createStatement("Select * from Person where Id = " + StudentId );
             reader = DatabaseConnection.getData();
@@ -104,7 +114,13 @@ namespace DBMSL_ProjectA
 
         private void CreateGroup_Load(object sender, EventArgs e)
         {
-
+            DatabaseConnection.start();
+            DatabaseConnection.createStatement("select FirstName[FName], LastName[LName] from Person join Student on Person.Id = Student.Id ");
+            SqlDataReader reader = DatabaseConnection.getData();
+            while (reader.Read())
+            {
+                cmbSelectStudent.Items.Add(reader["FName"].ToString() + " " + reader["LName"].ToString());
+            }
         }
     }
 }

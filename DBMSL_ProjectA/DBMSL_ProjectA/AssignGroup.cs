@@ -54,7 +54,6 @@ namespace DBMSL_ProjectA
                 {
                     groupMembers.Add(reader2["reg"].ToString());
                 }
-                MessageBox.Show(groupMembers.Count.ToString());
                 if (groupMembers.Count != 0)
                 {
                     DataGridViewRow row = (DataGridViewRow)gvStudents.Rows[0].Clone();
@@ -78,8 +77,12 @@ namespace DBMSL_ProjectA
         {
             if (gvStudents.Columns[e.ColumnIndex].Name.ToString() == "Assign")
             {
-                gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString();
-
+                string sqlFormattedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                DatabaseConnection.start();
+                DatabaseConnection.createStatement("Insert into GroupProject (ProjectId, GroupId, AssignmentDate)" + 
+                    " Values (" +TempData.CurrentProject.Id + ", " + gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString() + ", '" +
+                    sqlFormattedDate + "')");
+                DatabaseConnection.performAction();
 
                 ProjectDashboard projectDashboard = ProjectDashboard.GetInstance();
                 projectDashboard.Show();

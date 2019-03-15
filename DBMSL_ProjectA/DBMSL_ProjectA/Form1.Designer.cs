@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtContactNo = new System.Windows.Forms.TextBox();
             this.txtRegNo = new System.Windows.Forms.TextBox();
@@ -46,34 +45,18 @@
             this.cmbDay = new System.Windows.Forms.ComboBox();
             this.cmbMonth = new System.Windows.Forms.ComboBox();
             this.cmbYear = new System.Windows.Forms.ComboBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(854, 207);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add Advisor";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtEmail
             // 
-            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEmail.Location = new System.Drawing.Point(231, 338);
+            this.txtEmail.Location = new System.Drawing.Point(219, 288);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 22);
             this.txtEmail.TabIndex = 31;
             // 
             // txtContactNo
             // 
-            this.txtContactNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtContactNo.Location = new System.Drawing.Point(231, 299);
+            this.txtContactNo.Location = new System.Drawing.Point(219, 249);
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(200, 22);
             this.txtContactNo.TabIndex = 30;
@@ -81,33 +64,29 @@
             // 
             // txtRegNo
             // 
-            this.txtRegNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtRegNo.Location = new System.Drawing.Point(231, 257);
+            this.txtRegNo.Location = new System.Drawing.Point(219, 207);
             this.txtRegNo.Name = "txtRegNo";
             this.txtRegNo.Size = new System.Drawing.Size(200, 22);
             this.txtRegNo.TabIndex = 29;
             // 
             // txtLastName
             // 
-            this.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLastName.Location = new System.Drawing.Point(231, 212);
+            this.txtLastName.Location = new System.Drawing.Point(219, 162);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(200, 22);
             this.txtLastName.TabIndex = 28;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtFirstName.Location = new System.Drawing.Point(231, 166);
+            this.txtFirstName.Location = new System.Drawing.Point(219, 116);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(200, 22);
             this.txtFirstName.TabIndex = 27;
             // 
             // lblDOB
             // 
-            this.lblDOB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDOB.AutoSize = true;
-            this.lblDOB.Location = new System.Drawing.Point(83, 421);
+            this.lblDOB.Location = new System.Drawing.Point(71, 371);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(90, 17);
             this.lblDOB.TabIndex = 26;
@@ -115,9 +94,8 @@
             // 
             // lblGender
             // 
-            this.lblGender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(85, 381);
+            this.lblGender.Location = new System.Drawing.Point(73, 331);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(56, 17);
             this.lblGender.TabIndex = 25;
@@ -125,9 +103,8 @@
             // 
             // lblEmail
             // 
-            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(85, 341);
+            this.lblEmail.Location = new System.Drawing.Point(73, 291);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(42, 17);
             this.lblEmail.TabIndex = 24;
@@ -135,9 +112,8 @@
             // 
             // lblContactNo
             // 
-            this.lblContactNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblContactNo.AutoSize = true;
-            this.lblContactNo.Location = new System.Drawing.Point(85, 302);
+            this.lblContactNo.Location = new System.Drawing.Point(73, 252);
             this.lblContactNo.Name = "lblContactNo";
             this.lblContactNo.Size = new System.Drawing.Size(78, 17);
             this.lblContactNo.TabIndex = 23;
@@ -145,9 +121,8 @@
             // 
             // lblRegNo
             // 
-            this.lblRegNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRegNo.AutoSize = true;
-            this.lblRegNo.Location = new System.Drawing.Point(83, 260);
+            this.lblRegNo.Location = new System.Drawing.Point(71, 210);
             this.lblRegNo.Name = "lblRegNo";
             this.lblRegNo.Size = new System.Drawing.Size(106, 17);
             this.lblRegNo.TabIndex = 22;
@@ -155,9 +130,8 @@
             // 
             // lblLastName
             // 
-            this.lblLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(85, 215);
+            this.lblLastName.Location = new System.Drawing.Point(73, 165);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(76, 17);
             this.lblLastName.TabIndex = 21;
@@ -165,9 +139,8 @@
             // 
             // lblFirstName
             // 
-            this.lblFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(85, 169);
+            this.lblFirstName.Location = new System.Drawing.Point(73, 119);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(76, 17);
             this.lblFirstName.TabIndex = 20;
@@ -175,8 +148,7 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegister.Location = new System.Drawing.Point(340, 463);
+            this.btnRegister.Location = new System.Drawing.Point(328, 413);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(93, 29);
             this.btnRegister.TabIndex = 19;
@@ -191,7 +163,7 @@
             this.cmbGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cmbGender.Location = new System.Drawing.Point(231, 374);
+            this.cmbGender.Location = new System.Drawing.Point(219, 324);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(200, 24);
             this.cmbGender.TabIndex = 34;
@@ -233,7 +205,7 @@
             "28",
             "29",
             "30"});
-            this.cmbDay.Location = new System.Drawing.Point(231, 418);
+            this.cmbDay.Location = new System.Drawing.Point(219, 368);
             this.cmbDay.Name = "cmbDay";
             this.cmbDay.Size = new System.Drawing.Size(55, 24);
             this.cmbDay.TabIndex = 35;
@@ -256,7 +228,7 @@
             "October",
             "November",
             "December"});
-            this.cmbMonth.Location = new System.Drawing.Point(292, 418);
+            this.cmbMonth.Location = new System.Drawing.Point(280, 368);
             this.cmbMonth.Name = "cmbMonth";
             this.cmbMonth.Size = new System.Drawing.Size(71, 24);
             this.cmbMonth.TabIndex = 36;
@@ -293,63 +265,16 @@
             "2003",
             "2004",
             "2005"});
-            this.cmbYear.Location = new System.Drawing.Point(369, 419);
+            this.cmbYear.Location = new System.Drawing.Point(357, 369);
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.Size = new System.Drawing.Size(64, 24);
             this.cmbYear.TabIndex = 37;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(851, 297);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(74, 17);
-            this.linkLabel1.TabIndex = 38;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Manage st";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(854, 252);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(199, 23);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "Add Project";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(851, 336);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(74, 17);
-            this.linkLabel2.TabIndex = 40;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Evaluation";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(851, 377);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(94, 17);
-            this.linkLabel3.TabIndex = 41;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Create Group";
-            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
             // 
             // frmRegisterStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1185, 620);
-            this.Controls.Add(this.linkLabel3);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(520, 519);
             this.Controls.Add(this.cmbYear);
             this.Controls.Add(this.cmbMonth);
             this.Controls.Add(this.cmbDay);
@@ -367,7 +292,6 @@
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.btnRegister);
-            this.Controls.Add(this.button1);
             this.Name = "frmRegisterStudent";
             this.Text = "Student Registration";
             this.Load += new System.EventHandler(this.frmRegisterStudent_Load);
@@ -377,8 +301,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtContactNo;
         private System.Windows.Forms.TextBox txtRegNo;
@@ -396,10 +318,6 @@
         private System.Windows.Forms.ComboBox cmbDay;
         private System.Windows.Forms.ComboBox cmbMonth;
         private System.Windows.Forms.ComboBox cmbYear;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.LinkLabel linkLabel3;
     }
 }
 

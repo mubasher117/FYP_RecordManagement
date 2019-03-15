@@ -51,9 +51,8 @@ namespace DBMSL_ProjectA
                 advisor.AdvisorId1 = int.Parse(reader["id"].ToString());
                 TempData.CurrentAdvisor = advisor;
             }
-            MessageBox.Show(TempData.CurrentAdvisor.AdvisorId1.ToString());
             string sqlFormattedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            MessageBox.Show(TempData.CurrentProject.Id.ToString() + " " + TempData.CurrentAdvisor.AdvisorId1.ToString() + " "+  TempData.CurrentRole.ToString());
+            
             DatabaseConnection.createStatement("Insert into ProjectAdvisor (AdvisorId, ProjectId, AdvisorRole, AssignmentDate)" +
                 " Values (" + TempData.CurrentAdvisor.AdvisorId1.ToString() + ", " + TempData.CurrentProject.Id + ","+
                 TempData.CurrentRole.ToString() + ", '" + sqlFormattedDate + "') ");

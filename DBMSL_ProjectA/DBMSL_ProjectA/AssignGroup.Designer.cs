@@ -69,6 +69,7 @@
             // 
             this.GroupId.HeaderText = "Id";
             this.GroupId.Name = "GroupId";
+            this.GroupId.Visible = false;
             // 
             // Member1
             // 

@@ -44,7 +44,9 @@ namespace DBMSL_ProjectA
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            CreateGroup createGroup = CreateGroup.GetInstance();
+            createGroup.Show();
+            this.Hide();
         }
 
         private void btnAdvisors_Click(object sender, EventArgs e)

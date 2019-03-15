@@ -43,9 +43,7 @@
             this.btnViewCoAdvisor = new System.Windows.Forms.Button();
             this.btnAddIndustryAdvisor = new System.Windows.Forms.Button();
             this.btnViewIndustryAdvisor = new System.Windows.Forms.Button();
-            this.lblGroupStudentMessage = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnAddGroup = new System.Windows.Forms.Button();
             this.btnChangeGroup = new System.Windows.Forms.Button();
             this.btnEvaluation = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvGroupStudents)).BeginInit();
@@ -79,7 +77,6 @@
             this.gvGroupStudents.RowTemplate.Height = 24;
             this.gvGroupStudents.Size = new System.Drawing.Size(629, 242);
             this.gvGroupStudents.TabIndex = 3;
-            this.gvGroupStudents.Visible = false;
             // 
             // lblMainAdvisor
             // 
@@ -196,16 +193,6 @@
             this.btnViewIndustryAdvisor.Text = "View";
             this.btnViewIndustryAdvisor.UseVisualStyleBackColor = true;
             // 
-            // lblGroupStudentMessage
-            // 
-            this.lblGroupStudentMessage.AutoSize = true;
-            this.lblGroupStudentMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblGroupStudentMessage.Location = new System.Drawing.Point(167, 430);
-            this.lblGroupStudentMessage.Name = "lblGroupStudentMessage";
-            this.lblGroupStudentMessage.Size = new System.Drawing.Size(161, 17);
-            this.lblGroupStudentMessage.TabIndex = 16;
-            this.lblGroupStudentMessage.Text = "*Group not assigned yet";
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -215,16 +202,6 @@
             this.lblTitle.Size = new System.Drawing.Size(0, 32);
             this.lblTitle.TabIndex = 17;
             // 
-            // btnAddGroup
-            // 
-            this.btnAddGroup.Location = new System.Drawing.Point(618, 426);
-            this.btnAddGroup.Name = "btnAddGroup";
-            this.btnAddGroup.Size = new System.Drawing.Size(123, 24);
-            this.btnAddGroup.TabIndex = 18;
-            this.btnAddGroup.Text = "Add";
-            this.btnAddGroup.UseVisualStyleBackColor = true;
-            this.btnAddGroup.Click += new System.EventHandler(this.btnAddGroup_Click);
-            // 
             // btnChangeGroup
             // 
             this.btnChangeGroup.Location = new System.Drawing.Point(642, 746);
@@ -233,7 +210,6 @@
             this.btnChangeGroup.TabIndex = 19;
             this.btnChangeGroup.Text = "Change Group";
             this.btnChangeGroup.UseVisualStyleBackColor = true;
-            this.btnChangeGroup.Visible = false;
             // 
             // btnEvaluation
             // 
@@ -252,9 +228,7 @@
             this.ClientSize = new System.Drawing.Size(999, 796);
             this.Controls.Add(this.btnEvaluation);
             this.Controls.Add(this.btnChangeGroup);
-            this.Controls.Add(this.btnAddGroup);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.lblGroupStudentMessage);
             this.Controls.Add(this.btnAddIndustryAdvisor);
             this.Controls.Add(this.btnViewIndustryAdvisor);
             this.Controls.Add(this.btnAddCoAdvisor);
@@ -295,9 +269,7 @@
         private System.Windows.Forms.Button btnViewCoAdvisor;
         private System.Windows.Forms.Button btnAddIndustryAdvisor;
         private System.Windows.Forms.Button btnViewIndustryAdvisor;
-        private System.Windows.Forms.Label lblGroupStudentMessage;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button btnAddGroup;
         private System.Windows.Forms.Button btnChangeGroup;
         private System.Windows.Forms.Button btnEvaluation;
     }

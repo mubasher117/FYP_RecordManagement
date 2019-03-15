@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -41,6 +42,22 @@ namespace DBMSL_ProjectA
         {
             //            Name TotalMarks TotalWeightage
             DatabaseConnection.start();
+            DatabaseConnection.createStatement("Insert into Evaluation ( Name, TotalMarks, TotalWeightage) "+
+                "Values ('Group', " +  gvEvaluation.Rows[0].Cells[1].Value.ToString() + ", " + gvEvaluation.Rows[0].Cells[2].Value.ToString()+ ")" );
+            DatabaseConnection.performAction();
+
+            DatabaseConnection.createStatement("Select @@identity as id from Evaluation");
+            SqlDataReader reader = DatabaseConnection.getData();
+            string id = "0";
+            while (reader.Read())
+            {
+                id = (reader["id"].ToString());
+            }
+
+            string sqlFormattedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            DatabaseConnection.createStatement("INSERT INTO GroupEvaluation (GroupId, EvaluationId, ObtainedMarks, EvaluationDate) " +
+            "VALUES (" + TempData.CurrentGroupId.ToString()+ ", " + id + ", " + gvEvaluation.Rows[0].Cells[3].Value.ToString() + ", '" + sqlFormattedDate +"') ");
+            DatabaseConnection.performAction();
 
         }
     }
