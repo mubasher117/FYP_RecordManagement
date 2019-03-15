@@ -128,7 +128,11 @@ namespace DBMSL_ProjectA
 
             DatabaseConnection.createStatement("INSERT INTO Student (Id, RegistrationNo) VALUES ("+id+", '"+txtRegNo.Text+"') ");
             DatabaseConnection.performAction();
-            
+            MessageBox.Show("Student added");
+            ManageStudent manageStudent = ManageStudent.GetInstance();
+            manageStudent.Show();
+            this.Hide();
+
         }
 
         private void frmRegisterStudent_Load(object sender, EventArgs e)

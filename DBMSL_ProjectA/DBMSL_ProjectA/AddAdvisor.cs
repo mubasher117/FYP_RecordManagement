@@ -85,7 +85,7 @@ namespace DBMSL_ProjectA
 
             DatabaseConnection.createStatement("INSERT INTO Advisor (Id, Designation, Salary) VALUES (" + id + ","+advisorDesignation+","+ txtSalary.Text+") ");
             DatabaseConnection.performAction();
-
+            MessageBox.Show("Advisor added");
             ManageAdvisors manageAdvisors = ManageAdvisors.GetInstance();
             manageAdvisors.Show();
             this.Hide();

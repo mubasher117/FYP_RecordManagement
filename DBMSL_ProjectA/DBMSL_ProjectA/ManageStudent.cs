@@ -67,8 +67,26 @@ namespace DBMSL_ProjectA
                     DatabaseConnection.performAction();
 
                 }
-                
-            
+            }
+            if (gvStudents.Columns[e.ColumnIndex].Name.ToString() == "Action2")
+            {
+                Student student = new Student();
+                DatabaseConnection.start();
+                DatabaseConnection.createStatement("select Person.Id[id], FirstName[FName], LastName[LName], Contact[Contact], Email[Email] from Person join Student on Person.Id = Student.Id where Student.Id =" + gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString());
+                SqlDataReader reader = DatabaseConnection.getData();
+                while (reader.Read())
+                {
+                    student.PersonId = int.Parse(reader["id"].ToString());
+                    student.FirstName = reader["FName"].ToString();
+                    student.LastName =  reader["LName"].ToString();
+                    student.Contact = reader["Contact"].ToString();
+                    student.Email = reader["Email"].ToString();
+                }
+                TempData.CurrentStudent = student;
+                EditStudent editStudent = new EditStudent();
+                editStudent.Show();
+                this.Hide();
+
             }
         }
     }

@@ -90,6 +90,27 @@ namespace DBMSL_ProjectA
 
 
             }
+            if (gvAdvisors.Columns[e.ColumnIndex].Name.ToString() == "Action2")
+            {
+                Advisor advisor = new Advisor();
+                DatabaseConnection.start();
+                DatabaseConnection.createStatement("select Person.Id[id], FirstName[FName], LastName[LName], Contact[Contact], Email[Email], Salary[Salary]  from Person join Advisor on Person.Id = Advisor.Id where Advisor.Id =" + gvAdvisors.Rows[e.RowIndex].Cells[0].Value.ToString());
+                SqlDataReader reader = DatabaseConnection.getData();
+                while (reader.Read())
+                {
+                    advisor.AdvisorId1 = int.Parse(reader["id"].ToString());
+                    advisor.BasicDetails.FirstName = reader["FName"].ToString();
+                    advisor.BasicDetails.LastName = reader["LName"].ToString();
+                    advisor.BasicDetails.Contact = reader["Contact"].ToString();
+                    advisor.BasicDetails.Email = reader["Email"].ToString();
+                    advisor.Sallary = int.Parse(reader["Salary"].ToString());
+                }
+                TempData.CurrentAdvisor = advisor;
+                EditAdvisor editAdvisor = new EditAdvisor();
+                editAdvisor.Show();
+                this.Hide();
+
+            }
         }
     }
 }
