@@ -104,6 +104,7 @@ namespace DBMSL_ProjectA
                     advisor.BasicDetails.Contact = reader["Contact"].ToString();
                     advisor.BasicDetails.Email = reader["Email"].ToString();
                     advisor.Sallary = int.Parse(reader["Salary"].ToString());
+
                 }
                 TempData.CurrentAdvisor = advisor;
                 EditAdvisor editAdvisor = new EditAdvisor();

@@ -29,10 +29,10 @@ namespace DBMSL_ProjectA
         private void btnSave_Click(object sender, EventArgs e)
         {
             DatabaseConnection.createStatement("update Person set FirstName = '" + txtFirstName.Text + "' , LastName = '" + txtLastName.Text + "', Contact = '" + txtContactNo.Text + "', Email = '" + txtEmail.Text + "'" +
-                " where Id = " + TempData.CurrentAdvisor.PersonId1);
+                " where Id = " + TempData.CurrentAdvisor.AdvisorId1);
             DatabaseConnection.performAction();
             DatabaseConnection.createStatement("update Advisor set Salary = " + txtSallary.Text + 
-                " where Id = " + TempData.CurrentAdvisor.PersonId1);
+                " where Id = " + TempData.CurrentAdvisor.AdvisorId1);
             DatabaseConnection.performAction();
             MessageBox.Show("Changes are saved");
             ManageAdvisors manageAdvisor = ManageAdvisors.GetInstance();

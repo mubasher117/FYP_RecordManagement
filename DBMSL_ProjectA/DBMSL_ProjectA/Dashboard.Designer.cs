@@ -39,6 +39,7 @@
             // 
             // btnProjects
             // 
+            this.btnProjects.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnProjects.Location = new System.Drawing.Point(84, 170);
             this.btnProjects.Name = "btnProjects";
             this.btnProjects.Size = new System.Drawing.Size(221, 74);
@@ -49,6 +50,7 @@
             // 
             // btnStudents
             // 
+            this.btnStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnStudents.Location = new System.Drawing.Point(84, 264);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Size = new System.Drawing.Size(221, 74);
@@ -59,6 +61,7 @@
             // 
             // btnGroups
             // 
+            this.btnGroups.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnGroups.Location = new System.Drawing.Point(325, 170);
             this.btnGroups.Name = "btnGroups";
             this.btnGroups.Size = new System.Drawing.Size(221, 74);
@@ -69,6 +72,7 @@
             // 
             // btnAdvisors
             // 
+            this.btnAdvisors.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdvisors.Location = new System.Drawing.Point(322, 264);
             this.btnAdvisors.Name = "btnAdvisors";
             this.btnAdvisors.Size = new System.Drawing.Size(224, 74);
@@ -79,16 +83,18 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(129, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(370, 39);
+            this.label1.Size = new System.Drawing.Size(355, 37);
             this.label1.TabIndex = 7;
             this.label1.Text = "FYP Management System";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(416, 403);
             this.label2.Name = "label2";
@@ -98,6 +104,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(524, 403);
             this.label3.Name = "label3";

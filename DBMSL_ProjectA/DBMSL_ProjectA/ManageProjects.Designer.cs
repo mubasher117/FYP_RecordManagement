@@ -30,12 +30,13 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gvStudents = new System.Windows.Forms.DataGridView();
-            this.btnAddProject = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegistrationNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action3 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnAddProject = new System.Windows.Forms.Button();
+            this.btnProjectsReports = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,22 +60,12 @@
             this.Action,
             this.Action2,
             this.Action3});
-            this.gvStudents.Location = new System.Drawing.Point(8, 175);
+            this.gvStudents.Location = new System.Drawing.Point(63, 175);
             this.gvStudents.Name = "gvStudents";
             this.gvStudents.RowTemplate.Height = 24;
             this.gvStudents.Size = new System.Drawing.Size(461, 254);
             this.gvStudents.TabIndex = 2;
             this.gvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvStudents_CellContentClick);
-            // 
-            // btnAddProject
-            // 
-            this.btnAddProject.Location = new System.Drawing.Point(527, 78);
-            this.btnAddProject.Name = "btnAddProject";
-            this.btnAddProject.Size = new System.Drawing.Size(108, 24);
-            this.btnAddProject.TabIndex = 3;
-            this.btnAddProject.Text = "Add Project";
-            this.btnAddProject.UseVisualStyleBackColor = true;
-            this.btnAddProject.Click += new System.EventHandler(this.button1_Click);
             // 
             // Id
             // 
@@ -115,11 +106,34 @@
             this.Action3.UseColumnTextForButtonValue = true;
             this.Action3.Width = 60;
             // 
+            // btnAddProject
+            // 
+            this.btnAddProject.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddProject.Location = new System.Drawing.Point(416, 113);
+            this.btnAddProject.Name = "btnAddProject";
+            this.btnAddProject.Size = new System.Drawing.Size(108, 24);
+            this.btnAddProject.TabIndex = 3;
+            this.btnAddProject.Text = "Add Project";
+            this.btnAddProject.UseVisualStyleBackColor = true;
+            this.btnAddProject.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnProjectsReports
+            // 
+            this.btnProjectsReports.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnProjectsReports.Location = new System.Drawing.Point(375, 42);
+            this.btnProjectsReports.Name = "btnProjectsReports";
+            this.btnProjectsReports.Size = new System.Drawing.Size(149, 44);
+            this.btnProjectsReports.TabIndex = 4;
+            this.btnProjectsReports.Text = "See Projects Report";
+            this.btnProjectsReports.UseVisualStyleBackColor = true;
+            this.btnProjectsReports.Click += new System.EventHandler(this.btnProjectsReports_Click);
+            // 
             // ManageProjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(838, 605);
+            this.ClientSize = new System.Drawing.Size(598, 484);
+            this.Controls.Add(this.btnProjectsReports);
             this.Controls.Add(this.btnAddProject);
             this.Controls.Add(this.gvStudents);
             this.Name = "ManageProjects";
@@ -139,5 +153,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Action;
         private System.Windows.Forms.DataGridViewButtonColumn Action2;
         private System.Windows.Forms.DataGridViewButtonColumn Action3;
+        private System.Windows.Forms.Button btnProjectsReports;
     }
 }

@@ -110,5 +110,13 @@ namespace DBMSL_ProjectA
             project.Show();
             this.Hide();
         }
+
+        private void btnProjectsReports_Click(object sender, EventArgs e)
+        {
+            ProjectsReport project = ProjectsReport.GetInstance();
+            project.Show();
+            this.Hide();
+
+        }
     }
 }

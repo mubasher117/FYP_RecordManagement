@@ -29,18 +29,21 @@ namespace DBMSL_ProjectA
             get { return firstName; }
             set
             {
-                if (Regex.IsMatch(FirstName, @"^[a-zA-Z ]+$"))
-                {
-                    firstName = value;
-                }
-                else if (String.IsNullOrWhiteSpace(firstName))
+                /*
+                if (String.IsNullOrWhiteSpace(firstName))
                 {
                     throw new ArgumentNullException();
                 }
+                else if (Regex.IsMatch(firstName, @"^[a-zA-Z ]+$"))
+                {
+                */
+                    firstName = value;
+                /*}
                 else
                 {
                     throw new ArgumentException();
                 }
+                */
             }
         }
         public string LastName { get => lastName; set => lastName = value; }
