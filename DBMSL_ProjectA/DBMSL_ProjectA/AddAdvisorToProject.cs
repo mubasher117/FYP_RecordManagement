@@ -42,21 +42,32 @@ namespace DBMSL_ProjectA
         private void lblAdd_Click(object sender, EventArgs e)
         {
             string[] names = cmbSelctAdvisor.Text.Split(new char[] { ' ' });
-            DatabaseConnection.createStatement("select Advisor.Id[id] from Person join Advisor on FirstName = '" + names[0] + "'" +
+
+            DatabaseConnection.createStatement("select Advisor.Id[id] from Person join Advisor on Advisor.Id = Person.Id where FirstName = '" + names[0] + "'" +
                 " and LastName = '" + names[1] + "'");
-            SqlDataReader reader = DatabaseConnection.getData();
+                SqlDataReader reader = DatabaseConnection.getData();
+            Advisor advisor = new Advisor();
             if (reader.Read())
-            {
-                Advisor advisor = new Advisor();
-                advisor.AdvisorId1 = int.Parse(reader["id"].ToString());
-                TempData.CurrentAdvisor = advisor;
-            }
+                {
+                    int x = advisor.AdvisorId1 = int.Parse(reader["id"].ToString());
+                MessageBox.Show(x.ToString());
+                    TempData.CurrentAdvisor = advisor;
+                }
+            MessageBox.Show(TempData.CurrentAdvisor.AdvisorId1.ToString());
             string sqlFormattedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             
             DatabaseConnection.createStatement("Insert into ProjectAdvisor (AdvisorId, ProjectId, AdvisorRole, AssignmentDate)" +
                 " Values (" + TempData.CurrentAdvisor.AdvisorId1.ToString() + ", " + TempData.CurrentProject.Id + ","+
                 TempData.CurrentRole.ToString() + ", '" + sqlFormattedDate + "') ");
-            DatabaseConnection.performAction();
+            try
+            {
+                DatabaseConnection.performAction();
+            }
+            catch 
+            {
+                MessageBox.Show("Advisor already assigned to the group");
+
+            }
             ProjectDashboard projectDashboard = ProjectDashboard.GetInstance();
             projectDashboard.Show();
             this.Hide();

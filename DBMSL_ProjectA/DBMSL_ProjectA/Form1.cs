@@ -103,6 +103,20 @@ namespace DBMSL_ProjectA
                 MessageBox.Show("Error");
 
             }
+
+            Student student = new Student();
+            try
+            {
+                student.FirstName = txtFirstName.Text;
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Enter First Name");
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Name should be alphabets only");
+            }
             string StudentGender = "0";
             if ( cmbGender.Text == "Male")
             {
@@ -113,6 +127,7 @@ namespace DBMSL_ProjectA
             string month = cmbMonth.SelectedIndex.ToString();
             string year = cmbYear.Text;
             string studentDOB = year + " - " + month + " - " + day;
+            
             
             DatabaseConnection.createStatement("INSERT INTO Person ( FirstName, LastName, Contact, Email, DateOfBirth, Gender)" +
             " VALUES('" + txtFirstName.Text + "' , '" + txtLastName.Text + "', '" + txtContactNo.Text + "', '"+ txtEmail.Text+ "', '"+studentDOB+"' ," + StudentGender+"); ");

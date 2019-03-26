@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace DBMSL_ProjectA
 {
@@ -18,9 +19,30 @@ namespace DBMSL_ProjectA
         private DateTime dateOfBirth;
         private int gender;
 
-        public int PersonId { get => personId; set => personId = value; }
+        public int PersonId
+        {
+            get => personId; set => personId = value;
+        }
         public int StudentId { get => studentId; set => studentId = value; }
-        public string FirstName { get => firstName; set => firstName = value; }
+        public string FirstName
+        {
+            get { return firstName; }
+            set
+            {
+                if (Regex.IsMatch(FirstName, @"^[a-zA-Z ]+$"))
+                {
+                    firstName = value;
+                }
+                else if (String.IsNullOrWhiteSpace(firstName))
+                {
+                    throw new ArgumentNullException();
+                }
+                else
+                {
+                    throw new ArgumentException();
+                }
+            }
+        }
         public string LastName { get => lastName; set => lastName = value; }
         public string RegistrationNo { get => registrationNo; set => registrationNo = value; }
         public string Contact { get => contact; set => contact = value; }
