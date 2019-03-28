@@ -84,6 +84,9 @@ namespace DBMSL_ProjectA
                     sqlFormattedDate + "')");
                 DatabaseConnection.performAction();
 
+                DatabaseConnection.createStatement("Update GroupStudent set Status = 4 where GroupId = " + gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString());
+                DatabaseConnection.performAction();
+
                 ProjectDashboard projectDashboard = ProjectDashboard.GetInstance();
                 projectDashboard.Show();
                 this.Hide();

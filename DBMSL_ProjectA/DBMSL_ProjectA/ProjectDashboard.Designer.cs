@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.tabMain = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.lblAdvisors = new System.Windows.Forms.Label();
             this.lblGroupStudents = new System.Windows.Forms.Label();
             this.gvGroupStudents = new System.Windows.Forms.DataGridView();
@@ -39,15 +45,82 @@
             this.lblIndustryAdvisorName = new System.Windows.Forms.Label();
             this.btnViewMainAdvisor = new System.Windows.Forms.Button();
             this.btnAddMainAdvisor = new System.Windows.Forms.Button();
-            this.btnAddCoAdvisor = new System.Windows.Forms.Button();
             this.btnViewCoAdvisor = new System.Windows.Forms.Button();
-            this.btnAddIndustryAdvisor = new System.Windows.Forms.Button();
+            this.btnAddCoAdvisor = new System.Windows.Forms.Button();
             this.btnViewIndustryAdvisor = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
+            this.btnAddIndustryAdvisor = new System.Windows.Forms.Button();
             this.btnChangeGroup = new System.Windows.Forms.Button();
             this.btnEvaluation = new System.Windows.Forms.Button();
+            this.btnMarksheet = new System.Windows.Forms.Button();
+            this.tabMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvGroupStudents)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(48, 32);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(0, 32);
+            this.lblTitle.TabIndex = 17;
+            // 
+            // tabMain
+            // 
+            this.tabMain.Controls.Add(this.tabPage1);
+            this.tabMain.Controls.Add(this.tabPage2);
+            this.tabMain.Controls.Add(this.tabPage3);
+            this.tabMain.Controls.Add(this.tabPage4);
+            this.tabMain.Location = new System.Drawing.Point(12, 12);
+            this.tabMain.Name = "tabMain";
+            this.tabMain.SelectedIndex = 0;
+            this.tabMain.Size = new System.Drawing.Size(405, 85);
+            this.tabMain.TabIndex = 21;
+            this.tabMain.SelectedIndexChanged += new System.EventHandler(this.tabMain_SelectedIndexChanged);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.AccessibleName = "tbHome";
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(397, 56);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Home";
+            this.tabPage1.ToolTipText = "Go to Home";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(397, 56);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(397, 56);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(397, 56);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // lblAdvisors
             // 
@@ -155,6 +228,15 @@
             this.btnAddMainAdvisor.UseVisualStyleBackColor = true;
             this.btnAddMainAdvisor.Click += new System.EventHandler(this.btnAddMainAdvisor_Click);
             // 
+            // btnViewCoAdvisor
+            // 
+            this.btnViewCoAdvisor.Location = new System.Drawing.Point(571, 215);
+            this.btnViewCoAdvisor.Name = "btnViewCoAdvisor";
+            this.btnViewCoAdvisor.Size = new System.Drawing.Size(77, 31);
+            this.btnViewCoAdvisor.TabIndex = 12;
+            this.btnViewCoAdvisor.Text = "View";
+            this.btnViewCoAdvisor.UseVisualStyleBackColor = true;
+            // 
             // btnAddCoAdvisor
             // 
             this.btnAddCoAdvisor.Location = new System.Drawing.Point(664, 215);
@@ -165,14 +247,14 @@
             this.btnAddCoAdvisor.UseVisualStyleBackColor = true;
             this.btnAddCoAdvisor.Click += new System.EventHandler(this.btnAddCoAdvisor_Click);
             // 
-            // btnViewCoAdvisor
+            // btnViewIndustryAdvisor
             // 
-            this.btnViewCoAdvisor.Location = new System.Drawing.Point(571, 215);
-            this.btnViewCoAdvisor.Name = "btnViewCoAdvisor";
-            this.btnViewCoAdvisor.Size = new System.Drawing.Size(77, 31);
-            this.btnViewCoAdvisor.TabIndex = 12;
-            this.btnViewCoAdvisor.Text = "View";
-            this.btnViewCoAdvisor.UseVisualStyleBackColor = true;
+            this.btnViewIndustryAdvisor.Location = new System.Drawing.Point(571, 268);
+            this.btnViewIndustryAdvisor.Name = "btnViewIndustryAdvisor";
+            this.btnViewIndustryAdvisor.Size = new System.Drawing.Size(77, 31);
+            this.btnViewIndustryAdvisor.TabIndex = 14;
+            this.btnViewIndustryAdvisor.Text = "View";
+            this.btnViewIndustryAdvisor.UseVisualStyleBackColor = true;
             // 
             // btnAddIndustryAdvisor
             // 
@@ -183,24 +265,6 @@
             this.btnAddIndustryAdvisor.Text = "Add";
             this.btnAddIndustryAdvisor.UseVisualStyleBackColor = true;
             this.btnAddIndustryAdvisor.Click += new System.EventHandler(this.btnAddIndustryAdvisor_Click);
-            // 
-            // btnViewIndustryAdvisor
-            // 
-            this.btnViewIndustryAdvisor.Location = new System.Drawing.Point(571, 268);
-            this.btnViewIndustryAdvisor.Name = "btnViewIndustryAdvisor";
-            this.btnViewIndustryAdvisor.Size = new System.Drawing.Size(77, 31);
-            this.btnViewIndustryAdvisor.TabIndex = 14;
-            this.btnViewIndustryAdvisor.Text = "View";
-            this.btnViewIndustryAdvisor.UseVisualStyleBackColor = true;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(48, 32);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(0, 32);
-            this.lblTitle.TabIndex = 17;
             // 
             // btnChangeGroup
             // 
@@ -217,15 +281,27 @@
             this.btnEvaluation.Name = "btnEvaluation";
             this.btnEvaluation.Size = new System.Drawing.Size(138, 33);
             this.btnEvaluation.TabIndex = 20;
-            this.btnEvaluation.Text = "Evaluation";
+            this.btnEvaluation.Text = "Evaluate";
             this.btnEvaluation.UseVisualStyleBackColor = true;
             this.btnEvaluation.Click += new System.EventHandler(this.btnEvaluation_Click);
+            // 
+            // btnMarksheet
+            // 
+            this.btnMarksheet.Location = new System.Drawing.Point(793, 135);
+            this.btnMarksheet.Name = "btnMarksheet";
+            this.btnMarksheet.Size = new System.Drawing.Size(142, 49);
+            this.btnMarksheet.TabIndex = 22;
+            this.btnMarksheet.Text = "Mark Sheet";
+            this.btnMarksheet.UseVisualStyleBackColor = true;
+            this.btnMarksheet.Click += new System.EventHandler(this.btnMarksheet_Click);
             // 
             // ProjectDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 796);
+            this.Controls.Add(this.btnMarksheet);
+            this.Controls.Add(this.tabMain);
             this.Controls.Add(this.btnEvaluation);
             this.Controls.Add(this.btnChangeGroup);
             this.Controls.Add(this.lblTitle);
@@ -247,6 +323,7 @@
             this.Name = "ProjectDashboard";
             this.Text = "ProjectDashboard";
             this.Load += new System.EventHandler(this.ProjectDashboard_Load);
+            this.tabMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvGroupStudents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -254,6 +331,11 @@
         }
 
         #endregion
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.TabControl tabMain;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label lblAdvisors;
         private System.Windows.Forms.Label lblGroupStudents;
         private System.Windows.Forms.DataGridView gvGroupStudents;
@@ -265,12 +347,13 @@
         private System.Windows.Forms.Label lblIndustryAdvisorName;
         private System.Windows.Forms.Button btnViewMainAdvisor;
         private System.Windows.Forms.Button btnAddMainAdvisor;
-        private System.Windows.Forms.Button btnAddCoAdvisor;
         private System.Windows.Forms.Button btnViewCoAdvisor;
-        private System.Windows.Forms.Button btnAddIndustryAdvisor;
+        private System.Windows.Forms.Button btnAddCoAdvisor;
         private System.Windows.Forms.Button btnViewIndustryAdvisor;
-        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Button btnAddIndustryAdvisor;
         private System.Windows.Forms.Button btnChangeGroup;
         private System.Windows.Forms.Button btnEvaluation;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Button btnMarksheet;
     }
 }

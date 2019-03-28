@@ -41,37 +41,55 @@ namespace DBMSL_ProjectA
 
         private void lblAdd_Click(object sender, EventArgs e)
         {
-            string[] names = cmbSelctAdvisor.Text.Split(new char[] { ' ' });
+            if (string.IsNullOrWhiteSpace(cmbSelctAdvisor.Text))
+            {
+                lblWarning.Visible = true;
+            }
+            else {
+                string[] names = cmbSelctAdvisor.Text.Split(new char[] { ' ' });
 
-            DatabaseConnection.createStatement("select Advisor.Id[id] from Person join Advisor on Advisor.Id = Person.Id where FirstName = '" + names[0] + "'" +
-                " and LastName = '" + names[1] + "'");
+                DatabaseConnection.createStatement("select Advisor.Id[id] from Person join Advisor on Advisor.Id = Person.Id where FirstName = '" + names[0] + "'" +
+                    " and LastName = '" + names[1] + "'");
                 SqlDataReader reader = DatabaseConnection.getData();
-            Advisor advisor = new Advisor();
-            if (reader.Read())
+                Advisor advisor = new Advisor();
+                if (reader.Read())
                 {
                     int x = advisor.AdvisorId1 = int.Parse(reader["id"].ToString());
-                MessageBox.Show(x.ToString());
+                    MessageBox.Show(x.ToString());
                     TempData.CurrentAdvisor = advisor;
                 }
-            MessageBox.Show(TempData.CurrentAdvisor.AdvisorId1.ToString());
-            string sqlFormattedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            
-            DatabaseConnection.createStatement("Insert into ProjectAdvisor (AdvisorId, ProjectId, AdvisorRole, AssignmentDate)" +
-                " Values (" + TempData.CurrentAdvisor.AdvisorId1.ToString() + ", " + TempData.CurrentProject.Id + ","+
-                TempData.CurrentRole.ToString() + ", '" + sqlFormattedDate + "') ");
-            try
-            {
-                DatabaseConnection.performAction();
-            }
-            catch 
-            {
-                MessageBox.Show("Advisor already assigned to the group");
+                MessageBox.Show(TempData.CurrentAdvisor.AdvisorId1.ToString());
+                string sqlFormattedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
+                DatabaseConnection.createStatement("Insert into ProjectAdvisor (AdvisorId, ProjectId, AdvisorRole, AssignmentDate)" +
+                    " Values (" + TempData.CurrentAdvisor.AdvisorId1.ToString() + ", " + TempData.CurrentProject.Id + "," +
+                    TempData.CurrentRole.ToString() + ", '" + sqlFormattedDate + "') ");
+                try
+                {
+                    DatabaseConnection.performAction();
+                }
+                catch
+                {
+                    MessageBox.Show("Advisor already assigned to the group");
+
+                }
+                ProjectDashboard projectDashboard = ProjectDashboard.GetInstance();
+                projectDashboard.Show();
+                this.Hide();
             }
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
             ProjectDashboard projectDashboard = ProjectDashboard.GetInstance();
             projectDashboard.Show();
             this.Hide();
+        }
 
+        private void cmbSelctAdvisor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblWarning.Visible = false;
         }
     }
 }

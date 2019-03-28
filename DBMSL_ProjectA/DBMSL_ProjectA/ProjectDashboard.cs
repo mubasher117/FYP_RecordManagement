@@ -30,6 +30,7 @@ namespace DBMSL_ProjectA
         }
         private void ProjectDashboard_Load(object sender, EventArgs e)
         {
+            
             if (gvGroupStudents.Rows.Count == 0)
             {
                 btnChangeGroup.Text = "Add Group";
@@ -106,6 +107,12 @@ namespace DBMSL_ProjectA
 
         private void btnEvaluation_Click(object sender, EventArgs e)
         {
+            DatabaseConnection.createStatement("Select * from GroupProject where ProjectId = " + TempData.CurrentProject.Id.ToString());
+            SqlDataReader reader2 = DatabaseConnection.getData();
+            if (reader2.Read())
+            {
+                TempData.CurrentGroupId = int.Parse(reader2["GroupId"].ToString());
+            }
             ProjectEvaluation evaluation = ProjectEvaluation.GetInstance();
             evaluation.Show();
             this.Hide();
@@ -115,6 +122,37 @@ namespace DBMSL_ProjectA
         {
             AssignGroup assignGroup = AssignGroup.GetInstance();
             assignGroup.Show();
+            this.Hide();
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+            Dashboard projectDashboard = Dashboard.GetInstance();
+            projectDashboard.Show();
+            this.Hide();
+        }
+
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabMain_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void btnMarksheet_Click(object sender, EventArgs e)
+        {
+
+            DatabaseConnection.createStatement("Select * from GroupProject where ProjectId = " + TempData.CurrentProject.Id.ToString());
+            SqlDataReader reader2 = DatabaseConnection.getData();
+            if (reader2.Read())
+            {
+                TempData.CurrentGroupId = int.Parse(reader2["GroupId"].ToString());
+            }
+            Marksheet marksheet = Marksheet.GetInstance();
+            marksheet.Show();
             this.Hide();
         }
     }

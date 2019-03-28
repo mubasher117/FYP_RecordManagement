@@ -35,12 +35,18 @@ namespace DBMSL_ProjectA
             gvEvaluation.Refresh();
             gvEvaluation.Rows.Add("Group");
             DatabaseConnection.start();
+
+            DatabaseConnection.createStatement("Select * from GroupStudent join Student on GroupStudent.StudentId = Student.Id where GroupStudent.GroupId = " + TempData.CurrentGroupId.ToString());
+            SqlDataReader newReader = DatabaseConnection.getData();
+            while (newReader.Read())
+            {
+                gvEvaluation.Rows.Add(newReader["RegistrationNo"]);
+            }
             
         }
 
         private void btnEvaluate_Click(object sender, EventArgs e)
         {
-            //            Name TotalMarks TotalWeightage
             DatabaseConnection.start();
             DatabaseConnection.createStatement("Insert into Evaluation ( Name, TotalMarks, TotalWeightage) "+
                 "Values ('Group', " +  gvEvaluation.Rows[0].Cells[1].Value.ToString() + ", " + gvEvaluation.Rows[0].Cells[2].Value.ToString()+ ")" );
@@ -58,6 +64,12 @@ namespace DBMSL_ProjectA
             DatabaseConnection.createStatement("INSERT INTO GroupEvaluation (GroupId, EvaluationId, ObtainedMarks, EvaluationDate) " +
             "VALUES (" + TempData.CurrentGroupId.ToString()+ ", " + id + ", " + gvEvaluation.Rows[0].Cells[3].Value.ToString() + ", '" + sqlFormattedDate +"') ");
             DatabaseConnection.performAction();
+
+
+        }
+
+        private void gvEvaluation_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

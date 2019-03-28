@@ -31,11 +31,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblCurrentDate = new System.Windows.Forms.Label();
             this.gvEvaluation = new System.Windows.Forms.DataGridView();
+            this.btnEvaluate = new System.Windows.Forms.Button();
             this.Entity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalMarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weightage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Obtained = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEvaluate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvEvaluation)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +43,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(60, 215);
+            this.label2.Location = new System.Drawing.Point(60, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 17);
             this.label2.TabIndex = 1;
@@ -52,7 +52,7 @@
             // lblCurrentDate
             // 
             this.lblCurrentDate.AutoSize = true;
-            this.lblCurrentDate.Location = new System.Drawing.Point(131, 215);
+            this.lblCurrentDate.Location = new System.Drawing.Point(154, 110);
             this.lblCurrentDate.Name = "lblCurrentDate";
             this.lblCurrentDate.Size = new System.Drawing.Size(46, 17);
             this.lblCurrentDate.TabIndex = 3;
@@ -66,11 +66,22 @@
             this.TotalMarks,
             this.Weightage,
             this.Obtained});
-            this.gvEvaluation.Location = new System.Drawing.Point(63, 259);
+            this.gvEvaluation.Location = new System.Drawing.Point(63, 165);
             this.gvEvaluation.Name = "gvEvaluation";
             this.gvEvaluation.RowTemplate.Height = 24;
-            this.gvEvaluation.Size = new System.Drawing.Size(706, 179);
+            this.gvEvaluation.Size = new System.Drawing.Size(636, 226);
             this.gvEvaluation.TabIndex = 4;
+            this.gvEvaluation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvEvaluation_CellContentClick);
+            // 
+            // btnEvaluate
+            // 
+            this.btnEvaluate.Location = new System.Drawing.Point(596, 413);
+            this.btnEvaluate.Name = "btnEvaluate";
+            this.btnEvaluate.Size = new System.Drawing.Size(103, 34);
+            this.btnEvaluate.TabIndex = 5;
+            this.btnEvaluate.Text = "Evaluate";
+            this.btnEvaluate.UseVisualStyleBackColor = true;
+            this.btnEvaluate.Click += new System.EventHandler(this.btnEvaluate_Click);
             // 
             // Entity
             // 
@@ -81,6 +92,7 @@
             // 
             this.TotalMarks.HeaderText = "Total Marks";
             this.TotalMarks.Name = "TotalMarks";
+            this.TotalMarks.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // Weightage
             // 
@@ -92,27 +104,17 @@
             this.Obtained.HeaderText = "Obtained Marks";
             this.Obtained.Name = "Obtained";
             // 
-            // btnEvaluate
-            // 
-            this.btnEvaluate.Location = new System.Drawing.Point(666, 492);
-            this.btnEvaluate.Name = "btnEvaluate";
-            this.btnEvaluate.Size = new System.Drawing.Size(103, 34);
-            this.btnEvaluate.TabIndex = 5;
-            this.btnEvaluate.Text = "Evaluate";
-            this.btnEvaluate.UseVisualStyleBackColor = true;
-            this.btnEvaluate.Click += new System.EventHandler(this.btnEvaluate_Click);
-            // 
             // ProjectEvaluation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 638);
+            this.ClientSize = new System.Drawing.Size(765, 492);
             this.Controls.Add(this.btnEvaluate);
             this.Controls.Add(this.gvEvaluation);
             this.Controls.Add(this.lblCurrentDate);
             this.Controls.Add(this.label2);
             this.Name = "ProjectEvaluation";
-            this.Text = "ProjectEvaluation";
+            this.Text = "Project Evaluation";
             this.Load += new System.EventHandler(this.ProjectEvaluation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvEvaluation)).EndInit();
             this.ResumeLayout(false);
@@ -124,10 +126,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblCurrentDate;
         private System.Windows.Forms.DataGridView gvEvaluation;
+        private System.Windows.Forms.Button btnEvaluate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Entity;
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalMarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weightage;
         private System.Windows.Forms.DataGridViewTextBoxColumn Obtained;
-        private System.Windows.Forms.Button btnEvaluate;
     }
 }

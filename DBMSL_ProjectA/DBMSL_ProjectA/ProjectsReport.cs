@@ -47,7 +47,7 @@ namespace DBMSL_ProjectA
             gvReport.Rows.Clear();
             gvReport.Refresh();
 
-            List<Report> reports = new List<Report>();
+            List<ProjectReport> reports = new List<ProjectReport>();
             List<string> ProjectIds = new List<string>();
 
             bool IsConnnected = DatabaseConnection.start();
@@ -88,7 +88,7 @@ namespace DBMSL_ProjectA
             }
             foreach (string project_id in ProjectIds)
             {
-                Report report = new Report();
+                ProjectReport report = new ProjectReport();
                 List<string> members = new List<string>();
                 DatabaseConnection.createStatement("select* from Project join GroupProject on Project.Id = GroupProject.ProjectID join GroupStudent on GroupProject.GroupId = GroupStudent.GroupId join Student on GroupStudent.StudentId = Student.Id where Project.Id = " + project_id);
                 SqlDataReader reader3 = DatabaseConnection.getData();

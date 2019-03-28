@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DBMSL_ProjectA
 {
-    class Report
+    class ProjectReport
     {
         private string title;
         private string mainAdvisor;

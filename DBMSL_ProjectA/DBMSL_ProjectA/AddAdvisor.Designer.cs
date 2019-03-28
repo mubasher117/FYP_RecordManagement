@@ -51,7 +51,6 @@
             // 
             // cmbYear
             // 
-            this.cmbYear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYear.FormattingEnabled = true;
             this.cmbYear.Items.AddRange(new object[] {
@@ -82,14 +81,13 @@
             "2003",
             "2004",
             "2005"});
-            this.cmbYear.Location = new System.Drawing.Point(473, 394);
+            this.cmbYear.Location = new System.Drawing.Point(374, 354);
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.Size = new System.Drawing.Size(64, 24);
             this.cmbYear.TabIndex = 54;
             // 
             // cmbMonth
             // 
-            this.cmbMonth.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMonth.FormattingEnabled = true;
             this.cmbMonth.Items.AddRange(new object[] {
@@ -106,14 +104,13 @@
             "October",
             "November",
             "December"});
-            this.cmbMonth.Location = new System.Drawing.Point(396, 393);
+            this.cmbMonth.Location = new System.Drawing.Point(297, 353);
             this.cmbMonth.Name = "cmbMonth";
             this.cmbMonth.Size = new System.Drawing.Size(71, 24);
             this.cmbMonth.TabIndex = 53;
             // 
             // cmbDay
             // 
-            this.cmbDay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbDay.DisplayMember = "Day";
             this.cmbDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDay.FormattingEnabled = true;
@@ -148,37 +145,35 @@
             "27",
             "28",
             "29",
-            "30"});
-            this.cmbDay.Location = new System.Drawing.Point(335, 393);
+            "30",
+            "31"});
+            this.cmbDay.Location = new System.Drawing.Point(236, 353);
             this.cmbDay.Name = "cmbDay";
             this.cmbDay.Size = new System.Drawing.Size(55, 24);
             this.cmbDay.TabIndex = 52;
             // 
             // cmbGender
             // 
-            this.cmbGender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGender.FormattingEnabled = true;
             this.cmbGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cmbGender.Location = new System.Drawing.Point(335, 349);
+            this.cmbGender.Location = new System.Drawing.Point(236, 309);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(200, 24);
             this.cmbGender.TabIndex = 51;
             // 
             // txtEmail
             // 
-            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtEmail.Location = new System.Drawing.Point(336, 311);
+            this.txtEmail.Location = new System.Drawing.Point(236, 266);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 22);
             this.txtEmail.TabIndex = 50;
             // 
             // txtContactNo
             // 
-            this.txtContactNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtContactNo.Location = new System.Drawing.Point(334, 272);
+            this.txtContactNo.Location = new System.Drawing.Point(236, 223);
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(200, 22);
             this.txtContactNo.TabIndex = 49;
@@ -186,25 +181,22 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLastName.Location = new System.Drawing.Point(334, 185);
+            this.txtLastName.Location = new System.Drawing.Point(236, 134);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(200, 22);
             this.txtLastName.TabIndex = 47;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtFirstName.Location = new System.Drawing.Point(334, 139);
+            this.txtFirstName.Location = new System.Drawing.Point(236, 88);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(200, 22);
             this.txtFirstName.TabIndex = 46;
             // 
             // lblDOB
             // 
-            this.lblDOB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDOB.AutoSize = true;
-            this.lblDOB.Location = new System.Drawing.Point(186, 394);
+            this.lblDOB.Location = new System.Drawing.Point(87, 354);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(90, 17);
             this.lblDOB.TabIndex = 45;
@@ -212,9 +204,8 @@
             // 
             // lblGender
             // 
-            this.lblGender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(188, 354);
+            this.lblGender.Location = new System.Drawing.Point(89, 314);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(56, 17);
             this.lblGender.TabIndex = 44;
@@ -222,9 +213,8 @@
             // 
             // lblEmail
             // 
-            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(188, 314);
+            this.lblEmail.Location = new System.Drawing.Point(89, 269);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(42, 17);
             this.lblEmail.TabIndex = 43;
@@ -232,9 +222,8 @@
             // 
             // lblContactNo
             // 
-            this.lblContactNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblContactNo.AutoSize = true;
-            this.lblContactNo.Location = new System.Drawing.Point(188, 275);
+            this.lblContactNo.Location = new System.Drawing.Point(90, 226);
             this.lblContactNo.Name = "lblContactNo";
             this.lblContactNo.Size = new System.Drawing.Size(78, 17);
             this.lblContactNo.TabIndex = 42;
@@ -242,9 +231,8 @@
             // 
             // lblDesignation
             // 
-            this.lblDesignation.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDesignation.AutoSize = true;
-            this.lblDesignation.Location = new System.Drawing.Point(186, 233);
+            this.lblDesignation.Location = new System.Drawing.Point(87, 176);
             this.lblDesignation.Name = "lblDesignation";
             this.lblDesignation.Size = new System.Drawing.Size(83, 17);
             this.lblDesignation.TabIndex = 41;
@@ -252,9 +240,8 @@
             // 
             // lblLastName
             // 
-            this.lblLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(188, 188);
+            this.lblLastName.Location = new System.Drawing.Point(90, 137);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(76, 17);
             this.lblLastName.TabIndex = 40;
@@ -262,9 +249,8 @@
             // 
             // lblFirstName
             // 
-            this.lblFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(188, 142);
+            this.lblFirstName.Location = new System.Drawing.Point(90, 91);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(76, 17);
             this.lblFirstName.TabIndex = 39;
@@ -272,8 +258,7 @@
             // 
             // btnAddAdvisor
             // 
-            this.btnAddAdvisor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddAdvisor.Location = new System.Drawing.Point(443, 467);
+            this.btnAddAdvisor.Location = new System.Drawing.Point(343, 441);
             this.btnAddAdvisor.Name = "btnAddAdvisor";
             this.btnAddAdvisor.Size = new System.Drawing.Size(93, 29);
             this.btnAddAdvisor.TabIndex = 38;
@@ -283,9 +268,8 @@
             // 
             // lblSalary
             // 
-            this.lblSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSalary.AutoSize = true;
-            this.lblSalary.Location = new System.Drawing.Point(186, 433);
+            this.lblSalary.Location = new System.Drawing.Point(88, 398);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(48, 17);
             this.lblSalary.TabIndex = 55;
@@ -293,8 +277,7 @@
             // 
             // txtSalary
             // 
-            this.txtSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSalary.Location = new System.Drawing.Point(334, 433);
+            this.txtSalary.Location = new System.Drawing.Point(236, 398);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(200, 22);
             this.txtSalary.TabIndex = 56;
@@ -302,7 +285,6 @@
             // 
             // cmbDesignation
             // 
-            this.cmbDesignation.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbDesignation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDesignation.FormattingEnabled = true;
             this.cmbDesignation.Items.AddRange(new object[] {
@@ -311,7 +293,7 @@
             "Assisstant Professor",
             "Lecturer",
             "Industry Professional"});
-            this.cmbDesignation.Location = new System.Drawing.Point(335, 233);
+            this.cmbDesignation.Location = new System.Drawing.Point(236, 176);
             this.cmbDesignation.Name = "cmbDesignation";
             this.cmbDesignation.Size = new System.Drawing.Size(200, 24);
             this.cmbDesignation.TabIndex = 57;
@@ -321,7 +303,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(912, 589);
+            this.ClientSize = new System.Drawing.Size(565, 512);
             this.Controls.Add(this.cmbDesignation);
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.lblSalary);

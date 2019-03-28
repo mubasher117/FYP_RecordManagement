@@ -72,6 +72,8 @@ namespace DBMSL_ProjectA
 
         private void txtCreateGroup_Click(object sender, EventArgs e)
         {
+            // These queries are done without the Database class.
+
             string conStr = "Data Source=MUSHI\\MUSHISQL;Initial Catalog=LabProjectA;Integrated Security=True; MultipleActiveResultSets=true";
             SqlConnection con = new SqlConnection(conStr);
             con.Open();
@@ -101,7 +103,7 @@ namespace DBMSL_ProjectA
             {
                 MessageBox.Show(s.StudentId.ToString());
                 DatabaseConnection.createStatement("Insert into GroupStudent (GroupId, StudentId ,Status , AssignmentDate) " +
-                    "Values (" + id + "," + s.StudentId.ToString() + ", 3 ,'" + DateTime.Now.ToString("yyyy-MM-dd") + "')");
+                    "Values (" + id + "," + s.StudentId.ToString() + ", 4 ,'" + DateTime.Now.ToString("yyyy-MM-dd") + "')");
                 DatabaseConnection.performAction();
             }
             TempData.Clear_GroupStudents();

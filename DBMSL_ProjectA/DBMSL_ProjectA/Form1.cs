@@ -43,38 +43,6 @@ namespace DBMSL_ProjectA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /*
-            DatabaseConnection.createStatement("INSERT INTO Person ( FirstName, LastName, Contact, Email, DateOfBirth, Gender)" + 
-            "VALUES('Mushi', 'Ahmad', '031342431147', 'mushi.ahmad1101@gmail.com', 1998 - 9 - 30, 1); ");
-            DatabaseConnection.performAction();
-            
-             SqlDataReader reader = DatabaseConnection.getData();
-            textBox1.Text = "Result";
-            while (reader.Read())
-            {
-                Values.Add(reader["Value"].ToString());
-            }
-            DatabaseConnection.close();
-            foreach (string s in Values)
-            {
-                richTextBox1.Text += s;
-                richTextBox1.Text += "\n";
-
-            }
-            
-            DatabaseConnection.createStatement("Select @@identity as id from Person");
-            SqlDataReader reader = DatabaseConnection.getData();
-            string id = "0";
-            while (reader.Read())
-            {
-               id = (reader["id"].ToString());
-            }
-            MessageBox.Show(id);
-            
-            DatabaseConnection.createStatement("INSERT INTO Student (Id, RegistrationNo) VALUES( "+ id +",'2016-CS-312') ");
-            DatabaseConnection.performAction();
-            
-            */
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -93,63 +61,162 @@ namespace DBMSL_ProjectA
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            bool IsConnnected = DatabaseConnection.start();
-            if (IsConnnected)
+            if (!IsAnyTextBoxEmpty())
             {
-                MessageBox.Show("Connected");
-            }
-            else
-            {
-                MessageBox.Show("Error");
+                bool IsConnnected = DatabaseConnection.start();
+                if (IsConnnected)
+                {
+                    MessageBox.Show("Connected");
+                }
+                else
+                {
+                    MessageBox.Show("Error");
 
-            }
+                }
 
-            Student student = new Student();
-            try
-            {
-                student.FirstName = txtFirstName.Text;
-            }
-            catch (ArgumentNullException)
-            {
-                MessageBox.Show("Enter First Name");
-            }
-            catch (ArgumentException)
-            {
-                MessageBox.Show("Name should be alphabets only");
-            }
-            string StudentGender = "0";
-            if ( cmbGender.Text == "Male")
-            {
-                StudentGender = "1";
-            }
+                bool ISValidStudent = true;
 
-            string day = cmbDay.Text;
-            string month = cmbMonth.SelectedIndex.ToString();
-            string year = cmbYear.Text;
-            string studentDOB = year + " - " + month + " - " + day;
-            
-            
-            DatabaseConnection.createStatement("INSERT INTO Person ( FirstName, LastName, Contact, Email, DateOfBirth, Gender)" +
-            " VALUES('" + txtFirstName.Text + "' , '" + txtLastName.Text + "', '" + txtContactNo.Text + "', '"+ txtEmail.Text+ "', '"+studentDOB+"' ," + StudentGender+"); ");
-            DatabaseConnection.performAction();
-            
-            DatabaseConnection.createStatement("Select @@identity as id from Person");
-            SqlDataReader reader = DatabaseConnection.getData();
-            string id = "0";
-            while (reader.Read())
-            {
-                id = (reader["id"].ToString());
+                Student student = new Student();
+                try
+                {
+                    student.FirstName = txtFirstName.Text;
+                }
+                catch (ArgumentException)
+                {
+                    ISValidStudent = false;
+                    lblFNameWarning.Visible = true;
+                }
+                try
+                {
+                    student.LastName = txtLastName.Text;
+                }
+                catch (ArgumentException)
+                {
+                    ISValidStudent = false;
+                    lblLNameWarning.Visible = true;
+                }
+                try
+                {
+                    student.RegistrationNo = txtRegNo.Text;
+                }
+                catch (ArgumentException)
+                {
+                    ISValidStudent = false;
+                    lblRegWarning.Visible = true;
+                }
+                try
+                {
+                    student.Email = txtEmail.Text;
+                }
+                catch (ArgumentException)
+                {
+                    ISValidStudent = false;
+                    lblEmailWarning.Visible = true;
+                }
+                if (ISValidStudent)
+                {
+                    string StudentGender = "0";
+                    if (cmbGender.Text == "Male")
+                    {
+                        StudentGender = "1";
+                    }
+
+                    string day = cmbDay.Text;
+                    string month = cmbMonth.SelectedIndex.ToString();
+                    string year = cmbYear.Text;
+                    string studentDOB = year + " - " + month + " - " + day;
+
+                    bool IsException = false;
+
+                    DatabaseConnection.createStatement("select * form Student where RegistrationNo = '" + txtRegNo.Text + " '");
+                    SqlDataReader r = DatabaseConnection.getData();
+                    if (!r.Read())
+                    {
+                        IsException = true;
+                        MessageBox.Show("This Registration Number already exists");
+                    }
+
+                    if (!IsException)
+                    {
+                        try
+                        {
+                            DatabaseConnection.createStatement("INSERT INTO Person ( FirstName, LastName, Contact, Email, DateOfBirth, Gender)" +
+                        " VALUES('" + txtFirstName.Text + "' , '" + txtLastName.Text + "', '" + txtContactNo.Text + "', '" + txtEmail.Text + "', '" + studentDOB + "' ," + StudentGender + "); ");
+
+                            DatabaseConnection.performAction();
+                        }
+                        catch (SqlException)
+                        {
+                            IsException = true;
+                            lblDOBwarning.Visible = true;
+                        }
+                    }
+                    if (!IsException)
+                    {
+                        DatabaseConnection.createStatement("Select @@identity as id from Person");
+                        SqlDataReader reader = DatabaseConnection.getData();
+                        string id = "0";
+                        while (reader.Read())
+                        {
+                            id = (reader["id"].ToString());
+                        }
+                        
+                        DatabaseConnection.createStatement("INSERT INTO Student (Id, RegistrationNo) VALUES (" + id + ", '" + txtRegNo.Text + "') ");
+                        DatabaseConnection.performAction();
+                        
+                        if (!IsException)
+                        {
+                            MessageBox.Show("Student added");
+                            ManageStudent manageStudent = ManageStudent.GetInstance();
+                            manageStudent.Show();
+                            this.Hide();
+                        }
+                    }
+                }
             }
-
-            DatabaseConnection.createStatement("INSERT INTO Student (Id, RegistrationNo) VALUES ("+id+", '"+txtRegNo.Text+"') ");
-            DatabaseConnection.performAction();
-            MessageBox.Show("Student added");
-            ManageStudent manageStudent = ManageStudent.GetInstance();
-            manageStudent.Show();
-            this.Hide();
-
         }
+        private bool IsAnyTextBoxEmpty()
+        {
+            if (
+                string.IsNullOrWhiteSpace(txtFirstName.Text) || string.IsNullOrWhiteSpace(txtLastName.Text) || 
+                string.IsNullOrWhiteSpace(txtRegNo.Text) || string.IsNullOrWhiteSpace(txtContactNo.Text) || 
+                string.IsNullOrWhiteSpace(txtEmail.Text) || string.IsNullOrWhiteSpace(cmbGender.Text) ||
+                cmbDay.Text == "Day" || cmbMonth.Text == "Month" || cmbYear.Text == "Year")
+            {
 
+                if (string.IsNullOrWhiteSpace(txtFirstName.Text))
+                {
+                    lblFNameWarning.Visible = true;
+                }
+                if (string.IsNullOrWhiteSpace(txtLastName.Text))
+                {
+                    lblLNameWarning.Visible = true;
+                }
+                if (string.IsNullOrWhiteSpace(txtRegNo.Text))
+                {
+                    lblRegWarning.Visible = true;
+                }
+                if (string.IsNullOrWhiteSpace(txtContactNo.Text))
+                {
+                    lblCellWarning.Visible = true;
+                }
+                if (string.IsNullOrWhiteSpace(txtEmail.Text))
+                {
+                    lblEmailWarning.Visible = true;
+                }
+                if (string.IsNullOrWhiteSpace(cmbGender.Text))
+                {
+                    lblGenderWarning.Visible = true;
+                }
+                if (cmbDay.Text == "Day" || cmbMonth.Text == "Month" || cmbYear.Text == "Year")
+                {
+                    lblDOBwarning.Visible = true;
+                }
+
+                return true;
+            }
+            return false;
+        }
         private void frmRegisterStudent_Load(object sender, EventArgs e)
         {
 
@@ -184,6 +251,52 @@ namespace DBMSL_ProjectA
             CreateGroup c = new CreateGroup();
             c.Show();
             this.Hide();
+        }
+
+        private void txtFirstName_TextChanged(object sender, EventArgs e)
+        {
+            lblFNameWarning.Visible = false;
+        }
+
+        private void txtLastName_TextChanged(object sender, EventArgs e)
+        {
+
+            lblLNameWarning.Visible = false;
+        }
+
+        private void txtRegNo_TextChanged(object sender, EventArgs e)
+        {
+            lblRegWarning.Visible = false;
+        }
+
+        private void txtContactNo_TextChanged(object sender, EventArgs e)
+        {
+            lblCellWarning.Visible = false;
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            lblEmailWarning.Visible = false;
+        }
+
+        private void cmbGender_TextChanged(object sender, EventArgs e)
+        {
+            lblGenderWarning.Visible = false;
+        }
+
+        private void cmbDay_TextChanged(object sender, EventArgs e)
+        {
+            lblDOBwarning.Visible = false;
+        }
+
+        private void cmbMonth_TextChanged(object sender, EventArgs e)
+        {
+            lblDOBwarning.Visible = false;
+        }
+
+        private void cmbYear_TextChanged(object sender, EventArgs e)
+        {
+            lblDOBwarning.Visible = false;
         }
     }
 }

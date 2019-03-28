@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using System.Net.Mail;
 
 namespace DBMSL_ProjectA
 {
@@ -29,27 +30,61 @@ namespace DBMSL_ProjectA
             get { return firstName; }
             set
             {
-                /*
-                if (String.IsNullOrWhiteSpace(firstName))
+                if (Regex.IsMatch(value, @"^[a-zA-Z ]+$"))
                 {
-                    throw new ArgumentNullException();
-                }
-                else if (Regex.IsMatch(firstName, @"^[a-zA-Z ]+$"))
-                {
-                */
+                
                     firstName = value;
-                /*}
+                }
                 else
                 {
                     throw new ArgumentException();
                 }
-                */
+                
             }
         }
-        public string LastName { get => lastName; set => lastName = value; }
-        public string RegistrationNo { get => registrationNo; set => registrationNo = value; }
+        public string LastName
+        {
+            get => lastName; set {
+                if (Regex.IsMatch(value, @"^[a-zA-Z ]+$"))
+            {
+
+                lastName = value;
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
+            }
+        }
+        public string RegistrationNo
+        {
+            get => registrationNo; set { 
+            if (Regex.IsMatch(value, @"^[0-9]{4}-[A-Z]{2}-[0-9]{1,3}$"))
+            {
+
+                registrationNo = value;
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
+            }
+        }
         public string Contact { get => contact; set => contact = value; }
-        public string Email { get => email; set => email = value; }
+        public string Email { get => email; set {
+                try
+                {
+                    MailAddress m = new MailAddress(value);
+
+                    email = value;
+                }
+                catch (FormatException)
+                {
+                    throw new ArgumentException();
+                }
+
+                email = value;
+            } }
         public DateTime DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
         public int Gender { get => gender; set => gender = value; }
     }
