@@ -31,29 +31,45 @@ namespace DBMSL_ProjectA
 
         private void btnAddProject_Click(object sender, EventArgs e)
         {
-
-            DatabaseConnection.createStatement("INSERT INTO Project ( Title, Description)" +
-            " VALUES('" + txtTitle.Text + "' , '" + txtDescription.Text + "'); ");
-            DatabaseConnection.performAction();
-            Project project = new Project();
-            project.Title = txtTitle.Text;
-
-            DatabaseConnection.createStatement("Select @@identity as id from Project");
-            SqlDataReader reader = DatabaseConnection.getData();
-            while (reader.Read())
-            {
-                project.Id = int.Parse(reader["id"].ToString());
+            if (string.IsNullOrWhiteSpace(txtTitle.Text) ) {
+                lblTitleWarning.Visible = true;
             }
-            TempData.CurrentProject = project;
-            ProjectDashboard dashboard = ProjectDashboard.GetInstance();
-            dashboard.Show();
-            this.Hide();
+            else if (string.IsNullOrWhiteSpace(txtDescription.Text))
+            {
+                lblDescriptionWarning.Visible = true;
+            }
+            else
+            {
+                DatabaseConnection.createStatement("INSERT INTO Project ( Title, Description)" +
+                " VALUES('" + txtTitle.Text + "' , '" + txtDescription.Text + "'); ");
+                DatabaseConnection.performAction();
+                Project project = new Project();
+                project.Title = txtTitle.Text;
 
+                DatabaseConnection.createStatement("Select @@identity as id from Project");
+                SqlDataReader reader = DatabaseConnection.getData();
+                while (reader.Read())
+                {
+                    project.Id = int.Parse(reader["id"].ToString());
+                }
+                TempData.CurrentProject = project;
+                ProjectDashboard dashboard = ProjectDashboard.GetInstance();
+                dashboard.Show();
+                this.Hide();
+            }
         }
 
         private void AddProject_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+            AddProject project = AddProject.GetInstance();
+            project.Show();
+            this.Hide();
         }
     }
 }

@@ -64,15 +64,6 @@ namespace DBMSL_ProjectA
             if (!IsAnyTextBoxEmpty())
             {
                 bool IsConnnected = DatabaseConnection.start();
-                if (IsConnnected)
-                {
-                    MessageBox.Show("Connected");
-                }
-                else
-                {
-                    MessageBox.Show("Error");
-
-                }
 
                 bool ISValidStudent = true;
 

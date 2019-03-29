@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
-            this.tabMain = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.lblAdvisors = new System.Windows.Forms.Label();
             this.lblGroupStudents = new System.Windows.Forms.Label();
             this.gvGroupStudents = new System.Windows.Forms.DataGridView();
@@ -52,7 +47,6 @@
             this.btnChangeGroup = new System.Windows.Forms.Button();
             this.btnEvaluation = new System.Windows.Forms.Button();
             this.btnMarksheet = new System.Windows.Forms.Button();
-            this.tabMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvGroupStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,63 +58,6 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(0, 32);
             this.lblTitle.TabIndex = 17;
-            // 
-            // tabMain
-            // 
-            this.tabMain.Controls.Add(this.tabPage1);
-            this.tabMain.Controls.Add(this.tabPage2);
-            this.tabMain.Controls.Add(this.tabPage3);
-            this.tabMain.Controls.Add(this.tabPage4);
-            this.tabMain.Location = new System.Drawing.Point(12, 12);
-            this.tabMain.Name = "tabMain";
-            this.tabMain.SelectedIndex = 0;
-            this.tabMain.Size = new System.Drawing.Size(405, 85);
-            this.tabMain.TabIndex = 21;
-            this.tabMain.SelectedIndexChanged += new System.EventHandler(this.tabMain_SelectedIndexChanged);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.AccessibleName = "tbHome";
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(397, 56);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Home";
-            this.tabPage1.ToolTipText = "Go to Home";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(397, 56);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(397, 56);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(397, 56);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // lblAdvisors
             // 
@@ -277,7 +214,7 @@
             // 
             // btnEvaluation
             // 
-            this.btnEvaluation.Location = new System.Drawing.Point(797, 84);
+            this.btnEvaluation.Location = new System.Drawing.Point(673, 51);
             this.btnEvaluation.Name = "btnEvaluation";
             this.btnEvaluation.Size = new System.Drawing.Size(138, 33);
             this.btnEvaluation.TabIndex = 20;
@@ -287,9 +224,9 @@
             // 
             // btnMarksheet
             // 
-            this.btnMarksheet.Location = new System.Drawing.Point(793, 135);
+            this.btnMarksheet.Location = new System.Drawing.Point(825, 161);
             this.btnMarksheet.Name = "btnMarksheet";
-            this.btnMarksheet.Size = new System.Drawing.Size(142, 49);
+            this.btnMarksheet.Size = new System.Drawing.Size(142, 33);
             this.btnMarksheet.TabIndex = 22;
             this.btnMarksheet.Text = "Mark Sheet";
             this.btnMarksheet.UseVisualStyleBackColor = true;
@@ -301,7 +238,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 796);
             this.Controls.Add(this.btnMarksheet);
-            this.Controls.Add(this.tabMain);
             this.Controls.Add(this.btnEvaluation);
             this.Controls.Add(this.btnChangeGroup);
             this.Controls.Add(this.lblTitle);
@@ -323,7 +259,6 @@
             this.Name = "ProjectDashboard";
             this.Text = "ProjectDashboard";
             this.Load += new System.EventHandler(this.ProjectDashboard_Load);
-            this.tabMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvGroupStudents)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -332,10 +267,6 @@
 
         #endregion
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.TabControl tabMain;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label lblAdvisors;
         private System.Windows.Forms.Label lblGroupStudents;
         private System.Windows.Forms.DataGridView gvGroupStudents;
@@ -353,7 +284,6 @@
         private System.Windows.Forms.Button btnAddIndustryAdvisor;
         private System.Windows.Forms.Button btnChangeGroup;
         private System.Windows.Forms.Button btnEvaluation;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button btnMarksheet;
     }
 }

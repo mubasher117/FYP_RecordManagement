@@ -36,3 +36,6 @@ E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\D
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.EditAdvisor.resources
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.ProjectsReport.resources
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.Marksheet.resources
+E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\bin\Debug\itextsharp.dll
+E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\bin\Debug\itextsharp.xml
+E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.csproj.CopyComplete

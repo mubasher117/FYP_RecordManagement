@@ -23,7 +23,7 @@ namespace DBMSL_ProjectA
             txtLastName.Text = TempData.CurrentAdvisor.BasicDetails.LastName;
             txtContactNo.Text = TempData.CurrentAdvisor.BasicDetails.Contact;
             txtEmail.Text = TempData.CurrentAdvisor.BasicDetails.Email;
-            txtSallary.Text = TempData.CurrentAdvisor.Sallary.ToString();
+            txtSallary.Text = TempData.CurrentAdvisor.Salary.ToString();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

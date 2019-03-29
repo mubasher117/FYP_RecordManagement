@@ -39,7 +39,7 @@ namespace DBMSL_ProjectA
 
         private void ManageAdvisors_Load(object sender, EventArgs e)
         {
-
+            tabControl1.SelectedIndex = 3;
             gvAdvisors.Rows.Clear();
             gvAdvisors.Refresh();
             bool IsConnnected = DatabaseConnection.start();
@@ -103,7 +103,7 @@ namespace DBMSL_ProjectA
                     advisor.BasicDetails.LastName = reader["LName"].ToString();
                     advisor.BasicDetails.Contact = reader["Contact"].ToString();
                     advisor.BasicDetails.Email = reader["Email"].ToString();
-                    advisor.Sallary = int.Parse(reader["Salary"].ToString());
+                    advisor.Salary = int.Parse(reader["Salary"].ToString());
 
                 }
                 TempData.CurrentAdvisor = advisor;
@@ -111,6 +111,82 @@ namespace DBMSL_ProjectA
                 editAdvisor.Show();
                 this.Hide();
 
+            }
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+
+            AddAdvisor addAdvisor = AddAdvisor.GetInstance();
+            addAdvisor.Show();
+            this.Hide();
+        }
+
+        private void gvAdvisors_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (gvAdvisors.Columns[e.ColumnIndex].Name.ToString() == "Action3")
+            {
+                if (MessageBox.Show("Are you sure you want to delete?", "Delete Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    string id = gvAdvisors.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    DatabaseConnection.start();
+                    DatabaseConnection.createStatement("Delete from ProjectAdvisor where AdvisorId =" + id);
+                    DatabaseConnection.performAction();
+                    DatabaseConnection.createStatement("Delete from Advisor where Id =" + id);
+                    DatabaseConnection.performAction();
+                    DatabaseConnection.createStatement("Delete from Person where Id =" + id);
+                    DatabaseConnection.performAction();
+
+                }
+
+
+            }
+            if (gvAdvisors.Columns[e.ColumnIndex].Name.ToString() == "Action2")
+            {
+                Advisor advisor = new Advisor();
+                DatabaseConnection.start();
+                DatabaseConnection.createStatement("select Person.Id[id], FirstName[FName], LastName[LName], Contact[Contact], Email[Email], Salary[Salary]  from Person join Advisor on Person.Id = Advisor.Id where Advisor.Id =" + gvAdvisors.Rows[e.RowIndex].Cells[0].Value.ToString());
+                SqlDataReader reader = DatabaseConnection.getData();
+                while (reader.Read())
+                {
+                    advisor.AdvisorId1 = int.Parse(reader["id"].ToString());
+                    advisor.BasicDetails.FirstName = reader["FName"].ToString();
+                    advisor.BasicDetails.LastName = reader["LName"].ToString();
+                    advisor.BasicDetails.Contact = reader["Contact"].ToString();
+                    advisor.BasicDetails.Email = reader["Email"].ToString();
+                    advisor.Salary = int.Parse(reader["Salary"].ToString());
+
+                }
+                TempData.CurrentAdvisor = advisor;
+                EditAdvisor editAdvisor = new EditAdvisor();
+                editAdvisor.Show();
+                this.Hide();
+
+            }
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (tabControl1.SelectedIndex == 0)
+            {
+                Dashboard dashboard = Dashboard.GetInstance();
+                dashboard.Show();
+                this.Hide();
+
+            }
+            if (tabControl1.SelectedIndex == 1)
+            {
+                ManageProjects f = ManageProjects.GetInstance();
+                f.Show();
+                this.Hide();
+            }
+            if (tabControl1.SelectedIndex == 2)
+            {
+                ManageStudent f = ManageStudent.GetInstance();
+                f.Show();
+                this.Hide();
             }
         }
     }

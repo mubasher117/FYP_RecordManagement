@@ -39,34 +39,43 @@ namespace DBMSL_ProjectA
         {
             string RegNo = cmbSelectStudent.Text;
             bool IsConnnected = DatabaseConnection.start();
-            DatabaseConnection.createStatement("Select Id from Student where RegistrationNo = '" + RegNo + "'");
-            SqlDataReader reader = DatabaseConnection.getData();
-            string StudentId = "";
-            if (reader.Read())
+            DatabaseConnection.createStatement("select * from GroupStudent join Student on GroupStudent.StudentId = Student.Id where Student.RegistrationNo = '" + RegNo + "'");
+            SqlDataReader sqlDataReader = DatabaseConnection.getData();
+            if (!sqlDataReader.Read())
             {
-                StudentId = reader.GetValue(reader.GetOrdinal("Id")).ToString();
+                DatabaseConnection.createStatement("Select Id from Student where RegistrationNo = '" + RegNo + "'");
+                SqlDataReader reader = DatabaseConnection.getData();
+                string StudentId = "";
+                if (reader.Read())
+                {
+                    StudentId = reader.GetValue(reader.GetOrdinal("Id")).ToString();
+                }
+
+                DatabaseConnection.createStatement("Select * from Person where Id = " + StudentId);
+                reader = DatabaseConnection.getData();
+                Student student = new Student();
+                student.RegistrationNo = RegNo;
+                student.StudentId = int.Parse(StudentId);
+                if (reader.Read())
+                {
+                    student.FirstName = reader.GetString(1).ToString();
+                    student.LastName = reader.GetString(2).ToString();
+                    student.Contact = reader.GetString(3).ToString();
+                    student.Email = reader.GetString(4).ToString();
+                    student.DateOfBirth = Convert.ToDateTime(reader.GetDateTime(5));
+                }
+                TempData.add_GroupStudent(student);
+                gvStudents.Rows.Clear();
+                gvStudents.Refresh();
+                foreach (Student s in TempData.GetGroupStudents())
+                {
+                    gvStudents.Rows.Add(s.RegistrationNo, s.FirstName);
+                }
             }
-            DatabaseConnection.createStatement("Select * from Person where Id = " + StudentId );
-            reader = DatabaseConnection.getData();
-            Student student = new Student();
-            student.RegistrationNo = RegNo;
-            student.StudentId = int.Parse(StudentId);
-            if (reader.Read())
+            else
             {
-                student.FirstName =  reader.GetString(1).ToString();
-                student.LastName =  reader.GetString(2).ToString();
-                student.Contact = reader.GetString(3).ToString();
-                student.Email = reader.GetString(4).ToString();
-                student.DateOfBirth = Convert.ToDateTime(reader.GetDateTime(5));
+                MessageBox.Show("Student already a part of another group");
             }
-            TempData.add_GroupStudent(student);
-            gvStudents.Rows.Clear();
-            gvStudents.Refresh();
-            foreach(Student s in TempData.GetGroupStudents())
-            {
-                gvStudents.Rows.Add(s.RegistrationNo, s.FirstName);
-            }
-            
 
         }
 
@@ -95,33 +104,37 @@ namespace DBMSL_ProjectA
             if (reader.Read())
             {
                 id = (reader["id"].ToString());
-                MessageBox.Show(id);
             }
 
 
             foreach (Student s in TempData.GetGroupStudents())
             {
-                MessageBox.Show(s.StudentId.ToString());
                 DatabaseConnection.createStatement("Insert into GroupStudent (GroupId, StudentId ,Status , AssignmentDate) " +
                     "Values (" + id + "," + s.StudentId.ToString() + ", 4 ,'" + DateTime.Now.ToString("yyyy-MM-dd") + "')");
                 DatabaseConnection.performAction();
             }
             TempData.Clear_GroupStudents();
+            gvStudents.Rows.Clear();
+            gvStudents.Refresh();
+            cmbSelectStudent.Text = "";
+            MessageBox.Show("Group has been Created");
+            
 
         }
 
         private void gvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
         }
 
         private void CreateGroup_Load(object sender, EventArgs e)
         {
             DatabaseConnection.start();
-            DatabaseConnection.createStatement("select FirstName[FName], LastName[LName] from Person join Student on Person.Id = Student.Id ");
+            DatabaseConnection.createStatement("select RegistrationNo from Person join Student on Person.Id = Student.Id ");
             SqlDataReader reader = DatabaseConnection.getData();
             while (reader.Read())
             {
-                cmbSelectStudent.Items.Add(reader["FName"].ToString() + " " + reader["LName"].ToString());
+                cmbSelectStudent.Items.Add(reader["RegistrationNO"].ToString() );
             }
         }
     }

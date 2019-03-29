@@ -293,9 +293,9 @@
             this.lblFNameWarning.ForeColor = System.Drawing.Color.Red;
             this.lblFNameWarning.Location = new System.Drawing.Point(466, 114);
             this.lblFNameWarning.Name = "lblFNameWarning";
-            this.lblFNameWarning.Size = new System.Drawing.Size(119, 17);
+            this.lblFNameWarning.Size = new System.Drawing.Size(138, 17);
             this.lblFNameWarning.TabIndex = 38;
-            this.lblFNameWarning.Text = "*Enter First Name";
+            this.lblFNameWarning.Text = "*Enter Correct Name";
             this.lblFNameWarning.Visible = false;
             // 
             // lblLNameWarning
@@ -304,9 +304,9 @@
             this.lblLNameWarning.ForeColor = System.Drawing.Color.Red;
             this.lblLNameWarning.Location = new System.Drawing.Point(466, 160);
             this.lblLNameWarning.Name = "lblLNameWarning";
-            this.lblLNameWarning.Size = new System.Drawing.Size(119, 17);
+            this.lblLNameWarning.Size = new System.Drawing.Size(138, 17);
             this.lblLNameWarning.TabIndex = 39;
-            this.lblLNameWarning.Text = "*Enter Last Name";
+            this.lblLNameWarning.Text = "*Enter Correct Name";
             this.lblLNameWarning.Visible = false;
             // 
             // lblRegWarning
@@ -315,9 +315,9 @@
             this.lblRegWarning.ForeColor = System.Drawing.Color.Red;
             this.lblRegWarning.Location = new System.Drawing.Point(466, 203);
             this.lblRegWarning.Name = "lblRegWarning";
-            this.lblRegWarning.Size = new System.Drawing.Size(149, 17);
+            this.lblRegWarning.Size = new System.Drawing.Size(134, 17);
             this.lblRegWarning.TabIndex = 40;
-            this.lblRegWarning.Text = "*Enter Registration No";
+            this.lblRegWarning.Text = "*Enter Valid Reg No";
             this.lblRegWarning.Visible = false;
             // 
             // lblCellWarning
@@ -337,9 +337,9 @@
             this.lblEmailWarning.ForeColor = System.Drawing.Color.Red;
             this.lblEmailWarning.Location = new System.Drawing.Point(466, 284);
             this.lblEmailWarning.Name = "lblEmailWarning";
-            this.lblEmailWarning.Size = new System.Drawing.Size(85, 17);
+            this.lblEmailWarning.Size = new System.Drawing.Size(120, 17);
             this.lblEmailWarning.TabIndex = 42;
-            this.lblEmailWarning.Text = "*Enter Email";
+            this.lblEmailWarning.Text = "*Enter Valid Email";
             this.lblEmailWarning.Visible = false;
             // 
             // lblGenderWarning

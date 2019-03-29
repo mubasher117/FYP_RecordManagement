@@ -13,10 +13,10 @@ namespace DBMSL_ProjectA
         private Student basicDetails = new Student();
         private int role;
         private int designation;
-        private int sallary;
+        private int salary;
 
         public int Designation { get => designation; set => designation = value; }
-        public int Sallary { get => sallary; set => sallary = value; }
+        public int Salary { get => salary; set => salary = value; }
         public int AdvisorId1 { get => AdvisorId; set => AdvisorId = value; }
         public int PersonId1 { get => PersonId; set => PersonId = value; }
         public int Role { get => role; set => role = value; }

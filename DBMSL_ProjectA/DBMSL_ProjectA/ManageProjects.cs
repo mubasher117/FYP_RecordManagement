@@ -31,6 +31,77 @@ namespace DBMSL_ProjectA
 
         private void gvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void ManageProjects_Load(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+            gvStudents.Rows.Clear();
+            gvStudents.Refresh();
+            bool IsConnnected = DatabaseConnection.start();
+            DatabaseConnection.createStatement("select Id ,Title from Project");
+            SqlDataReader reader = DatabaseConnection.getData();
+            while (reader.Read())
+            {
+                gvStudents.Rows.Add(reader["Id"].ToString() , reader["Title"].ToString());
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btnProjectsReports_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 0)
+            {
+                Dashboard dashboard = Dashboard.GetInstance();
+                dashboard.Show();
+                this.Hide();
+
+            }
+            if (tabControl1.SelectedIndex == 2)
+            {
+                ManageStudent f = ManageStudent.GetInstance();
+                f.Show();
+                this.Hide();
+            }
+            if (tabControl1.SelectedIndex == 3)
+            {
+                ManageAdvisors f = ManageAdvisors.GetInstance();
+                f.Show();
+                this.Hide();
+            }
+        }
+
+        private void btnAddProject_Click(object sender, EventArgs e)
+        {
+            AddProject project = AddProject.GetInstance();
+            project.Show();
+            this.Hide();
+
+        }
+
+        private void btnProjectsReports_Click_1(object sender, EventArgs e)
+        {
+            ProjectsReport project = ProjectsReport.GetInstance();
+            project.Show();
+            this.Hide();
+
+        }
+
+        private void gvStudents_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             if (gvStudents.Columns[e.ColumnIndex].Name.ToString() == "Action")
             {
                 Project project = new Project();
@@ -57,65 +128,7 @@ namespace DBMSL_ProjectA
 
                 }
             }
-            /*
-            if (gvStudents.Columns[e.ColumnIndex].Name.ToString() == "Action2")
-            {
-                string commandString = "UPDATE StudentInfo SET Name = '" + gvStudents.Rows[e.RowIndex].Cells[1].Value.ToString() +
-                    "'  , Degree = '" + gvStudents.Rows[e.RowIndex].Cells[2].Value.ToString() + "' WHERE [Reg No] = '" + gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString() + "'";
-                SqlCommand newCommand = new SqlCommand(commandString, Active.Connection());
-                newCommand.ExecuteNonQuery();
-                foreach (Student st in Section.getInstance().ListOfStudents())
-                {
-                    if (st.RegistrationNumber == gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString())
-                    {
-                        st.SetName(gvStudents.Rows[e.RowIndex].Cells[1].Value.ToString());
-                        st.SetDegree(gvStudents.Rows[e.RowIndex].Cells[2].Value.ToString());
-                    }
-                }
-                ManageStudents_Load(this, null);
 
-            }
-            */
-            if (gvStudents.Columns[e.ColumnIndex].Name.ToString() == "Action3")
-            {
-                MessageBox.Show("Are you sure you want to delete?", "Delete Confirmation", MessageBoxButtons.YesNoCancel);
-                    /*
-                Active.LoggedStudent = new Student();
-                Active.LoggedStudent.SetName(gvStudents.Rows[e.RowIndex].Cells[1].Value.ToString());
-                Active.LoggedStudent.SetRegistrationNumber(gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString());
-                Active.LoggedStudent.SetDegree(gvStudents.Rows[e.RowIndex].Cells[2].Value.ToString());
-                DMCGenerator.GetInstance().Show();
-                this.Hide();
-                */
-            }
-
-        }
-
-        private void ManageProjects_Load(object sender, EventArgs e)
-        {
-            gvStudents.Rows.Clear();
-            gvStudents.Refresh();
-            bool IsConnnected = DatabaseConnection.start();
-            DatabaseConnection.createStatement("select Id ,Title from Project");
-            SqlDataReader reader = DatabaseConnection.getData();
-            while (reader.Read())
-            {
-                gvStudents.Rows.Add(reader["Id"].ToString() , reader["Title"].ToString());
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AddProject project = AddProject.GetInstance();
-            project.Show();
-            this.Hide();
-        }
-
-        private void btnProjectsReports_Click(object sender, EventArgs e)
-        {
-            ProjectsReport project = ProjectsReport.GetInstance();
-            project.Show();
-            this.Hide();
 
         }
     }

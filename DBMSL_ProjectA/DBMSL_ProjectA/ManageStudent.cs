@@ -32,6 +32,7 @@ namespace DBMSL_ProjectA
 
         private void ManageStudent_Load(object sender, EventArgs e)
         {
+            tabControl1.SelectedIndex = 2;
             gvStudents.Rows.Clear();
             gvStudents.Refresh();
             bool IsConnnected = DatabaseConnection.start();
@@ -46,12 +47,21 @@ namespace DBMSL_ProjectA
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
-            frmRegisterStudent frmRegisterStudent = frmRegisterStudent.GetInstance();
-            frmRegisterStudent.Show();
-            this.Hide();
         }
 
         private void gvStudents_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void btnAddStudent_Click_1(object sender, EventArgs e)
+        {
+            frmRegisterStudent frmRegisterStudent = frmRegisterStudent.GetInstance();
+            frmRegisterStudent.Show();
+            this.Hide();
+
+        }
+
+        private void gvStudents_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (gvStudents.Columns[e.ColumnIndex].Name.ToString() == "Action3")
             {
@@ -78,7 +88,7 @@ namespace DBMSL_ProjectA
                 {
                     student.PersonId = int.Parse(reader["id"].ToString());
                     student.FirstName = reader["FName"].ToString();
-                    student.LastName =  reader["LName"].ToString();
+                    student.LastName = reader["LName"].ToString();
                     student.Contact = reader["Contact"].ToString();
                     student.Email = reader["Email"].ToString();
                 }
@@ -87,6 +97,30 @@ namespace DBMSL_ProjectA
                 editStudent.Show();
                 this.Hide();
 
+            }
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (tabControl1.SelectedIndex == 0)
+            {
+                Dashboard dashboard = Dashboard.GetInstance();
+                dashboard.Show();
+                this.Hide();
+
+            }
+            if (tabControl1.SelectedIndex == 1)
+            {
+                ManageProjects f = ManageProjects.GetInstance();
+                f.Show();
+                this.Hide();
+            }
+            if (tabControl1.SelectedIndex == 3)
+            {
+                ManageAdvisors f = ManageAdvisors.GetInstance();
+                f.Show();
+                this.Hide();
             }
         }
     }

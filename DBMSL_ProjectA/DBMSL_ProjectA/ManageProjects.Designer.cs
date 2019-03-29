@@ -29,16 +29,116 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Home = new System.Windows.Forms.TabPage();
+            this.Projects = new System.Windows.Forms.TabPage();
+            this.Students = new System.Windows.Forms.TabPage();
+            this.Advisors = new System.Windows.Forms.TabPage();
+            this.Groups = new System.Windows.Forms.TabPage();
+            this.btnProjectsReports = new System.Windows.Forms.Button();
+            this.btnAddProject = new System.Windows.Forms.Button();
             this.gvStudents = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RegistrationNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action3 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnAddProject = new System.Windows.Forms.Button();
-            this.btnProjectsReports = new System.Windows.Forms.Button();
+            this.tabControl1.SuspendLayout();
+            this.Projects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.Home);
+            this.tabControl1.Controls.Add(this.Projects);
+            this.tabControl1.Controls.Add(this.Students);
+            this.tabControl1.Controls.Add(this.Advisors);
+            this.tabControl1.Controls.Add(this.Groups);
+            this.tabControl1.Location = new System.Drawing.Point(57, 43);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(821, 530);
+            this.tabControl1.TabIndex = 5;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged_1);
+            // 
+            // Home
+            // 
+            this.Home.AccessibleName = "tabHome";
+            this.Home.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Home.Location = new System.Drawing.Point(4, 25);
+            this.Home.Name = "Home";
+            this.Home.Padding = new System.Windows.Forms.Padding(3);
+            this.Home.Size = new System.Drawing.Size(463, 53);
+            this.Home.TabIndex = 0;
+            this.Home.Text = "Home";
+            // 
+            // Projects
+            // 
+            this.Projects.AccessibleName = "tabProject";
+            this.Projects.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Projects.Controls.Add(this.btnProjectsReports);
+            this.Projects.Controls.Add(this.btnAddProject);
+            this.Projects.Controls.Add(this.gvStudents);
+            this.Projects.Location = new System.Drawing.Point(4, 25);
+            this.Projects.Name = "Projects";
+            this.Projects.Padding = new System.Windows.Forms.Padding(3);
+            this.Projects.Size = new System.Drawing.Size(813, 501);
+            this.Projects.TabIndex = 1;
+            this.Projects.Text = "Projects";
+            // 
+            // Students
+            // 
+            this.Students.AccessibleName = "tabStudents";
+            this.Students.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Students.Location = new System.Drawing.Point(4, 25);
+            this.Students.Name = "Students";
+            this.Students.Padding = new System.Windows.Forms.Padding(3);
+            this.Students.Size = new System.Drawing.Size(463, 53);
+            this.Students.TabIndex = 2;
+            this.Students.Text = "Students";
+            // 
+            // Advisors
+            // 
+            this.Advisors.AccessibleName = "tabAdvisors";
+            this.Advisors.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Advisors.Location = new System.Drawing.Point(4, 25);
+            this.Advisors.Name = "Advisors";
+            this.Advisors.Size = new System.Drawing.Size(463, 53);
+            this.Advisors.TabIndex = 3;
+            this.Advisors.Text = "Advisors";
+            // 
+            // Groups
+            // 
+            this.Groups.AccessibleName = "Groups";
+            this.Groups.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Groups.Location = new System.Drawing.Point(4, 25);
+            this.Groups.Name = "Groups";
+            this.Groups.Size = new System.Drawing.Size(463, 53);
+            this.Groups.TabIndex = 4;
+            this.Groups.Text = "Groups";
+            // 
+            // btnProjectsReports
+            // 
+            this.btnProjectsReports.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnProjectsReports.Location = new System.Drawing.Point(569, 100);
+            this.btnProjectsReports.Name = "btnProjectsReports";
+            this.btnProjectsReports.Size = new System.Drawing.Size(169, 32);
+            this.btnProjectsReports.TabIndex = 13;
+            this.btnProjectsReports.Text = "See Projects Report";
+            this.btnProjectsReports.UseVisualStyleBackColor = true;
+            this.btnProjectsReports.Click += new System.EventHandler(this.btnProjectsReports_Click_1);
+            // 
+            // btnAddProject
+            // 
+            this.btnAddProject.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddProject.Location = new System.Drawing.Point(569, 50);
+            this.btnAddProject.Name = "btnAddProject";
+            this.btnAddProject.Size = new System.Drawing.Size(169, 32);
+            this.btnAddProject.TabIndex = 12;
+            this.btnAddProject.Text = "Add New Project";
+            this.btnAddProject.UseVisualStyleBackColor = true;
+            this.btnAddProject.Click += new System.EventHandler(this.btnAddProject_Click);
             // 
             // gvStudents
             // 
@@ -60,12 +160,12 @@
             this.Action,
             this.Action2,
             this.Action3});
-            this.gvStudents.Location = new System.Drawing.Point(63, 175);
+            this.gvStudents.Location = new System.Drawing.Point(74, 197);
             this.gvStudents.Name = "gvStudents";
             this.gvStudents.RowTemplate.Height = 24;
             this.gvStudents.Size = new System.Drawing.Size(461, 254);
-            this.gvStudents.TabIndex = 2;
-            this.gvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvStudents_CellContentClick);
+            this.gvStudents.TabIndex = 11;
+            this.gvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvStudents_CellContentClick_1);
             // 
             // Id
             // 
@@ -106,53 +206,36 @@
             this.Action3.UseColumnTextForButtonValue = true;
             this.Action3.Width = 60;
             // 
-            // btnAddProject
-            // 
-            this.btnAddProject.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddProject.Location = new System.Drawing.Point(416, 113);
-            this.btnAddProject.Name = "btnAddProject";
-            this.btnAddProject.Size = new System.Drawing.Size(108, 24);
-            this.btnAddProject.TabIndex = 3;
-            this.btnAddProject.Text = "Add Project";
-            this.btnAddProject.UseVisualStyleBackColor = true;
-            this.btnAddProject.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnProjectsReports
-            // 
-            this.btnProjectsReports.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnProjectsReports.Location = new System.Drawing.Point(375, 42);
-            this.btnProjectsReports.Name = "btnProjectsReports";
-            this.btnProjectsReports.Size = new System.Drawing.Size(149, 44);
-            this.btnProjectsReports.TabIndex = 4;
-            this.btnProjectsReports.Text = "See Projects Report";
-            this.btnProjectsReports.UseVisualStyleBackColor = true;
-            this.btnProjectsReports.Click += new System.EventHandler(this.btnProjectsReports_Click);
-            // 
             // ManageProjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 484);
-            this.Controls.Add(this.btnProjectsReports);
-            this.Controls.Add(this.btnAddProject);
-            this.Controls.Add(this.gvStudents);
+            this.ClientSize = new System.Drawing.Size(944, 623);
+            this.Controls.Add(this.tabControl1);
             this.Name = "ManageProjects";
             this.Text = "ManageProjects";
             this.Load += new System.EventHandler(this.ManageProjects_Load);
+            this.tabControl1.ResumeLayout(false);
+            this.Projects.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView gvStudents;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage Home;
+        private System.Windows.Forms.TabPage Projects;
+        private System.Windows.Forms.TabPage Students;
+        private System.Windows.Forms.TabPage Advisors;
+        private System.Windows.Forms.TabPage Groups;
+        private System.Windows.Forms.Button btnProjectsReports;
         private System.Windows.Forms.Button btnAddProject;
+        private System.Windows.Forms.DataGridView gvStudents;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationNo;
         private System.Windows.Forms.DataGridViewButtonColumn Action;
         private System.Windows.Forms.DataGridViewButtonColumn Action2;
         private System.Windows.Forms.DataGridViewButtonColumn Action3;
-        private System.Windows.Forms.Button btnProjectsReports;
     }
 }

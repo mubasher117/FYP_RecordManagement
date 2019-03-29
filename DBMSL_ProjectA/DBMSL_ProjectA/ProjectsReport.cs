@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace DBMSL_ProjectA
 {
@@ -34,15 +37,15 @@ namespace DBMSL_ProjectA
             manageProjects.Show();
             this.Hide();
         }
+        static string stringToCenter = "hello";
+        static int stringToCenterLength = stringToCenter.Length;
+        static int totalLength = 500;
+
+        string centeredString = stringToCenter.PadLeft((totalLength - stringToCenterLength) / 2);
+        private string PDF_Write = "";
 
         private void ProjectsReport_Load(object sender, EventArgs e)
         {
-            /*
-            string ProjectTitle = "";
-            string MainAdvisor = "N/A";
-            string CoAdvisor = "N/A";
-            string IndustryAdvisor = "N/A";
-            */
             DatabaseConnection.start();
             gvReport.Rows.Clear();
             gvReport.Refresh();
@@ -57,40 +60,14 @@ namespace DBMSL_ProjectA
             while (reader.Read())
             {
                 ProjectIds.Add(reader["Id"].ToString());
-
-            }
-
-            foreach (string project_id in ProjectIds)
-            {
-                /*
-                DatabaseConnection.createStatement("select Student.RegistrationNo[reg] from GroupStudent join Student on GroupStudent.StudentId = Student.Id where GroupId = " + group);
-                SqlDataReader reader2 = DatabaseConnection.getData();
-                while (reader2.Read())
-                {
-                    groupMembers.Add(reader2["reg"].ToString());
-                }
-                if (groupMembers.Count != 0)
-                {
-                    DataGridViewRow row = (DataGridViewRow)gvReport.Rows[0].Clone();
-                    row.Cells[0].Value = group;
-                    int i = 1;
-                    foreach (string member in groupMembers)
-                    {
-                        row.Cells[i].Value = member;
-                        ++i;
-                    }
-                    gvReport.Rows.Add(row);
-
-                }
-                */
-
+                MessageBox.Show(reader["Id"].ToString());
 
             }
             foreach (string project_id in ProjectIds)
             {
                 ProjectReport report = new ProjectReport();
                 List<string> members = new List<string>();
-                DatabaseConnection.createStatement("select* from Project join GroupProject on Project.Id = GroupProject.ProjectID join GroupStudent on GroupProject.GroupId = GroupStudent.GroupId join Student on GroupStudent.StudentId = Student.Id where Project.Id = " + project_id);
+                DatabaseConnection.createStatement("select * from Project join GroupProject on Project.Id = GroupProject.ProjectID join GroupStudent on GroupProject.GroupId = GroupStudent.GroupId join Student on GroupStudent.StudentId = Student.Id where Project.Id = " + project_id);
                 SqlDataReader reader3 = DatabaseConnection.getData();
                 if (reader3.Read())
                 {
@@ -151,11 +128,37 @@ namespace DBMSL_ProjectA
                 }
 
             }
-            MessageBox.Show(reports.Count.ToString());
             var bindingSource = new BindingSource();
             bindingSource.DataSource = reports;
             gvReport.DataSource = bindingSource;
 
+
+
+
+
+        }
+
+        private void btnSaveReport_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = "PDF file|*.pdf", ValidateNames = true };
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                iTextSharp.text.Document document = new iTextSharp.text.Document(PageSize.A4.Rotate());
+                try
+                {
+                    PdfWriter.GetInstance(document, new FileStream(saveFileDialog.FileName, FileMode.Create));
+                    document.Open();
+                    document.Add(new iTextSharp.text.Paragraph(centeredString));
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    document.Close();
+                }
+            }
 
         }
     }
