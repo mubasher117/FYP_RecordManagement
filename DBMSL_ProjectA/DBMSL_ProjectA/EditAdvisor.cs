@@ -39,5 +39,12 @@ namespace DBMSL_ProjectA
             manageAdvisor.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ManageAdvisors manageAdvisors = ManageAdvisors.GetInstance();
+            manageAdvisors.Show();
+            this.Hide();
+        }
     }
 }

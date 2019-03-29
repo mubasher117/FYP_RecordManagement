@@ -131,5 +131,10 @@ namespace DBMSL_ProjectA
 
 
         }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

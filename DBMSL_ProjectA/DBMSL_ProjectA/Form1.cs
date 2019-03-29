@@ -289,5 +289,13 @@ namespace DBMSL_ProjectA
         {
             lblDOBwarning.Visible = false;
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+            ManageStudent m = ManageStudent.GetInstance();
+            m.Show();
+            this.Hide();
+        }
     }
 }

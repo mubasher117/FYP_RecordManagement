@@ -32,9 +32,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Home = new System.Windows.Forms.TabPage();
             this.Projects = new System.Windows.Forms.TabPage();
-            this.Students = new System.Windows.Forms.TabPage();
-            this.Advisors = new System.Windows.Forms.TabPage();
-            this.Groups = new System.Windows.Forms.TabPage();
             this.btnProjectsReports = new System.Windows.Forms.Button();
             this.btnAddProject = new System.Windows.Forms.Button();
             this.gvStudents = new System.Windows.Forms.DataGridView();
@@ -43,6 +40,9 @@
             this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action3 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Students = new System.Windows.Forms.TabPage();
+            this.Advisors = new System.Windows.Forms.TabPage();
+            this.Groups = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.Projects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).BeginInit();
@@ -69,9 +69,10 @@
             this.Home.Location = new System.Drawing.Point(4, 25);
             this.Home.Name = "Home";
             this.Home.Padding = new System.Windows.Forms.Padding(3);
-            this.Home.Size = new System.Drawing.Size(463, 53);
+            this.Home.Size = new System.Drawing.Size(813, 501);
             this.Home.TabIndex = 0;
             this.Home.Text = "Home";
+            this.Home.Click += new System.EventHandler(this.Home_Click);
             // 
             // Projects
             // 
@@ -86,37 +87,6 @@
             this.Projects.Size = new System.Drawing.Size(813, 501);
             this.Projects.TabIndex = 1;
             this.Projects.Text = "Projects";
-            // 
-            // Students
-            // 
-            this.Students.AccessibleName = "tabStudents";
-            this.Students.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Students.Location = new System.Drawing.Point(4, 25);
-            this.Students.Name = "Students";
-            this.Students.Padding = new System.Windows.Forms.Padding(3);
-            this.Students.Size = new System.Drawing.Size(463, 53);
-            this.Students.TabIndex = 2;
-            this.Students.Text = "Students";
-            // 
-            // Advisors
-            // 
-            this.Advisors.AccessibleName = "tabAdvisors";
-            this.Advisors.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Advisors.Location = new System.Drawing.Point(4, 25);
-            this.Advisors.Name = "Advisors";
-            this.Advisors.Size = new System.Drawing.Size(463, 53);
-            this.Advisors.TabIndex = 3;
-            this.Advisors.Text = "Advisors";
-            // 
-            // Groups
-            // 
-            this.Groups.AccessibleName = "Groups";
-            this.Groups.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Groups.Location = new System.Drawing.Point(4, 25);
-            this.Groups.Name = "Groups";
-            this.Groups.Size = new System.Drawing.Size(463, 53);
-            this.Groups.TabIndex = 4;
-            this.Groups.Text = "Groups";
             // 
             // btnProjectsReports
             // 
@@ -205,6 +175,37 @@
             this.Action3.Text = "Delete";
             this.Action3.UseColumnTextForButtonValue = true;
             this.Action3.Width = 60;
+            // 
+            // Students
+            // 
+            this.Students.AccessibleName = "tabStudents";
+            this.Students.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Students.Location = new System.Drawing.Point(4, 25);
+            this.Students.Name = "Students";
+            this.Students.Padding = new System.Windows.Forms.Padding(3);
+            this.Students.Size = new System.Drawing.Size(813, 501);
+            this.Students.TabIndex = 2;
+            this.Students.Text = "Students";
+            // 
+            // Advisors
+            // 
+            this.Advisors.AccessibleName = "tabAdvisors";
+            this.Advisors.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Advisors.Location = new System.Drawing.Point(4, 25);
+            this.Advisors.Name = "Advisors";
+            this.Advisors.Size = new System.Drawing.Size(813, 501);
+            this.Advisors.TabIndex = 3;
+            this.Advisors.Text = "Advisors";
+            // 
+            // Groups
+            // 
+            this.Groups.AccessibleName = "Groups";
+            this.Groups.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Groups.Location = new System.Drawing.Point(4, 25);
+            this.Groups.Name = "Groups";
+            this.Groups.Size = new System.Drawing.Size(813, 501);
+            this.Groups.TabIndex = 4;
+            this.Groups.Text = "Groups";
             // 
             // ManageProjects
             // 

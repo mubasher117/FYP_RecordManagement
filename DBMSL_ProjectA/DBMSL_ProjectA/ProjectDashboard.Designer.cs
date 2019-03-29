@@ -31,7 +31,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblAdvisors = new System.Windows.Forms.Label();
             this.lblGroupStudents = new System.Windows.Forms.Label();
-            this.gvGroupStudents = new System.Windows.Forms.DataGridView();
             this.lblMainAdvisor = new System.Windows.Forms.Label();
             this.lblCoAdvisor = new System.Windows.Forms.Label();
             this.lblIndustryAdvisor = new System.Windows.Forms.Label();
@@ -47,6 +46,11 @@
             this.btnChangeGroup = new System.Windows.Forms.Button();
             this.btnEvaluation = new System.Windows.Forms.Button();
             this.btnMarksheet = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.gvGroupStudents = new System.Windows.Forms.DataGridView();
+            this.RegNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gvGroupStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,15 +82,6 @@
             this.lblGroupStudents.Size = new System.Drawing.Size(194, 29);
             this.lblGroupStudents.TabIndex = 2;
             this.lblGroupStudents.Text = "Group Students";
-            // 
-            // gvGroupStudents
-            // 
-            this.gvGroupStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gvGroupStudents.Location = new System.Drawing.Point(136, 475);
-            this.gvGroupStudents.Name = "gvGroupStudents";
-            this.gvGroupStudents.RowTemplate.Height = 24;
-            this.gvGroupStudents.Size = new System.Drawing.Size(629, 242);
-            this.gvGroupStudents.TabIndex = 3;
             // 
             // lblMainAdvisor
             // 
@@ -205,16 +200,17 @@
             // 
             // btnChangeGroup
             // 
-            this.btnChangeGroup.Location = new System.Drawing.Point(642, 746);
+            this.btnChangeGroup.Location = new System.Drawing.Point(618, 728);
             this.btnChangeGroup.Name = "btnChangeGroup";
             this.btnChangeGroup.Size = new System.Drawing.Size(123, 38);
             this.btnChangeGroup.TabIndex = 19;
             this.btnChangeGroup.Text = "Change Group";
             this.btnChangeGroup.UseVisualStyleBackColor = true;
+            this.btnChangeGroup.Click += new System.EventHandler(this.btnChangeGroup_Click);
             // 
             // btnEvaluation
             // 
-            this.btnEvaluation.Location = new System.Drawing.Point(673, 51);
+            this.btnEvaluation.Location = new System.Drawing.Point(456, 63);
             this.btnEvaluation.Name = "btnEvaluation";
             this.btnEvaluation.Size = new System.Drawing.Size(138, 33);
             this.btnEvaluation.TabIndex = 20;
@@ -224,7 +220,7 @@
             // 
             // btnMarksheet
             // 
-            this.btnMarksheet.Location = new System.Drawing.Point(825, 161);
+            this.btnMarksheet.Location = new System.Drawing.Point(619, 63);
             this.btnMarksheet.Name = "btnMarksheet";
             this.btnMarksheet.Size = new System.Drawing.Size(142, 33);
             this.btnMarksheet.TabIndex = 22;
@@ -232,11 +228,59 @@
             this.btnMarksheet.UseVisualStyleBackColor = true;
             this.btnMarksheet.Click += new System.EventHandler(this.btnMarksheet_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(767, 63);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(99, 32);
+            this.btnBack.TabIndex = 23;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // gvGroupStudents
+            // 
+            this.gvGroupStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvGroupStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.RegNo,
+            this.Column1});
+            this.gvGroupStudents.Location = new System.Drawing.Point(117, 432);
+            this.gvGroupStudents.Name = "gvGroupStudents";
+            this.gvGroupStudents.RowTemplate.Height = 24;
+            this.gvGroupStudents.Size = new System.Drawing.Size(624, 275);
+            this.gvGroupStudents.TabIndex = 24;
+            // 
+            // RegNo
+            // 
+            this.RegNo.HeaderText = "Registration No";
+            this.RegNo.Name = "RegNo";
+            this.RegNo.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Name";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(114, 412);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(165, 17);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Group Not Assigned  Yet";
+            this.label1.Visible = false;
+            // 
             // ProjectDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(999, 796);
+            this.ClientSize = new System.Drawing.Size(893, 796);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.gvGroupStudents);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnMarksheet);
             this.Controls.Add(this.btnEvaluation);
             this.Controls.Add(this.btnChangeGroup);
@@ -253,11 +297,10 @@
             this.Controls.Add(this.lblIndustryAdvisor);
             this.Controls.Add(this.lblCoAdvisor);
             this.Controls.Add(this.lblMainAdvisor);
-            this.Controls.Add(this.gvGroupStudents);
             this.Controls.Add(this.lblGroupStudents);
             this.Controls.Add(this.lblAdvisors);
             this.Name = "ProjectDashboard";
-            this.Text = "ProjectDashboard";
+            this.Text = "Project";
             this.Load += new System.EventHandler(this.ProjectDashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gvGroupStudents)).EndInit();
             this.ResumeLayout(false);
@@ -269,7 +312,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblAdvisors;
         private System.Windows.Forms.Label lblGroupStudents;
-        private System.Windows.Forms.DataGridView gvGroupStudents;
         private System.Windows.Forms.Label lblMainAdvisor;
         private System.Windows.Forms.Label lblCoAdvisor;
         private System.Windows.Forms.Label lblIndustryAdvisor;
@@ -285,5 +327,10 @@
         private System.Windows.Forms.Button btnChangeGroup;
         private System.Windows.Forms.Button btnEvaluation;
         private System.Windows.Forms.Button btnMarksheet;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.DataGridView gvGroupStudents;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RegNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Label label1;
     }
 }

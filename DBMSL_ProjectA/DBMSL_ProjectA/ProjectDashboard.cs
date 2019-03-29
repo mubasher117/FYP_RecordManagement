@@ -34,10 +34,12 @@ namespace DBMSL_ProjectA
             if (gvGroupStudents.Rows.Count == 0)
             {
                 btnChangeGroup.Text = "Add Group";
+                label1.Visible = true;
             }
             else 
             {
                 btnChangeGroup.Text = "Change Group";
+                label1.Visible = false;
             }
             lblTitle.Text = TempData.CurrentProject.Title;
             List<Advisor> advisors = new List<Advisor>();
@@ -71,6 +73,14 @@ namespace DBMSL_ProjectA
                 }
             }
 
+            gvGroupStudents.Rows.Clear();
+            gvGroupStudents.Refresh();
+            DatabaseConnection.createStatement("select * from Project join GroupProject on Project.Id = GroupProject.ProjectId join GroupStudent on GroupProject.GroupId = GroupStudent.GroupId join Student on GroupStudent.StudentId = Student.Id join Person on Student.Id = Person.Id where Project.Id =" + TempData.CurrentProject.Id);
+            SqlDataReader newReader = DatabaseConnection.getData();
+            while (newReader.Read())
+            {
+                gvGroupStudents.Rows.Add(newReader["RegistrationNo"].ToString(), newReader["FirstName"].ToString() + " " + newReader["LastName"].ToString() );
+            }
             
 
 
@@ -154,6 +164,26 @@ namespace DBMSL_ProjectA
             Marksheet marksheet = Marksheet.GetInstance();
             marksheet.Show();
             this.Hide();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            ManageProjects m = ManageProjects.GetInstance();
+            m.Show();
+            this.Hide();
+        }
+
+        private void btnChangeGroup_Click(object sender, EventArgs e)
+        {
+            if (btnChangeGroup.Text == "Change")
+            {
+                MessageBox.Show("Group cannot be changed at this time.");
+            }
+            else {
+                AssignGroup assignGroup = AssignGroup.GetInstance();
+                assignGroup.Show();
+                this.Hide();
+            }
         }
     }
 }

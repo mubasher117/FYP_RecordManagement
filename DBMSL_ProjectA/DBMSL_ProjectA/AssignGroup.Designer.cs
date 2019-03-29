@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.gvStudents = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.GroupId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Member1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Member2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Member3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Member4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Assign = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnOk = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,15 +57,6 @@
             this.gvStudents.Size = new System.Drawing.Size(955, 365);
             this.gvStudents.TabIndex = 0;
             this.gvStudents.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvStudents_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(96, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(217, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Select a group for current project";
             // 
             // GroupId
             // 
@@ -98,11 +91,42 @@
             this.Assign.Text = "Assign";
             this.Assign.UseColumnTextForButtonValue = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(96, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(217, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Select a group for current project";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(854, 478);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(101, 29);
+            this.btnCancel.TabIndex = 68;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnOk
+            // 
+            this.btnOk.Location = new System.Drawing.Point(961, 478);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(93, 29);
+            this.btnOk.TabIndex = 67;
+            this.btnOk.Text = "Ok";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            // 
             // AssignGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1161, 625);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnOk);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gvStudents);
             this.Name = "AssignGroup";
@@ -124,5 +148,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Member3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Member4;
         private System.Windows.Forms.DataGridViewButtonColumn Assign;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnOk;
     }
 }

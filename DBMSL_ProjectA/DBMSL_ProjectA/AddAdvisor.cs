@@ -244,5 +244,13 @@ namespace DBMSL_ProjectA
         {
             lblDOBwarning.Visible = false;
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+            ManageAdvisors m = ManageAdvisors.GetInstance();
+            m.Show();
+            this.Hide();
+        }
     }
 }

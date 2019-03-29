@@ -31,11 +31,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblCurrentDate = new System.Windows.Forms.Label();
             this.gvEvaluation = new System.Windows.Forms.DataGridView();
-            this.btnEvaluate = new System.Windows.Forms.Button();
             this.Entity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TotalMarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Weightage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Obtained = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEvaluate = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvEvaluation)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,16 +74,6 @@
             this.gvEvaluation.TabIndex = 4;
             this.gvEvaluation.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvEvaluation_CellContentClick);
             // 
-            // btnEvaluate
-            // 
-            this.btnEvaluate.Location = new System.Drawing.Point(596, 413);
-            this.btnEvaluate.Name = "btnEvaluate";
-            this.btnEvaluate.Size = new System.Drawing.Size(103, 34);
-            this.btnEvaluate.TabIndex = 5;
-            this.btnEvaluate.Text = "Evaluate";
-            this.btnEvaluate.UseVisualStyleBackColor = true;
-            this.btnEvaluate.Click += new System.EventHandler(this.btnEvaluate_Click);
-            // 
             // Entity
             // 
             this.Entity.HeaderText = "Entity";
@@ -104,11 +95,32 @@
             this.Obtained.HeaderText = "Obtained Marks";
             this.Obtained.Name = "Obtained";
             // 
+            // btnEvaluate
+            // 
+            this.btnEvaluate.Location = new System.Drawing.Point(596, 415);
+            this.btnEvaluate.Name = "btnEvaluate";
+            this.btnEvaluate.Size = new System.Drawing.Size(103, 34);
+            this.btnEvaluate.TabIndex = 5;
+            this.btnEvaluate.Text = "Evaluate";
+            this.btnEvaluate.UseVisualStyleBackColor = true;
+            this.btnEvaluate.Click += new System.EventHandler(this.btnEvaluate_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(487, 415);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(103, 34);
+            this.btnCancel.TabIndex = 6;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // ProjectEvaluation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(765, 492);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEvaluate);
             this.Controls.Add(this.gvEvaluation);
             this.Controls.Add(this.lblCurrentDate);
@@ -131,5 +143,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TotalMarks;
         private System.Windows.Forms.DataGridViewTextBoxColumn Weightage;
         private System.Windows.Forms.DataGridViewTextBoxColumn Obtained;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

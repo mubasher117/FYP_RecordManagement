@@ -39,6 +39,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.txtSallary = new System.Windows.Forms.TextBox();
             this.lblSallary = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -107,11 +108,11 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(339, 296);
+            this.btnSave.Location = new System.Drawing.Point(406, 295);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(126, 29);
+            this.btnSave.Size = new System.Drawing.Size(70, 29);
             this.btnSave.TabIndex = 51;
-            this.btnSave.Text = "Save Changes";
+            this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -131,11 +132,22 @@
             this.lblSallary.TabIndex = 60;
             this.lblSallary.Text = "Salary";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(330, 295);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(70, 29);
+            this.button1.TabIndex = 62;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // EditAdvisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 376);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.txtSallary);
             this.Controls.Add(this.lblSallary);
             this.Controls.Add(this.txtEmail);
@@ -168,5 +180,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtSallary;
         private System.Windows.Forms.Label lblSallary;
+        private System.Windows.Forms.Button button1;
     }
 }

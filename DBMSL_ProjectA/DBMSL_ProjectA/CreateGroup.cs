@@ -137,5 +137,12 @@ namespace DBMSL_ProjectA
                 cmbSelectStudent.Items.Add(reader["RegistrationNO"].ToString() );
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = Dashboard.GetInstance();
+            dashboard.Show();
+            this.Hide();
+        }
     }
 }

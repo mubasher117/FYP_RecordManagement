@@ -55,6 +55,7 @@
             this.lblLNameWarning = new System.Windows.Forms.Label();
             this.lblFNameWarning = new System.Windows.Forms.Label();
             this.lblSalaryWarning = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbYear
@@ -89,7 +90,7 @@
             "2003",
             "2004",
             "2005"});
-            this.cmbYear.Location = new System.Drawing.Point(440, 354);
+            this.cmbYear.Location = new System.Drawing.Point(419, 377);
             this.cmbYear.Name = "cmbYear";
             this.cmbYear.Size = new System.Drawing.Size(64, 24);
             this.cmbYear.TabIndex = 54;
@@ -113,7 +114,7 @@
             "October",
             "November",
             "December"});
-            this.cmbMonth.Location = new System.Drawing.Point(363, 353);
+            this.cmbMonth.Location = new System.Drawing.Point(342, 376);
             this.cmbMonth.Name = "cmbMonth";
             this.cmbMonth.Size = new System.Drawing.Size(71, 24);
             this.cmbMonth.TabIndex = 53;
@@ -157,7 +158,7 @@
             "29",
             "30",
             "31"});
-            this.cmbDay.Location = new System.Drawing.Point(302, 353);
+            this.cmbDay.Location = new System.Drawing.Point(281, 376);
             this.cmbDay.Name = "cmbDay";
             this.cmbDay.Size = new System.Drawing.Size(55, 24);
             this.cmbDay.TabIndex = 52;
@@ -170,7 +171,7 @@
             this.cmbGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cmbGender.Location = new System.Drawing.Point(302, 307);
+            this.cmbGender.Location = new System.Drawing.Point(281, 330);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(200, 24);
             this.cmbGender.TabIndex = 51;
@@ -178,7 +179,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(302, 267);
+            this.txtEmail.Location = new System.Drawing.Point(281, 290);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 22);
             this.txtEmail.TabIndex = 50;
@@ -186,7 +187,7 @@
             // 
             // txtContactNo
             // 
-            this.txtContactNo.Location = new System.Drawing.Point(302, 223);
+            this.txtContactNo.Location = new System.Drawing.Point(281, 246);
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(200, 22);
             this.txtContactNo.TabIndex = 49;
@@ -195,7 +196,7 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(302, 138);
+            this.txtLastName.Location = new System.Drawing.Point(281, 161);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(200, 22);
             this.txtLastName.TabIndex = 47;
@@ -203,7 +204,7 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(302, 94);
+            this.txtFirstName.Location = new System.Drawing.Point(281, 117);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(200, 22);
             this.txtFirstName.TabIndex = 46;
@@ -212,7 +213,7 @@
             // lblDOB
             // 
             this.lblDOB.AutoSize = true;
-            this.lblDOB.Location = new System.Drawing.Point(153, 356);
+            this.lblDOB.Location = new System.Drawing.Point(132, 379);
             this.lblDOB.Name = "lblDOB";
             this.lblDOB.Size = new System.Drawing.Size(90, 17);
             this.lblDOB.TabIndex = 45;
@@ -221,7 +222,7 @@
             // lblGender
             // 
             this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(156, 307);
+            this.lblGender.Location = new System.Drawing.Point(135, 330);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(56, 17);
             this.lblGender.TabIndex = 44;
@@ -230,7 +231,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(156, 267);
+            this.lblEmail.Location = new System.Drawing.Point(135, 290);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(42, 17);
             this.lblEmail.TabIndex = 43;
@@ -239,7 +240,7 @@
             // lblContactNo
             // 
             this.lblContactNo.AutoSize = true;
-            this.lblContactNo.Location = new System.Drawing.Point(156, 226);
+            this.lblContactNo.Location = new System.Drawing.Point(135, 249);
             this.lblContactNo.Name = "lblContactNo";
             this.lblContactNo.Size = new System.Drawing.Size(78, 17);
             this.lblContactNo.TabIndex = 42;
@@ -248,7 +249,7 @@
             // lblDesignation
             // 
             this.lblDesignation.AutoSize = true;
-            this.lblDesignation.Location = new System.Drawing.Point(153, 182);
+            this.lblDesignation.Location = new System.Drawing.Point(132, 205);
             this.lblDesignation.Name = "lblDesignation";
             this.lblDesignation.Size = new System.Drawing.Size(83, 17);
             this.lblDesignation.TabIndex = 41;
@@ -257,7 +258,7 @@
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(156, 143);
+            this.lblLastName.Location = new System.Drawing.Point(135, 166);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(76, 17);
             this.lblLastName.TabIndex = 40;
@@ -266,7 +267,7 @@
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(156, 97);
+            this.lblFirstName.Location = new System.Drawing.Point(135, 120);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(76, 17);
             this.lblFirstName.TabIndex = 39;
@@ -274,7 +275,7 @@
             // 
             // btnAddAdvisor
             // 
-            this.btnAddAdvisor.Location = new System.Drawing.Point(409, 447);
+            this.btnAddAdvisor.Location = new System.Drawing.Point(388, 470);
             this.btnAddAdvisor.Name = "btnAddAdvisor";
             this.btnAddAdvisor.Size = new System.Drawing.Size(93, 29);
             this.btnAddAdvisor.TabIndex = 38;
@@ -285,7 +286,7 @@
             // lblSalary
             // 
             this.lblSalary.AutoSize = true;
-            this.lblSalary.Location = new System.Drawing.Point(154, 400);
+            this.lblSalary.Location = new System.Drawing.Point(133, 423);
             this.lblSalary.Name = "lblSalary";
             this.lblSalary.Size = new System.Drawing.Size(48, 17);
             this.lblSalary.TabIndex = 55;
@@ -293,7 +294,7 @@
             // 
             // txtSalary
             // 
-            this.txtSalary.Location = new System.Drawing.Point(302, 400);
+            this.txtSalary.Location = new System.Drawing.Point(281, 423);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(200, 22);
             this.txtSalary.TabIndex = 56;
@@ -310,7 +311,7 @@
             "Assisstant Professor",
             "Lecturer",
             "Industry Professional"});
-            this.cmbDesignation.Location = new System.Drawing.Point(302, 179);
+            this.cmbDesignation.Location = new System.Drawing.Point(281, 202);
             this.cmbDesignation.Name = "cmbDesignation";
             this.cmbDesignation.Size = new System.Drawing.Size(200, 24);
             this.cmbDesignation.TabIndex = 57;
@@ -320,7 +321,7 @@
             // 
             this.lblDOBwarning.AutoSize = true;
             this.lblDOBwarning.ForeColor = System.Drawing.Color.Red;
-            this.lblDOBwarning.Location = new System.Drawing.Point(508, 357);
+            this.lblDOBwarning.Location = new System.Drawing.Point(487, 380);
             this.lblDOBwarning.Name = "lblDOBwarning";
             this.lblDOBwarning.Size = new System.Drawing.Size(138, 17);
             this.lblDOBwarning.TabIndex = 64;
@@ -331,7 +332,7 @@
             // 
             this.lblGenderWarning.AutoSize = true;
             this.lblGenderWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblGenderWarning.Location = new System.Drawing.Point(508, 314);
+            this.lblGenderWarning.Location = new System.Drawing.Point(487, 337);
             this.lblGenderWarning.Name = "lblGenderWarning";
             this.lblGenderWarning.Size = new System.Drawing.Size(104, 17);
             this.lblGenderWarning.TabIndex = 63;
@@ -342,7 +343,7 @@
             // 
             this.lblEmailWarning.AutoSize = true;
             this.lblEmailWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblEmailWarning.Location = new System.Drawing.Point(508, 272);
+            this.lblEmailWarning.Location = new System.Drawing.Point(487, 295);
             this.lblEmailWarning.Name = "lblEmailWarning";
             this.lblEmailWarning.Size = new System.Drawing.Size(120, 17);
             this.lblEmailWarning.TabIndex = 62;
@@ -353,7 +354,7 @@
             // 
             this.lblCellWarning.AutoSize = true;
             this.lblCellWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblCellWarning.Location = new System.Drawing.Point(508, 228);
+            this.lblCellWarning.Location = new System.Drawing.Point(487, 251);
             this.lblCellWarning.Name = "lblCellWarning";
             this.lblCellWarning.Size = new System.Drawing.Size(96, 17);
             this.lblCellWarning.TabIndex = 61;
@@ -364,7 +365,7 @@
             // 
             this.lblDesgWarning.AutoSize = true;
             this.lblDesgWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblDesgWarning.Location = new System.Drawing.Point(508, 186);
+            this.lblDesgWarning.Location = new System.Drawing.Point(487, 209);
             this.lblDesgWarning.Name = "lblDesgWarning";
             this.lblDesgWarning.Size = new System.Drawing.Size(131, 17);
             this.lblDesgWarning.TabIndex = 60;
@@ -375,7 +376,7 @@
             // 
             this.lblLNameWarning.AutoSize = true;
             this.lblLNameWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblLNameWarning.Location = new System.Drawing.Point(508, 143);
+            this.lblLNameWarning.Location = new System.Drawing.Point(487, 166);
             this.lblLNameWarning.Name = "lblLNameWarning";
             this.lblLNameWarning.Size = new System.Drawing.Size(138, 17);
             this.lblLNameWarning.TabIndex = 59;
@@ -386,7 +387,7 @@
             // 
             this.lblFNameWarning.AutoSize = true;
             this.lblFNameWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblFNameWarning.Location = new System.Drawing.Point(508, 97);
+            this.lblFNameWarning.Location = new System.Drawing.Point(487, 120);
             this.lblFNameWarning.Name = "lblFNameWarning";
             this.lblFNameWarning.Size = new System.Drawing.Size(138, 17);
             this.lblFNameWarning.TabIndex = 58;
@@ -397,19 +398,30 @@
             // 
             this.lblSalaryWarning.AutoSize = true;
             this.lblSalaryWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblSalaryWarning.Location = new System.Drawing.Point(508, 400);
+            this.lblSalaryWarning.Location = new System.Drawing.Point(487, 423);
             this.lblSalaryWarning.Name = "lblSalaryWarning";
             this.lblSalaryWarning.Size = new System.Drawing.Size(99, 17);
             this.lblSalaryWarning.TabIndex = 65;
             this.lblSalaryWarning.Text = "*Enter Salaray";
             this.lblSalaryWarning.Visible = false;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(281, 470);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(101, 29);
+            this.btnCancel.TabIndex = 66;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // AddAdvisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(694, 512);
+            this.ClientSize = new System.Drawing.Size(694, 580);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblSalaryWarning);
             this.Controls.Add(this.lblDOBwarning);
             this.Controls.Add(this.lblGenderWarning);
@@ -474,5 +486,6 @@
         private System.Windows.Forms.Label lblLNameWarning;
         private System.Windows.Forms.Label lblFNameWarning;
         private System.Windows.Forms.Label lblSalaryWarning;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

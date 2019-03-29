@@ -36,6 +36,7 @@
             this.lblContactNo = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -103,21 +104,33 @@
             this.lblFirstName.TabIndex = 39;
             this.lblFirstName.Text = "First Name";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(245, 243);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(70, 29);
+            this.btnCancel.TabIndex = 64;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(324, 251);
+            this.btnSave.Location = new System.Drawing.Point(321, 243);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(126, 29);
-            this.btnSave.TabIndex = 38;
-            this.btnSave.Text = "Save Changes";
+            this.btnSave.Size = new System.Drawing.Size(70, 29);
+            this.btnSave.TabIndex = 63;
+            this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.button2_Click);
             // 
             // EditStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 313);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtContactNo);
             this.Controls.Add(this.txtLastName);
@@ -126,7 +139,6 @@
             this.Controls.Add(this.lblContactNo);
             this.Controls.Add(this.lblLastName);
             this.Controls.Add(this.lblFirstName);
-            this.Controls.Add(this.btnSave);
             this.Name = "EditStudent";
             this.Text = "EditStudent";
             this.Load += new System.EventHandler(this.EditStudent_Load);
@@ -144,6 +156,7 @@
         private System.Windows.Forms.Label lblContactNo;
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
     }
 }

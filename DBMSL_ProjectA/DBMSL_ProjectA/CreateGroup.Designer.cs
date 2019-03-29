@@ -38,6 +38,7 @@
             this.Action2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.txtCreateGroup = new System.Windows.Forms.Button();
             this.cmbSelectStudent = new System.Windows.Forms.ComboBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +65,6 @@
             // gvStudents
             // 
             this.gvStudents.AllowUserToAddRows = false;
-            this.gvStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gvStudents.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -80,7 +80,7 @@
             this.SName,
             this.Action,
             this.Action2});
-            this.gvStudents.Location = new System.Drawing.Point(74, 199);
+            this.gvStudents.Location = new System.Drawing.Point(74, 195);
             this.gvStudents.Name = "gvStudents";
             this.gvStudents.RowTemplate.Height = 24;
             this.gvStudents.Size = new System.Drawing.Size(683, 177);
@@ -137,11 +137,22 @@
             this.cmbSelectStudent.Size = new System.Drawing.Size(366, 24);
             this.cmbSelectStudent.TabIndex = 5;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(507, 404);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(113, 34);
+            this.btnCancel.TabIndex = 69;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // CreateGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(843, 486);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.cmbSelectStudent);
             this.Controls.Add(this.txtCreateGroup);
             this.Controls.Add(this.gvStudents);
@@ -167,5 +178,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Action2;
         private System.Windows.Forms.Button txtCreateGroup;
         private System.Windows.Forms.ComboBox cmbSelectStudent;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

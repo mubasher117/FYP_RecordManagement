@@ -67,7 +67,7 @@ namespace DBMSL_ProjectA
         private void btnCancel_Click(object sender, EventArgs e)
         {
 
-            AddProject project = AddProject.GetInstance();
+            ManageProjects project = ManageProjects.GetInstance();
             project.Show();
             this.Hide();
         }

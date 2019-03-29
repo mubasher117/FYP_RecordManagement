@@ -52,6 +52,7 @@
             this.lblEmailWarning = new System.Windows.Forms.Label();
             this.lblGenderWarning = new System.Windows.Forms.Label();
             this.lblDOBwarning = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -364,11 +365,22 @@
             this.lblDOBwarning.Text = "*Select Date Of Birth";
             this.lblDOBwarning.Visible = false;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(262, 406);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(101, 29);
+            this.btnCancel.TabIndex = 67;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // frmRegisterStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(619, 519);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblDOBwarning);
             this.Controls.Add(this.lblGenderWarning);
             this.Controls.Add(this.lblEmailWarning);
@@ -426,6 +438,7 @@
         private System.Windows.Forms.Label lblEmailWarning;
         private System.Windows.Forms.Label lblGenderWarning;
         private System.Windows.Forms.Label lblDOBwarning;
+        private System.Windows.Forms.Button btnCancel;
     }
 }
 

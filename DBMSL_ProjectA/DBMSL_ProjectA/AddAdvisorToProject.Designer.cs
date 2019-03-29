@@ -55,7 +55,7 @@
             // 
             // lblAdd
             // 
-            this.lblAdd.Location = new System.Drawing.Point(328, 151);
+            this.lblAdd.Location = new System.Drawing.Point(450, 159);
             this.lblAdd.Name = "lblAdd";
             this.lblAdd.Size = new System.Drawing.Size(116, 40);
             this.lblAdd.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(450, 151);
+            this.btnCancel.Location = new System.Drawing.Point(328, 159);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(116, 40);
             this.btnCancel.TabIndex = 4;

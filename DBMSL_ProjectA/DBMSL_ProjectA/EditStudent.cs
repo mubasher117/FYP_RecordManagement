@@ -27,6 +27,11 @@ namespace DBMSL_ProjectA
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
             DatabaseConnection.createStatement("update Person set FirstName = '" + txtFirstName.Text + "' , LastName = '" + txtLastName.Text + "', Contact = '" + txtContactNo.Text + "', Email = '" + txtEmail.Text + "'" +
                 " where Id = " + TempData.CurrentStudent.PersonId);
             DatabaseConnection.performAction();
@@ -34,7 +39,15 @@ namespace DBMSL_ProjectA
             ManageStudent manageStudent = ManageStudent.GetInstance();
             manageStudent.Show();
             this.Hide();
-            
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+            ManageStudent m = ManageStudent.GetInstance();
+            m.Show();
+            this.Hide();
         }
     }
 }

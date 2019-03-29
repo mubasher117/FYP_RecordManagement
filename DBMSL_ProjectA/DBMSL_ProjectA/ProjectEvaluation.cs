@@ -72,5 +72,14 @@ namespace DBMSL_ProjectA
         {
 
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+            ProjectDashboard projectDashboard = ProjectDashboard.GetInstance();
+            projectDashboard.Show();
+            this.Hide();
+
+        }
     }
 }
