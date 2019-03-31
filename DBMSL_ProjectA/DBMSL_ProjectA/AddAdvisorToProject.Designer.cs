@@ -33,12 +33,13 @@
             this.lblAdd = new System.Windows.Forms.Button();
             this.lblWarning = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblSelectAdvisor
             // 
             this.lblSelectAdvisor.AutoSize = true;
-            this.lblSelectAdvisor.Location = new System.Drawing.Point(52, 95);
+            this.lblSelectAdvisor.Location = new System.Drawing.Point(52, 113);
             this.lblSelectAdvisor.Name = "lblSelectAdvisor";
             this.lblSelectAdvisor.Size = new System.Drawing.Size(98, 17);
             this.lblSelectAdvisor.TabIndex = 0;
@@ -47,7 +48,7 @@
             // cmbSelctAdvisor
             // 
             this.cmbSelctAdvisor.FormattingEnabled = true;
-            this.cmbSelctAdvisor.Location = new System.Drawing.Point(200, 92);
+            this.cmbSelctAdvisor.Location = new System.Drawing.Point(200, 110);
             this.cmbSelctAdvisor.Name = "cmbSelctAdvisor";
             this.cmbSelctAdvisor.Size = new System.Drawing.Size(366, 24);
             this.cmbSelctAdvisor.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             // lblAdd
             // 
-            this.lblAdd.Location = new System.Drawing.Point(450, 159);
+            this.lblAdd.Location = new System.Drawing.Point(450, 177);
             this.lblAdd.Name = "lblAdd";
             this.lblAdd.Size = new System.Drawing.Size(116, 40);
             this.lblAdd.TabIndex = 2;
@@ -67,7 +68,7 @@
             // 
             this.lblWarning.AutoSize = true;
             this.lblWarning.ForeColor = System.Drawing.Color.Red;
-            this.lblWarning.Location = new System.Drawing.Point(207, 119);
+            this.lblWarning.Location = new System.Drawing.Point(207, 137);
             this.lblWarning.Name = "lblWarning";
             this.lblWarning.Size = new System.Drawing.Size(122, 17);
             this.lblWarning.TabIndex = 3;
@@ -76,7 +77,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(328, 159);
+            this.btnCancel.Location = new System.Drawing.Point(328, 177);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(116, 40);
             this.btnCancel.TabIndex = 4;
@@ -84,11 +85,22 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(194, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(313, 31);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "Add Advisor To Project";
+            // 
             // AddAdvisorToProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(670, 363);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.lblAdd);
@@ -109,5 +121,6 @@
         private System.Windows.Forms.Button lblAdd;
         private System.Windows.Forms.Label lblWarning;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label label1;
     }
 }

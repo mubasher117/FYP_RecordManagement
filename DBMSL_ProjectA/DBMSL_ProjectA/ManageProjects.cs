@@ -278,5 +278,12 @@ namespace DBMSL_ProjectA
             }
 
         }
+
+        private void lblEvaluate_Click(object sender, EventArgs e)
+        {
+            ProjectEvaluation evaluation = ProjectEvaluation.GetInstance();
+            evaluation.Show();
+            this.Hide();
+        }
     }
 }

@@ -38,6 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             this.Member3,
             this.Member4,
             this.Assign});
-            this.gvStudents.Location = new System.Drawing.Point(99, 86);
+            this.gvStudents.Location = new System.Drawing.Point(103, 150);
             this.gvStudents.Name = "gvStudents";
             this.gvStudents.RowTemplate.Height = 24;
             this.gvStudents.Size = new System.Drawing.Size(955, 365);
@@ -94,7 +95,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(96, 52);
+            this.label1.Location = new System.Drawing.Point(100, 116);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(217, 17);
             this.label1.TabIndex = 1;
@@ -102,7 +103,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(854, 478);
+            this.btnCancel.Location = new System.Drawing.Point(858, 542);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(101, 29);
             this.btnCancel.TabIndex = 68;
@@ -112,7 +113,7 @@
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(961, 478);
+            this.btnOk.Location = new System.Drawing.Point(965, 542);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(93, 29);
             this.btnOk.TabIndex = 67;
@@ -120,11 +121,23 @@
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(414, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(323, 31);
+            this.label2.TabIndex = 69;
+            this.label2.Text = "Assign Group to Project";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // AssignGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1161, 625);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.label1);
@@ -150,5 +163,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Assign;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Label label2;
     }
 }

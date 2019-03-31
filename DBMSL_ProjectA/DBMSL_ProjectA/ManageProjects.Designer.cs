@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Home = new System.Windows.Forms.TabPage();
             this.Projects = new System.Windows.Forms.TabPage();
+            this.btnMarkSheet = new System.Windows.Forms.Button();
             this.btnProjectsReports = new System.Windows.Forms.Button();
             this.btnAddProject = new System.Windows.Forms.Button();
             this.gvStudents = new System.Windows.Forms.DataGridView();
@@ -43,7 +44,7 @@
             this.Students = new System.Windows.Forms.TabPage();
             this.Advisors = new System.Windows.Forms.TabPage();
             this.Groups = new System.Windows.Forms.TabPage();
-            this.btnMarkSheet = new System.Windows.Forms.Button();
+            this.lblEvaluate = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Projects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).BeginInit();
@@ -79,6 +80,7 @@
             // 
             this.Projects.AccessibleName = "tabProject";
             this.Projects.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Projects.Controls.Add(this.lblEvaluate);
             this.Projects.Controls.Add(this.btnMarkSheet);
             this.Projects.Controls.Add(this.btnProjectsReports);
             this.Projects.Controls.Add(this.btnAddProject);
@@ -89,6 +91,16 @@
             this.Projects.Size = new System.Drawing.Size(813, 501);
             this.Projects.TabIndex = 1;
             this.Projects.Text = "Projects";
+            // 
+            // btnMarkSheet
+            // 
+            this.btnMarkSheet.Location = new System.Drawing.Point(569, 149);
+            this.btnMarkSheet.Name = "btnMarkSheet";
+            this.btnMarkSheet.Size = new System.Drawing.Size(169, 31);
+            this.btnMarkSheet.TabIndex = 14;
+            this.btnMarkSheet.Text = "Mark Sheet";
+            this.btnMarkSheet.UseVisualStyleBackColor = true;
+            this.btnMarkSheet.Click += new System.EventHandler(this.btnMarkSheet_Click);
             // 
             // btnProjectsReports
             // 
@@ -117,14 +129,14 @@
             this.gvStudents.AllowUserToAddRows = false;
             this.gvStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gvStudents.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -209,15 +221,15 @@
             this.Groups.TabIndex = 4;
             this.Groups.Text = "Groups";
             // 
-            // btnMarkSheet
+            // lblEvaluate
             // 
-            this.btnMarkSheet.Location = new System.Drawing.Point(569, 149);
-            this.btnMarkSheet.Name = "btnMarkSheet";
-            this.btnMarkSheet.Size = new System.Drawing.Size(169, 31);
-            this.btnMarkSheet.TabIndex = 14;
-            this.btnMarkSheet.Text = "Mark Sheet";
-            this.btnMarkSheet.UseVisualStyleBackColor = true;
-            this.btnMarkSheet.Click += new System.EventHandler(this.btnMarkSheet_Click);
+            this.lblEvaluate.Location = new System.Drawing.Point(569, 197);
+            this.lblEvaluate.Name = "lblEvaluate";
+            this.lblEvaluate.Size = new System.Drawing.Size(169, 31);
+            this.lblEvaluate.TabIndex = 15;
+            this.lblEvaluate.Text = "Evaluate Projects";
+            this.lblEvaluate.UseVisualStyleBackColor = true;
+            this.lblEvaluate.Click += new System.EventHandler(this.lblEvaluate_Click);
             // 
             // ManageProjects
             // 
@@ -251,5 +263,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Action2;
         private System.Windows.Forms.DataGridViewButtonColumn Action3;
         private System.Windows.Forms.Button btnMarkSheet;
+        private System.Windows.Forms.Button lblEvaluate;
     }
 }
