@@ -98,6 +98,33 @@ namespace DBMSL_ProjectA
                 this.Hide();
 
             }
+            if (gvStudents.Columns[e.ColumnIndex].Name.ToString() == "Action")
+            {
+                gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString();
+                DatabaseConnection.createStatement("select * from Person join Student on Person.Id = Student.Id join GroupStudent on Student.Id = GroupStudent.StudentId join GroupProject on GroupStudent.GroupId = GroupProject.GroupId join Project on GroupProject.ProjectId = Project.Id where Student.Id =" + gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString());
+                SqlDataReader dataReader = DatabaseConnection.getData();
+                if (dataReader.Read())
+                {
+                    Student student = new Student();
+                    student.FirstName = dataReader["FirstName"].ToString();
+                    student.LastName = dataReader["LastName"].ToString();
+                    student.Contact = dataReader["Contact"].ToString();
+                    student.Email = dataReader["Email"].ToString();
+                    student.DateOfBirth = DateTime.Parse(dataReader["DateOfBirth"].ToString());
+                    student.Gender = int.Parse(dataReader["Gender"].ToString());
+                    student.RegistrationNo = dataReader["RegistrationNo"].ToString();
+                    student.Status = int.Parse(dataReader["Status"].ToString());
+                    student.ProjectTitle = dataReader["Title"].ToString();
+                    TempData.CurrentStudent = student;
+
+                    ViewStudent view = ViewStudent.GetInstance();
+                    this.Hide();
+                    view.Show();
+
+
+                }
+
+            }
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)

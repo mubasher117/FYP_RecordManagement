@@ -19,6 +19,8 @@ namespace DBMSL_ProjectA
         private string email;
         private DateTime dateOfBirth;
         private int gender;
+        private int status;
+        private string projectTitle;
 
         public int PersonId
         {
@@ -87,5 +89,7 @@ namespace DBMSL_ProjectA
             } }
         public DateTime DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
         public int Gender { get => gender; set => gender = value; }
+        public int Status { get => status; set => status = value; }
+        public string ProjectTitle { get => projectTitle; set => projectTitle = value; }
     }
 }

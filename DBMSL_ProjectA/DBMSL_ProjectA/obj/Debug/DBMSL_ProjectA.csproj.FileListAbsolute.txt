@@ -43,3 +43,4 @@ E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\bin\Debug\N
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\bin\Debug\System.Net.Http.Formatting.dll
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\bin\Debug\Newtonsoft.Json.xml
 E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\bin\Debug\System.Net.Http.Formatting.xml
+E:\Study\ProjectA\FYP_RecordManagement\DBMSL_ProjectA\DBMSL_ProjectA\obj\Debug\DBMSL_ProjectA.ViewStudent.resources
