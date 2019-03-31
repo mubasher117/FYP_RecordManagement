@@ -81,9 +81,11 @@ namespace DBMSL_ProjectA
 
         private void txtCreateGroup_Click(object sender, EventArgs e)
         {
-            // These queries are done without the Database class.
+            if (gvStudents.RowCount != 0)
+            {
+                // These queries are done without the Database class.
 
-            string conStr = "Data Source=MUSHI\\MUSHISQL;Initial Catalog=LabProjectA;Integrated Security=True; MultipleActiveResultSets=true";
+                string conStr = "Data Source=MUSHI\\MUSHISQL;Initial Catalog=LabProjectA;Integrated Security=True; MultipleActiveResultSets=true";
             SqlConnection con = new SqlConnection(conStr);
             con.Open();
             string sqlFormattedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
@@ -117,7 +119,13 @@ namespace DBMSL_ProjectA
             gvStudents.Rows.Clear();
             gvStudents.Refresh();
             cmbSelectStudent.Text = "";
-            MessageBox.Show("Group has been Created");
+                MessageBox.Show("Group has been Created");
+
+            }
+            else
+            {
+                MessageBox.Show("Select at least one student");
+            }
             
 
         }

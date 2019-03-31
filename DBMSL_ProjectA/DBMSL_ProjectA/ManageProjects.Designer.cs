@@ -43,6 +43,7 @@
             this.Students = new System.Windows.Forms.TabPage();
             this.Advisors = new System.Windows.Forms.TabPage();
             this.Groups = new System.Windows.Forms.TabPage();
+            this.btnMarkSheet = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Projects.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).BeginInit();
@@ -78,6 +79,7 @@
             // 
             this.Projects.AccessibleName = "tabProject";
             this.Projects.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Projects.Controls.Add(this.btnMarkSheet);
             this.Projects.Controls.Add(this.btnProjectsReports);
             this.Projects.Controls.Add(this.btnAddProject);
             this.Projects.Controls.Add(this.gvStudents);
@@ -207,6 +209,16 @@
             this.Groups.TabIndex = 4;
             this.Groups.Text = "Groups";
             // 
+            // btnMarkSheet
+            // 
+            this.btnMarkSheet.Location = new System.Drawing.Point(569, 149);
+            this.btnMarkSheet.Name = "btnMarkSheet";
+            this.btnMarkSheet.Size = new System.Drawing.Size(169, 31);
+            this.btnMarkSheet.TabIndex = 14;
+            this.btnMarkSheet.Text = "Mark Sheet";
+            this.btnMarkSheet.UseVisualStyleBackColor = true;
+            this.btnMarkSheet.Click += new System.EventHandler(this.btnMarkSheet_Click);
+            // 
             // ManageProjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -238,5 +250,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn Action;
         private System.Windows.Forms.DataGridViewButtonColumn Action2;
         private System.Windows.Forms.DataGridViewButtonColumn Action3;
+        private System.Windows.Forms.Button btnMarkSheet;
     }
 }

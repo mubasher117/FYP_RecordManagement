@@ -77,19 +77,33 @@ namespace DBMSL_ProjectA
         {
             if (gvStudents.Columns[e.ColumnIndex].Name.ToString() == "Assign")
             {
-                string sqlFormattedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                DatabaseConnection.start();
-                DatabaseConnection.createStatement("Insert into GroupProject (ProjectId, GroupId, AssignmentDate)" + 
-                    " Values (" +TempData.CurrentProject.Id + ", " + gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString() + ", '" +
-                    sqlFormattedDate + "')");
-                DatabaseConnection.performAction();
+                bool IsAlready = false;
+                DatabaseConnection.createStatement("select ProjectId from GroupProject where GroupId = " + gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString());
+                SqlDataReader newReader = DatabaseConnection.getData();
+                if (newReader.Read())
+                {
+                    IsAlready = true;
+                }
+                if (IsAlready)
+                {
+                    MessageBox.Show("This group is already assigned");
+                }
+                else
+                {
+                    string sqlFormattedDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    DatabaseConnection.start();
+                    DatabaseConnection.createStatement("Insert into GroupProject (ProjectId, GroupId, AssignmentDate)" +
+                        " Values (" + TempData.CurrentProject.Id + ", " + gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString() + ", '" +
+                        sqlFormattedDate + "')");
+                    DatabaseConnection.performAction();
 
-                DatabaseConnection.createStatement("Update GroupStudent set Status = 4 where GroupId = " + gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString());
-                DatabaseConnection.performAction();
+                    DatabaseConnection.createStatement("Update GroupStudent set Status = 4 where GroupId = " + gvStudents.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    DatabaseConnection.performAction();
 
-                ProjectDashboard projectDashboard = ProjectDashboard.GetInstance();
-                projectDashboard.Show();
-                this.Hide();
+                    ProjectDashboard projectDashboard = ProjectDashboard.GetInstance();
+                    projectDashboard.Show();
+                    this.Hide();
+                }
 
             }
         }

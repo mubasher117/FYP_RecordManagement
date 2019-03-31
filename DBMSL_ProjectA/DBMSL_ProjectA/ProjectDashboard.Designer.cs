@@ -51,6 +51,7 @@
             this.RegNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtDesc = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gvGroupStudents)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,7 +68,7 @@
             // 
             this.lblAdvisors.AutoSize = true;
             this.lblAdvisors.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdvisors.Location = new System.Drawing.Point(87, 100);
+            this.lblAdvisors.Location = new System.Drawing.Point(87, 283);
             this.lblAdvisors.Name = "lblAdvisors";
             this.lblAdvisors.Size = new System.Drawing.Size(113, 29);
             this.lblAdvisors.TabIndex = 1;
@@ -77,7 +78,7 @@
             // 
             this.lblGroupStudents.AutoSize = true;
             this.lblGroupStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGroupStudents.Location = new System.Drawing.Point(87, 365);
+            this.lblGroupStudents.Location = new System.Drawing.Point(87, 438);
             this.lblGroupStudents.Name = "lblGroupStudents";
             this.lblGroupStudents.Size = new System.Drawing.Size(194, 29);
             this.lblGroupStudents.TabIndex = 2;
@@ -86,7 +87,7 @@
             // lblMainAdvisor
             // 
             this.lblMainAdvisor.AutoSize = true;
-            this.lblMainAdvisor.Location = new System.Drawing.Point(109, 177);
+            this.lblMainAdvisor.Location = new System.Drawing.Point(114, 323);
             this.lblMainAdvisor.Name = "lblMainAdvisor";
             this.lblMainAdvisor.Size = new System.Drawing.Size(133, 17);
             this.lblMainAdvisor.TabIndex = 4;
@@ -95,7 +96,7 @@
             // lblCoAdvisor
             // 
             this.lblCoAdvisor.AutoSize = true;
-            this.lblCoAdvisor.Location = new System.Drawing.Point(109, 229);
+            this.lblCoAdvisor.Location = new System.Drawing.Point(114, 360);
             this.lblCoAdvisor.Name = "lblCoAdvisor";
             this.lblCoAdvisor.Size = new System.Drawing.Size(133, 17);
             this.lblCoAdvisor.TabIndex = 5;
@@ -104,7 +105,7 @@
             // lblIndustryAdvisor
             // 
             this.lblIndustryAdvisor.AutoSize = true;
-            this.lblIndustryAdvisor.Location = new System.Drawing.Point(109, 282);
+            this.lblIndustryAdvisor.Location = new System.Drawing.Point(114, 397);
             this.lblIndustryAdvisor.Name = "lblIndustryAdvisor";
             this.lblIndustryAdvisor.Size = new System.Drawing.Size(133, 17);
             this.lblIndustryAdvisor.TabIndex = 6;
@@ -114,7 +115,7 @@
             // 
             this.lblMainAdvisorName.AutoSize = true;
             this.lblMainAdvisorName.ForeColor = System.Drawing.Color.Red;
-            this.lblMainAdvisorName.Location = new System.Drawing.Point(284, 177);
+            this.lblMainAdvisorName.Location = new System.Drawing.Point(289, 323);
             this.lblMainAdvisorName.Name = "lblMainAdvisorName";
             this.lblMainAdvisorName.Size = new System.Drawing.Size(100, 17);
             this.lblMainAdvisorName.TabIndex = 7;
@@ -124,7 +125,7 @@
             // 
             this.lblCoAdvisorName.AutoSize = true;
             this.lblCoAdvisorName.ForeColor = System.Drawing.Color.Red;
-            this.lblCoAdvisorName.Location = new System.Drawing.Point(284, 229);
+            this.lblCoAdvisorName.Location = new System.Drawing.Point(289, 360);
             this.lblCoAdvisorName.Name = "lblCoAdvisorName";
             this.lblCoAdvisorName.Size = new System.Drawing.Size(100, 17);
             this.lblCoAdvisorName.TabIndex = 8;
@@ -134,7 +135,7 @@
             // 
             this.lblIndustryAdvisorName.AutoSize = true;
             this.lblIndustryAdvisorName.ForeColor = System.Drawing.Color.Red;
-            this.lblIndustryAdvisorName.Location = new System.Drawing.Point(284, 282);
+            this.lblIndustryAdvisorName.Location = new System.Drawing.Point(289, 397);
             this.lblIndustryAdvisorName.Name = "lblIndustryAdvisorName";
             this.lblIndustryAdvisorName.Size = new System.Drawing.Size(104, 17);
             this.lblIndustryAdvisorName.TabIndex = 9;
@@ -142,7 +143,7 @@
             // 
             // btnViewMainAdvisor
             // 
-            this.btnViewMainAdvisor.Location = new System.Drawing.Point(571, 170);
+            this.btnViewMainAdvisor.Location = new System.Drawing.Point(576, 316);
             this.btnViewMainAdvisor.Name = "btnViewMainAdvisor";
             this.btnViewMainAdvisor.Size = new System.Drawing.Size(77, 31);
             this.btnViewMainAdvisor.TabIndex = 10;
@@ -152,7 +153,7 @@
             // 
             // btnAddMainAdvisor
             // 
-            this.btnAddMainAdvisor.Location = new System.Drawing.Point(664, 170);
+            this.btnAddMainAdvisor.Location = new System.Drawing.Point(669, 316);
             this.btnAddMainAdvisor.Name = "btnAddMainAdvisor";
             this.btnAddMainAdvisor.Size = new System.Drawing.Size(77, 31);
             this.btnAddMainAdvisor.TabIndex = 11;
@@ -162,7 +163,7 @@
             // 
             // btnViewCoAdvisor
             // 
-            this.btnViewCoAdvisor.Location = new System.Drawing.Point(571, 215);
+            this.btnViewCoAdvisor.Location = new System.Drawing.Point(576, 353);
             this.btnViewCoAdvisor.Name = "btnViewCoAdvisor";
             this.btnViewCoAdvisor.Size = new System.Drawing.Size(77, 31);
             this.btnViewCoAdvisor.TabIndex = 12;
@@ -171,7 +172,7 @@
             // 
             // btnAddCoAdvisor
             // 
-            this.btnAddCoAdvisor.Location = new System.Drawing.Point(664, 215);
+            this.btnAddCoAdvisor.Location = new System.Drawing.Point(669, 353);
             this.btnAddCoAdvisor.Name = "btnAddCoAdvisor";
             this.btnAddCoAdvisor.Size = new System.Drawing.Size(77, 31);
             this.btnAddCoAdvisor.TabIndex = 13;
@@ -181,7 +182,7 @@
             // 
             // btnViewIndustryAdvisor
             // 
-            this.btnViewIndustryAdvisor.Location = new System.Drawing.Point(571, 268);
+            this.btnViewIndustryAdvisor.Location = new System.Drawing.Point(576, 390);
             this.btnViewIndustryAdvisor.Name = "btnViewIndustryAdvisor";
             this.btnViewIndustryAdvisor.Size = new System.Drawing.Size(77, 31);
             this.btnViewIndustryAdvisor.TabIndex = 14;
@@ -190,7 +191,7 @@
             // 
             // btnAddIndustryAdvisor
             // 
-            this.btnAddIndustryAdvisor.Location = new System.Drawing.Point(664, 268);
+            this.btnAddIndustryAdvisor.Location = new System.Drawing.Point(669, 390);
             this.btnAddIndustryAdvisor.Name = "btnAddIndustryAdvisor";
             this.btnAddIndustryAdvisor.Size = new System.Drawing.Size(77, 31);
             this.btnAddIndustryAdvisor.TabIndex = 15;
@@ -200,7 +201,7 @@
             // 
             // btnChangeGroup
             // 
-            this.btnChangeGroup.Location = new System.Drawing.Point(618, 728);
+            this.btnChangeGroup.Location = new System.Drawing.Point(620, 792);
             this.btnChangeGroup.Name = "btnChangeGroup";
             this.btnChangeGroup.Size = new System.Drawing.Size(123, 38);
             this.btnChangeGroup.TabIndex = 19;
@@ -210,7 +211,7 @@
             // 
             // btnEvaluation
             // 
-            this.btnEvaluation.Location = new System.Drawing.Point(456, 63);
+            this.btnEvaluation.Location = new System.Drawing.Point(809, 201);
             this.btnEvaluation.Name = "btnEvaluation";
             this.btnEvaluation.Size = new System.Drawing.Size(138, 33);
             this.btnEvaluation.TabIndex = 20;
@@ -220,9 +221,9 @@
             // 
             // btnMarksheet
             // 
-            this.btnMarksheet.Location = new System.Drawing.Point(619, 63);
+            this.btnMarksheet.Location = new System.Drawing.Point(809, 148);
             this.btnMarksheet.Name = "btnMarksheet";
-            this.btnMarksheet.Size = new System.Drawing.Size(142, 33);
+            this.btnMarksheet.Size = new System.Drawing.Size(138, 33);
             this.btnMarksheet.TabIndex = 22;
             this.btnMarksheet.Text = "Mark Sheet";
             this.btnMarksheet.UseVisualStyleBackColor = true;
@@ -230,9 +231,9 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(767, 63);
+            this.btnBack.Location = new System.Drawing.Point(809, 97);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(99, 32);
+            this.btnBack.Size = new System.Drawing.Size(138, 32);
             this.btnBack.TabIndex = 23;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -244,7 +245,7 @@
             this.gvGroupStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RegNo,
             this.Column1});
-            this.gvGroupStudents.Location = new System.Drawing.Point(117, 432);
+            this.gvGroupStudents.Location = new System.Drawing.Point(119, 496);
             this.gvGroupStudents.Name = "gvGroupStudents";
             this.gvGroupStudents.RowTemplate.Height = 24;
             this.gvGroupStudents.Size = new System.Drawing.Size(624, 275);
@@ -266,18 +267,28 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(114, 412);
+            this.label1.Location = new System.Drawing.Point(116, 476);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(165, 17);
             this.label1.TabIndex = 25;
             this.label1.Text = "Group Not Assigned  Yet";
             this.label1.Visible = false;
             // 
+            // txtDesc
+            // 
+            this.txtDesc.Location = new System.Drawing.Point(92, 102);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.ReadOnly = true;
+            this.txtDesc.Size = new System.Drawing.Size(654, 178);
+            this.txtDesc.TabIndex = 26;
+            this.txtDesc.Text = "";
+            // 
             // ProjectDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 796);
+            this.ClientSize = new System.Drawing.Size(990, 844);
+            this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gvGroupStudents);
             this.Controls.Add(this.btnBack);
@@ -332,5 +343,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn RegNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox txtDesc;
     }
 }

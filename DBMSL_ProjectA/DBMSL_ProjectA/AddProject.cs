@@ -41,7 +41,7 @@ namespace DBMSL_ProjectA
             else
             {
                 DatabaseConnection.createStatement("INSERT INTO Project ( Title, Description)" +
-                " VALUES('" + txtTitle.Text + "' , '" + txtDescription.Text + "'); ");
+                " VALUES('" + txtTitle.Text + "' , '" + txtDescription.Text + "') ");
                 DatabaseConnection.performAction();
                 Project project = new Project();
                 project.Title = txtTitle.Text;

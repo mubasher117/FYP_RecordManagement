@@ -119,9 +119,9 @@ namespace DBMSL_ProjectA
 
                     bool IsException = false;
 
-                    DatabaseConnection.createStatement("select * form Student where RegistrationNo = '" + txtRegNo.Text + " '");
+                    DatabaseConnection.createStatement("select * from Student where RegistrationNo = '" + txtRegNo.Text + " '");
                     SqlDataReader r = DatabaseConnection.getData();
-                    if (!r.Read())
+                    if (r.Read())
                     {
                         IsException = true;
                         MessageBox.Show("This Registration Number already exists");

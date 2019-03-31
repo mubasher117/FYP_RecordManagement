@@ -31,7 +31,7 @@ namespace DBMSL_ProjectA
         private void ProjectDashboard_Load(object sender, EventArgs e)
         {
             
-            if (gvGroupStudents.Rows.Count == 0)
+            if (gvGroupStudents.RowCount == 0)
             {
                 btnChangeGroup.Text = "Add Group";
                 label1.Visible = true;
@@ -42,6 +42,7 @@ namespace DBMSL_ProjectA
                 label1.Visible = false;
             }
             lblTitle.Text = TempData.CurrentProject.Title;
+            txtDesc.Text = TempData.CurrentProject.Description;
             List<Advisor> advisors = new List<Advisor>();
             DatabaseConnection.createStatement("select AdvisorId, FirstName, LastName, AdvisorRole from ProjectAdvisor join Advisor on ProjectAdvisor.AdvisorId = Advisor.Id join Person on Advisor.Id = Person.Id where ProjectAdvisor.ProjectId = " + TempData.CurrentProject.Id.ToString());
             SqlDataReader reader = DatabaseConnection.getData();
