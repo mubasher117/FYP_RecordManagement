@@ -45,6 +45,7 @@
             // 
             // lblRegistrationNo
             // 
+            this.lblRegistrationNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRegistrationNo.AutoSize = true;
             this.lblRegistrationNo.Location = new System.Drawing.Point(71, 95);
             this.lblRegistrationNo.Name = "lblRegistrationNo";
@@ -55,6 +56,7 @@
             // 
             // btnAddStudent
             // 
+            this.btnAddStudent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddStudent.Location = new System.Drawing.Point(523, 134);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(97, 34);
@@ -66,6 +68,7 @@
             // gvStudents
             // 
             this.gvStudents.AllowUserToAddRows = false;
+            this.gvStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gvStudents.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -122,6 +125,7 @@
             // 
             // txtCreateGroup
             // 
+            this.txtCreateGroup.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCreateGroup.Location = new System.Drawing.Point(626, 404);
             this.txtCreateGroup.Name = "txtCreateGroup";
             this.txtCreateGroup.Size = new System.Drawing.Size(131, 34);
@@ -132,6 +136,7 @@
             // 
             // cmbSelectStudent
             // 
+            this.cmbSelectStudent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbSelectStudent.FormattingEnabled = true;
             this.cmbSelectStudent.Location = new System.Drawing.Point(254, 92);
             this.cmbSelectStudent.Name = "cmbSelectStudent";
@@ -140,6 +145,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancel.Location = new System.Drawing.Point(507, 404);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(113, 34);
@@ -150,6 +156,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(315, 27);
@@ -162,6 +169,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoScrollMinSize = new System.Drawing.Size(400, 300);
             this.ClientSize = new System.Drawing.Size(843, 486);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);

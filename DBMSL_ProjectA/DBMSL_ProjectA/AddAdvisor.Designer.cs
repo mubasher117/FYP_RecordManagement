@@ -61,6 +61,7 @@
             // 
             // cmbYear
             // 
+            this.cmbYear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYear.FormattingEnabled = true;
             this.cmbYear.Items.AddRange(new object[] {
@@ -99,6 +100,7 @@
             // 
             // cmbMonth
             // 
+            this.cmbMonth.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMonth.FormattingEnabled = true;
             this.cmbMonth.Items.AddRange(new object[] {
@@ -123,6 +125,7 @@
             // 
             // cmbDay
             // 
+            this.cmbDay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbDay.DisplayMember = "Day";
             this.cmbDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDay.FormattingEnabled = true;
@@ -167,6 +170,7 @@
             // 
             // cmbGender
             // 
+            this.cmbGender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGender.FormattingEnabled = true;
             this.cmbGender.Items.AddRange(new object[] {
@@ -180,6 +184,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEmail.Location = new System.Drawing.Point(281, 290);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 22);
@@ -188,6 +193,7 @@
             // 
             // txtContactNo
             // 
+            this.txtContactNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtContactNo.Location = new System.Drawing.Point(281, 246);
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Size = new System.Drawing.Size(200, 22);
@@ -197,6 +203,7 @@
             // 
             // txtLastName
             // 
+            this.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtLastName.Location = new System.Drawing.Point(281, 161);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(200, 22);
@@ -205,6 +212,7 @@
             // 
             // txtFirstName
             // 
+            this.txtFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtFirstName.Location = new System.Drawing.Point(281, 117);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(200, 22);
@@ -213,6 +221,7 @@
             // 
             // lblDOB
             // 
+            this.lblDOB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDOB.AutoSize = true;
             this.lblDOB.Location = new System.Drawing.Point(132, 379);
             this.lblDOB.Name = "lblDOB";
@@ -222,6 +231,7 @@
             // 
             // lblGender
             // 
+            this.lblGender.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGender.AutoSize = true;
             this.lblGender.Location = new System.Drawing.Point(135, 330);
             this.lblGender.Name = "lblGender";
@@ -231,6 +241,7 @@
             // 
             // lblEmail
             // 
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Location = new System.Drawing.Point(135, 290);
             this.lblEmail.Name = "lblEmail";
@@ -240,6 +251,7 @@
             // 
             // lblContactNo
             // 
+            this.lblContactNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblContactNo.AutoSize = true;
             this.lblContactNo.Location = new System.Drawing.Point(135, 249);
             this.lblContactNo.Name = "lblContactNo";
@@ -249,6 +261,7 @@
             // 
             // lblDesignation
             // 
+            this.lblDesignation.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDesignation.AutoSize = true;
             this.lblDesignation.Location = new System.Drawing.Point(132, 205);
             this.lblDesignation.Name = "lblDesignation";
@@ -258,6 +271,7 @@
             // 
             // lblLastName
             // 
+            this.lblLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLastName.AutoSize = true;
             this.lblLastName.Location = new System.Drawing.Point(135, 166);
             this.lblLastName.Name = "lblLastName";
@@ -267,6 +281,7 @@
             // 
             // lblFirstName
             // 
+            this.lblFirstName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Location = new System.Drawing.Point(135, 120);
             this.lblFirstName.Name = "lblFirstName";
@@ -276,6 +291,7 @@
             // 
             // btnAddAdvisor
             // 
+            this.btnAddAdvisor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddAdvisor.Location = new System.Drawing.Point(388, 470);
             this.btnAddAdvisor.Name = "btnAddAdvisor";
             this.btnAddAdvisor.Size = new System.Drawing.Size(93, 29);
@@ -286,6 +302,7 @@
             // 
             // lblSalary
             // 
+            this.lblSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSalary.AutoSize = true;
             this.lblSalary.Location = new System.Drawing.Point(133, 423);
             this.lblSalary.Name = "lblSalary";
@@ -295,6 +312,7 @@
             // 
             // txtSalary
             // 
+            this.txtSalary.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSalary.Location = new System.Drawing.Point(281, 423);
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(200, 22);
@@ -304,6 +322,7 @@
             // 
             // cmbDesignation
             // 
+            this.cmbDesignation.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbDesignation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDesignation.FormattingEnabled = true;
             this.cmbDesignation.Items.AddRange(new object[] {
@@ -320,6 +339,7 @@
             // 
             // lblDOBwarning
             // 
+            this.lblDOBwarning.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDOBwarning.AutoSize = true;
             this.lblDOBwarning.ForeColor = System.Drawing.Color.Red;
             this.lblDOBwarning.Location = new System.Drawing.Point(487, 380);
@@ -331,6 +351,7 @@
             // 
             // lblGenderWarning
             // 
+            this.lblGenderWarning.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGenderWarning.AutoSize = true;
             this.lblGenderWarning.ForeColor = System.Drawing.Color.Red;
             this.lblGenderWarning.Location = new System.Drawing.Point(487, 337);
@@ -342,6 +363,7 @@
             // 
             // lblEmailWarning
             // 
+            this.lblEmailWarning.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmailWarning.AutoSize = true;
             this.lblEmailWarning.ForeColor = System.Drawing.Color.Red;
             this.lblEmailWarning.Location = new System.Drawing.Point(487, 295);
@@ -353,6 +375,7 @@
             // 
             // lblCellWarning
             // 
+            this.lblCellWarning.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCellWarning.AutoSize = true;
             this.lblCellWarning.ForeColor = System.Drawing.Color.Red;
             this.lblCellWarning.Location = new System.Drawing.Point(487, 251);
@@ -364,6 +387,7 @@
             // 
             // lblDesgWarning
             // 
+            this.lblDesgWarning.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDesgWarning.AutoSize = true;
             this.lblDesgWarning.ForeColor = System.Drawing.Color.Red;
             this.lblDesgWarning.Location = new System.Drawing.Point(487, 209);
@@ -375,6 +399,7 @@
             // 
             // lblLNameWarning
             // 
+            this.lblLNameWarning.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblLNameWarning.AutoSize = true;
             this.lblLNameWarning.ForeColor = System.Drawing.Color.Red;
             this.lblLNameWarning.Location = new System.Drawing.Point(487, 166);
@@ -386,6 +411,7 @@
             // 
             // lblFNameWarning
             // 
+            this.lblFNameWarning.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFNameWarning.AutoSize = true;
             this.lblFNameWarning.ForeColor = System.Drawing.Color.Red;
             this.lblFNameWarning.Location = new System.Drawing.Point(487, 120);
@@ -397,6 +423,7 @@
             // 
             // lblSalaryWarning
             // 
+            this.lblSalaryWarning.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSalaryWarning.AutoSize = true;
             this.lblSalaryWarning.ForeColor = System.Drawing.Color.Red;
             this.lblSalaryWarning.Location = new System.Drawing.Point(487, 423);
@@ -408,6 +435,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancel.Location = new System.Drawing.Point(281, 470);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(101, 29);
@@ -418,6 +446,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(289, 36);
@@ -431,6 +460,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoScrollMinSize = new System.Drawing.Size(500, 400);
             this.ClientSize = new System.Drawing.Size(694, 580);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);

@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Home = new System.Windows.Forms.TabPage();
             this.Projects = new System.Windows.Forms.TabPage();
             this.Students = new System.Windows.Forms.TabPage();
             this.Advisors = new System.Windows.Forms.TabPage();
-            this.Groups = new System.Windows.Forms.TabPage();
             this.btnAdd = new System.Windows.Forms.Button();
             this.gvAdvisors = new System.Windows.Forms.DataGridView();
             this.hiddenId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +42,7 @@
             this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action3 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Groups = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.Advisors.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvAdvisors)).BeginInit();
@@ -98,6 +98,8 @@
             // Advisors
             // 
             this.Advisors.AccessibleName = "tabAdvisors";
+            this.Advisors.AutoScroll = true;
+            this.Advisors.AutoScrollMinSize = new System.Drawing.Size(500, 200);
             this.Advisors.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Advisors.Controls.Add(this.btnAdd);
             this.Advisors.Controls.Add(this.gvAdvisors);
@@ -107,18 +109,9 @@
             this.Advisors.TabIndex = 3;
             this.Advisors.Text = "Advisors";
             // 
-            // Groups
-            // 
-            this.Groups.AccessibleName = "Groups";
-            this.Groups.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Groups.Location = new System.Drawing.Point(4, 25);
-            this.Groups.Name = "Groups";
-            this.Groups.Size = new System.Drawing.Size(759, 418);
-            this.Groups.TabIndex = 4;
-            this.Groups.Text = "Groups";
-            // 
             // btnAdd
             // 
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAdd.Location = new System.Drawing.Point(589, 36);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(135, 32);
@@ -132,14 +125,14 @@
             this.gvAdvisors.AllowUserToAddRows = false;
             this.gvAdvisors.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gvAdvisors.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvAdvisors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvAdvisors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvAdvisors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvAdvisors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.hiddenId,
@@ -199,6 +192,16 @@
             this.Action3.Text = "Delete";
             this.Action3.UseColumnTextForButtonValue = true;
             this.Action3.Width = 60;
+            // 
+            // Groups
+            // 
+            this.Groups.AccessibleName = "Groups";
+            this.Groups.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Groups.Location = new System.Drawing.Point(4, 25);
+            this.Groups.Name = "Groups";
+            this.Groups.Size = new System.Drawing.Size(759, 418);
+            this.Groups.TabIndex = 4;
+            this.Groups.Text = "Groups";
             // 
             // ManageAdvisors
             // 

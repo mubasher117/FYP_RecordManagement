@@ -57,6 +57,7 @@
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(48, 32);
@@ -66,6 +67,7 @@
             // 
             // lblAdvisors
             // 
+            this.lblAdvisors.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAdvisors.AutoSize = true;
             this.lblAdvisors.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdvisors.Location = new System.Drawing.Point(87, 283);
@@ -76,6 +78,7 @@
             // 
             // lblGroupStudents
             // 
+            this.lblGroupStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblGroupStudents.AutoSize = true;
             this.lblGroupStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGroupStudents.Location = new System.Drawing.Point(87, 438);
@@ -86,6 +89,7 @@
             // 
             // lblMainAdvisor
             // 
+            this.lblMainAdvisor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMainAdvisor.AutoSize = true;
             this.lblMainAdvisor.Location = new System.Drawing.Point(114, 323);
             this.lblMainAdvisor.Name = "lblMainAdvisor";
@@ -95,6 +99,7 @@
             // 
             // lblCoAdvisor
             // 
+            this.lblCoAdvisor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCoAdvisor.AutoSize = true;
             this.lblCoAdvisor.Location = new System.Drawing.Point(114, 360);
             this.lblCoAdvisor.Name = "lblCoAdvisor";
@@ -104,6 +109,7 @@
             // 
             // lblIndustryAdvisor
             // 
+            this.lblIndustryAdvisor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIndustryAdvisor.AutoSize = true;
             this.lblIndustryAdvisor.Location = new System.Drawing.Point(114, 397);
             this.lblIndustryAdvisor.Name = "lblIndustryAdvisor";
@@ -113,6 +119,7 @@
             // 
             // lblMainAdvisorName
             // 
+            this.lblMainAdvisorName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMainAdvisorName.AutoSize = true;
             this.lblMainAdvisorName.ForeColor = System.Drawing.Color.Red;
             this.lblMainAdvisorName.Location = new System.Drawing.Point(289, 323);
@@ -123,6 +130,7 @@
             // 
             // lblCoAdvisorName
             // 
+            this.lblCoAdvisorName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCoAdvisorName.AutoSize = true;
             this.lblCoAdvisorName.ForeColor = System.Drawing.Color.Red;
             this.lblCoAdvisorName.Location = new System.Drawing.Point(289, 360);
@@ -133,6 +141,7 @@
             // 
             // lblIndustryAdvisorName
             // 
+            this.lblIndustryAdvisorName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIndustryAdvisorName.AutoSize = true;
             this.lblIndustryAdvisorName.ForeColor = System.Drawing.Color.Red;
             this.lblIndustryAdvisorName.Location = new System.Drawing.Point(289, 397);
@@ -143,6 +152,7 @@
             // 
             // btnViewMainAdvisor
             // 
+            this.btnViewMainAdvisor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnViewMainAdvisor.Location = new System.Drawing.Point(576, 316);
             this.btnViewMainAdvisor.Name = "btnViewMainAdvisor";
             this.btnViewMainAdvisor.Size = new System.Drawing.Size(77, 31);
@@ -153,6 +163,7 @@
             // 
             // btnAddMainAdvisor
             // 
+            this.btnAddMainAdvisor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddMainAdvisor.Location = new System.Drawing.Point(669, 316);
             this.btnAddMainAdvisor.Name = "btnAddMainAdvisor";
             this.btnAddMainAdvisor.Size = new System.Drawing.Size(77, 31);
@@ -163,6 +174,7 @@
             // 
             // btnViewCoAdvisor
             // 
+            this.btnViewCoAdvisor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnViewCoAdvisor.Location = new System.Drawing.Point(576, 353);
             this.btnViewCoAdvisor.Name = "btnViewCoAdvisor";
             this.btnViewCoAdvisor.Size = new System.Drawing.Size(77, 31);
@@ -172,6 +184,7 @@
             // 
             // btnAddCoAdvisor
             // 
+            this.btnAddCoAdvisor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddCoAdvisor.Location = new System.Drawing.Point(669, 353);
             this.btnAddCoAdvisor.Name = "btnAddCoAdvisor";
             this.btnAddCoAdvisor.Size = new System.Drawing.Size(77, 31);
@@ -182,6 +195,7 @@
             // 
             // btnViewIndustryAdvisor
             // 
+            this.btnViewIndustryAdvisor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnViewIndustryAdvisor.Location = new System.Drawing.Point(576, 390);
             this.btnViewIndustryAdvisor.Name = "btnViewIndustryAdvisor";
             this.btnViewIndustryAdvisor.Size = new System.Drawing.Size(77, 31);
@@ -191,6 +205,7 @@
             // 
             // btnAddIndustryAdvisor
             // 
+            this.btnAddIndustryAdvisor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddIndustryAdvisor.Location = new System.Drawing.Point(669, 390);
             this.btnAddIndustryAdvisor.Name = "btnAddIndustryAdvisor";
             this.btnAddIndustryAdvisor.Size = new System.Drawing.Size(77, 31);
@@ -201,6 +216,7 @@
             // 
             // btnChangeGroup
             // 
+            this.btnChangeGroup.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnChangeGroup.Location = new System.Drawing.Point(620, 792);
             this.btnChangeGroup.Name = "btnChangeGroup";
             this.btnChangeGroup.Size = new System.Drawing.Size(123, 38);
@@ -211,6 +227,7 @@
             // 
             // btnEvaluation
             // 
+            this.btnEvaluation.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEvaluation.Location = new System.Drawing.Point(809, 201);
             this.btnEvaluation.Name = "btnEvaluation";
             this.btnEvaluation.Size = new System.Drawing.Size(138, 33);
@@ -221,6 +238,7 @@
             // 
             // btnMarksheet
             // 
+            this.btnMarksheet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnMarksheet.Location = new System.Drawing.Point(809, 148);
             this.btnMarksheet.Name = "btnMarksheet";
             this.btnMarksheet.Size = new System.Drawing.Size(138, 33);
@@ -231,6 +249,7 @@
             // 
             // btnBack
             // 
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnBack.Location = new System.Drawing.Point(809, 97);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(138, 32);
@@ -241,6 +260,7 @@
             // 
             // gvGroupStudents
             // 
+            this.gvGroupStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gvGroupStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvGroupStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RegNo,
@@ -265,6 +285,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(116, 476);
@@ -276,6 +297,7 @@
             // 
             // txtDesc
             // 
+            this.txtDesc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDesc.Location = new System.Drawing.Point(92, 102);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.ReadOnly = true;
@@ -287,6 +309,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoScrollMinSize = new System.Drawing.Size(800, 600);
             this.ClientSize = new System.Drawing.Size(990, 844);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.label1);

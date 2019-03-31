@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Home = new System.Windows.Forms.TabPage();
             this.Projects = new System.Windows.Forms.TabPage();
             this.Students = new System.Windows.Forms.TabPage();
-            this.Advisors = new System.Windows.Forms.TabPage();
-            this.Groups = new System.Windows.Forms.TabPage();
             this.btnAddStudent = new System.Windows.Forms.Button();
             this.gvStudents = new System.Windows.Forms.DataGridView();
             this.StudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +41,8 @@
             this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Action3 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Advisors = new System.Windows.Forms.TabPage();
+            this.Groups = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.Students.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvStudents)).BeginInit();
@@ -69,7 +69,7 @@
             this.Home.Location = new System.Drawing.Point(4, 25);
             this.Home.Name = "Home";
             this.Home.Padding = new System.Windows.Forms.Padding(3);
-            this.Home.Size = new System.Drawing.Size(463, 53);
+            this.Home.Size = new System.Drawing.Size(762, 462);
             this.Home.TabIndex = 0;
             this.Home.Text = "Home";
             // 
@@ -80,13 +80,15 @@
             this.Projects.Location = new System.Drawing.Point(4, 25);
             this.Projects.Name = "Projects";
             this.Projects.Padding = new System.Windows.Forms.Padding(3);
-            this.Projects.Size = new System.Drawing.Size(463, 53);
+            this.Projects.Size = new System.Drawing.Size(762, 462);
             this.Projects.TabIndex = 1;
             this.Projects.Text = "Projects";
             // 
             // Students
             // 
             this.Students.AccessibleName = "tabStudents";
+            this.Students.AutoScroll = true;
+            this.Students.AutoScrollMinSize = new System.Drawing.Size(500, 0);
             this.Students.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.Students.Controls.Add(this.btnAddStudent);
             this.Students.Controls.Add(this.gvStudents);
@@ -97,28 +99,9 @@
             this.Students.TabIndex = 2;
             this.Students.Text = "Students";
             // 
-            // Advisors
-            // 
-            this.Advisors.AccessibleName = "tabAdvisors";
-            this.Advisors.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Advisors.Location = new System.Drawing.Point(4, 25);
-            this.Advisors.Name = "Advisors";
-            this.Advisors.Size = new System.Drawing.Size(463, 53);
-            this.Advisors.TabIndex = 3;
-            this.Advisors.Text = "Advisors";
-            // 
-            // Groups
-            // 
-            this.Groups.AccessibleName = "Groups";
-            this.Groups.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Groups.Location = new System.Drawing.Point(4, 25);
-            this.Groups.Name = "Groups";
-            this.Groups.Size = new System.Drawing.Size(463, 53);
-            this.Groups.TabIndex = 4;
-            this.Groups.Text = "Groups";
-            // 
             // btnAddStudent
             // 
+            this.btnAddStudent.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddStudent.Location = new System.Drawing.Point(592, 34);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(135, 32);
@@ -132,14 +115,14 @@
             this.gvStudents.AllowUserToAddRows = false;
             this.gvStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gvStudents.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gvStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gvStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.StudentId,
@@ -200,10 +183,32 @@
             this.Action3.UseColumnTextForButtonValue = true;
             this.Action3.Width = 60;
             // 
+            // Advisors
+            // 
+            this.Advisors.AccessibleName = "tabAdvisors";
+            this.Advisors.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Advisors.Location = new System.Drawing.Point(4, 25);
+            this.Advisors.Name = "Advisors";
+            this.Advisors.Size = new System.Drawing.Size(762, 462);
+            this.Advisors.TabIndex = 3;
+            this.Advisors.Text = "Advisors";
+            // 
+            // Groups
+            // 
+            this.Groups.AccessibleName = "Groups";
+            this.Groups.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Groups.Location = new System.Drawing.Point(4, 25);
+            this.Groups.Name = "Groups";
+            this.Groups.Size = new System.Drawing.Size(762, 462);
+            this.Groups.TabIndex = 4;
+            this.Groups.Text = "Groups";
+            // 
             // ManageStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoScrollMinSize = new System.Drawing.Size(600, 300);
             this.ClientSize = new System.Drawing.Size(858, 537);
             this.Controls.Add(this.tabControl1);
             this.Name = "ManageStudent";

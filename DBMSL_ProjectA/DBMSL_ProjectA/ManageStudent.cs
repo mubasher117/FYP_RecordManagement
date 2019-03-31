@@ -149,6 +149,12 @@ namespace DBMSL_ProjectA
                 f.Show();
                 this.Hide();
             }
+            if (tabControl1.SelectedIndex == 4)
+            {
+                CreateGroup createGroup = CreateGroup.GetInstance();
+                createGroup.Show();
+                this.Hide();
+            }
         }
     }
 }

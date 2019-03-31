@@ -41,6 +41,7 @@
             // 
             // btnAddProject
             // 
+            this.btnAddProject.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddProject.Location = new System.Drawing.Point(402, 281);
             this.btnAddProject.Name = "btnAddProject";
             this.btnAddProject.Size = new System.Drawing.Size(109, 36);
@@ -51,6 +52,7 @@
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Location = new System.Drawing.Point(64, 114);
             this.lblTitle.Name = "lblTitle";
@@ -60,6 +62,7 @@
             // 
             // lblDescription
             // 
+            this.lblDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDescription.AutoSize = true;
             this.lblDescription.Location = new System.Drawing.Point(64, 156);
             this.lblDescription.Name = "lblDescription";
@@ -69,6 +72,7 @@
             // 
             // txtTitle
             // 
+            this.txtTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTitle.Location = new System.Drawing.Point(183, 111);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(328, 22);
@@ -76,6 +80,7 @@
             // 
             // txtDescription
             // 
+            this.txtDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescription.Location = new System.Drawing.Point(183, 156);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(328, 87);
@@ -84,6 +89,7 @@
             // 
             // lblTitleWarning
             // 
+            this.lblTitleWarning.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitleWarning.AutoSize = true;
             this.lblTitleWarning.ForeColor = System.Drawing.Color.Red;
             this.lblTitleWarning.Location = new System.Drawing.Point(200, 136);
@@ -95,6 +101,7 @@
             // 
             // lblDescriptionWarning
             // 
+            this.lblDescriptionWarning.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDescriptionWarning.AutoSize = true;
             this.lblDescriptionWarning.ForeColor = System.Drawing.Color.Red;
             this.lblDescriptionWarning.Location = new System.Drawing.Point(200, 246);
@@ -106,6 +113,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancel.Location = new System.Drawing.Point(287, 281);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(109, 36);
@@ -116,6 +124,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(198, 38);
@@ -128,6 +137,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoScrollMinSize = new System.Drawing.Size(400, 200);
             this.ClientSize = new System.Drawing.Size(603, 367);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);

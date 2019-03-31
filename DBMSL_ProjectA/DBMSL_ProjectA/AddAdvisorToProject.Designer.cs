@@ -38,6 +38,7 @@
             // 
             // lblSelectAdvisor
             // 
+            this.lblSelectAdvisor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSelectAdvisor.AutoSize = true;
             this.lblSelectAdvisor.Location = new System.Drawing.Point(52, 113);
             this.lblSelectAdvisor.Name = "lblSelectAdvisor";
@@ -47,6 +48,7 @@
             // 
             // cmbSelctAdvisor
             // 
+            this.cmbSelctAdvisor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbSelctAdvisor.FormattingEnabled = true;
             this.cmbSelctAdvisor.Location = new System.Drawing.Point(200, 110);
             this.cmbSelctAdvisor.Name = "cmbSelctAdvisor";
@@ -56,6 +58,7 @@
             // 
             // lblAdd
             // 
+            this.lblAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAdd.Location = new System.Drawing.Point(450, 177);
             this.lblAdd.Name = "lblAdd";
             this.lblAdd.Size = new System.Drawing.Size(116, 40);
@@ -66,6 +69,7 @@
             // 
             // lblWarning
             // 
+            this.lblWarning.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblWarning.AutoSize = true;
             this.lblWarning.ForeColor = System.Drawing.Color.Red;
             this.lblWarning.Location = new System.Drawing.Point(207, 137);
@@ -77,6 +81,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancel.Location = new System.Drawing.Point(328, 177);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(116, 40);
@@ -87,6 +92,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(194, 40);
@@ -99,6 +105,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoScrollMinSize = new System.Drawing.Size(400, 200);
             this.ClientSize = new System.Drawing.Size(670, 363);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);

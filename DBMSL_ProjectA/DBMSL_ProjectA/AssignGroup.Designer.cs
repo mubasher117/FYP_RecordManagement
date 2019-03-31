@@ -44,6 +44,7 @@
             // 
             // gvStudents
             // 
+            this.gvStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.GroupId,
@@ -94,6 +95,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(100, 116);
             this.label1.Name = "label1";
@@ -103,6 +105,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCancel.Location = new System.Drawing.Point(858, 542);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(101, 29);
@@ -113,6 +116,7 @@
             // 
             // btnOk
             // 
+            this.btnOk.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOk.Location = new System.Drawing.Point(965, 542);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(93, 29);
@@ -123,6 +127,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(414, 37);
@@ -136,6 +141,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoScrollMinSize = new System.Drawing.Size(800, 400);
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1161, 625);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancel);
